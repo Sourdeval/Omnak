@@ -32,7 +32,13 @@
         <h5>Valeurs : Honneur, Courage, Destruction, Perfection</h5>
         <h5>Domaines magiques : Feu, Combat avec des armes, Cavalier, Commandement</h5>
 
-        <img style="max-width: 100%;" src="PaysRouge.jpg">
+        <div style="position: relative;">
+            <img style="max-width: 100%;" src="PaysRouge.jpg">
+            <div *ngFor="let zone of zonesRouge" style="position: absolute; border: solid 1px black; cursor: pointer;"
+                [style.top.%]="zone.top" [style.left.%]="zone.left" [style.width.%]="9.4" [style.height.%]="7.2"
+                (click)="goToWay(zone.id)">
+            </div>
+        </div>
 
         <h2>La Nation Verte</h2>
         <h5 style="font-style: italic;">« Chasser, ou être chassé »</h5>
@@ -48,7 +54,13 @@
         <h5>Valeurs : Unité, Nature, Bestialité, Évolution</h5>
         <h5>Domaines magiques : Animaux, Tir à l'Arc, Poison, Soins</h5>
 
-        <img style="max-width: 100%;" src="PaysVert.jpg">
+        <div style="position: relative;">
+            <img style="max-width: 100%;" src="PaysVert.jpg">
+            <div *ngFor="let zone of zonesVertes" style="position: absolute; border: solid 1px black; cursor: pointer;"
+                [style.top.%]="zone.top" [style.left.%]="zone.left" [style.width.%]="9.3" [style.height.%]="9"
+                (click)="goToWay(zone.id)">
+            </div>
+        </div>
 
         <h2>La Nation Sable</h2>
         <h5 style="font-style: italic;">« Les têtes tomberont jusqu'à notre victoire »</h5>
@@ -62,7 +74,13 @@
         <h5>Valeurs : Communauté, Sang-Froid, Puissance, Détermination</h5>
         <h5>Domaines magiques : Sable, Roches, Invisibilité, Assassinat</h5>
 
-        <img style="max-width: 100%;" src="PaysSable.jpg">
+        <div style="position: relative;">
+            <img style="max-width: 100%;" src="PaysSable.jpg">
+            <div *ngFor="let zone of zonesSable" style="position: absolute; border: solid 1px black; cursor: pointer;"
+                [style.top.%]="zone.top" [style.left.%]="zone.left" [style.width.%]="9.4" [style.height.%]="8.6"
+                (click)="goToWay(zone.id)">
+            </div>
+        </div>
 
     </div>
 
