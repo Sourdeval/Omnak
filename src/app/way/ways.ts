@@ -16,11 +16,11 @@ export let ways: Way[] = [
     {
         id: "MageFeu",
         name: "Mage de Feu",
-        description: "",
+        description: "La Nation Rouge est la seule à maîtriser la Magie du Feu. Puissante et destructrice, son apprentissage ne se fait pas sans brûlures.",
         asset: 'Représailles de Flammes : quand attaqué au corps à corps, votre ennemi reçoit : "E3 : vous êtes brûlé, vous subissez 1 blessure"',
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.MagieFeu, difficulty: '', effects: [''] },
+            { name: "Boule de Feu", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ['3 blessures', 'E2 : inflige En Feu', 'R : la boule de feu part dans une autre direction'] },
             { name: "", type: TypeSkill.MagieFeu, difficulty: '', effects: [''] },
             { name: "", type: TypeSkill.MagieFeu, difficulty: '', effects: [''] },
         ]
@@ -56,21 +56,21 @@ export let ways: Way[] = [
         asset: "Épée Enchantée (Duel, 1 Effet aléatoire) (ou bien un Sabre ou équivalent)",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.ArmeGladiateur, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.ArmeGladiateur, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.ArmeGladiateur, difficulty: '', effects: [''] },
+            { name: "Coup Circulaire", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ['1 blessure sur toutes les cibles proches'] },
+            { name: "Riposte", type: TypeSkill.ArmeGladiateur, difficulty: 'C10', effects: ['Suite à une attaque au corps à corps', "2 blessures", "ER6 : 1 blessure"] },
+            { name: "Désarmer", type: TypeSkill.ArmeGladiateur, difficulty: 'C14', effects: ['1 blessure', 'Fait lâcher un objet à la cible', 'ER2 : 1 blessure'] },
         ]
     },
     {
         id: "CogneurEnchante",
         name: "Cogneur Enchanté",
-        description: "",
+        description: "Les Cogneurs sont facilement reconnaissables par leur carrure. Peu d'hommes sont capables de porter et de frapper avec leurs armes.",
         asset: "Marteau Enchanté (Ignore l'Armure, 1 Effet aléatoire) (ou bien une Masse ou équivalent)",
         equipment: "",
         skills: [
             { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures"] },
-            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'C14', effects: [""] },
-            { name: "", type: TypeSkill.ArmeContondante, difficulty: '', effects: [''] },
+            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "R : tombe au sol, bonus pour toute attaque ennemie jusqu'au prochain tour, malus au prochain tour"] },
+            { name: "Coup dans les Jambes", type: TypeSkill.ArmeContondante, difficulty: 'C12', effects: ['1 blessure', "La cible ne peut pas se déplacer pendant 2 tours", "ER4 : 1 blessure"] },
         ]
     },
     {
