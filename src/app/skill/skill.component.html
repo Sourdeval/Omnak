@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="title-space">
+        <h2 class="title">
+            {{skill.name}}</h2>
+    </div>
+    <div class="diff-space">
+        <div class="diff-circle">
+            <h4 class="diff-text">{{skill.difficulty}}</h4>
+        </div>
+    </div>
+    <div class="desc-space">
+        <h6 *ngFor="let e of skill.effects" class="desc-line">
+            {{e}}</h6>
+    </div>
+</div>

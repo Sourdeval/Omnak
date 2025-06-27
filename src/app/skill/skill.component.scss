@@ -1,0 +1,66 @@
+.card {
+    --card-color-1: #001ccf;
+    --card-color-2: #00c3ff;
+    --card-color-3: #9ffff9;
+    border: solid 1px black;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    background: radial-gradient(circle, var(--card-color-2) 0%, var(--card-color-1) 100%);
+    border-radius: 8px;
+}
+
+.title-space {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-color-2);
+    border-radius: 8px;
+    height: 160px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    text-shadow: -1px -1px 0 var(--card-color-3), 1px -1px 0 var(--card-color-3), -1px 1px 0 var(--card-color-3), 1px 1px 0 var(--card-color-3);
+}
+
+.diff-space {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.diff-circle {
+    border-radius: 20px;
+    width: 50px;
+    text-align: center;
+    background-color: cyan;
+}
+
+.diff-text {
+    text-shadow: none;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.desc-space {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-color-1);
+    border-radius: 8px;
+    color: var(--card-color-3);
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.desc-line {
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin: 0;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
