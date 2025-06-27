@@ -28,7 +28,9 @@
 .diff-space {
     height: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .diff-circle {

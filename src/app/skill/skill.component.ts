@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from '../../core/way.core';
+import { Skill, TypeSkill } from '../../core/way.core';
 
 @Component({
   selector: 'omnak-skill',
@@ -11,6 +11,7 @@ export class SkillComponent {
   @Input()
   skill: Skill = {
     name: '',
+    type: TypeSkill.Aucun,
     difficulty: '',
     effects: [''],
   };

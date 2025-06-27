@@ -10,5 +10,17 @@ export interface Way {
 export interface Skill {
     name: string,
     difficulty: string,
+    type: TypeSkill,
     effects: string[]
+}
+
+export enum TypeSkill {
+    Aucun = '',
+    ArmeHast = "Arme d'Hast",
+    ArmeGladiateur = "Arme de Gladiateur",
+    ArmeContondante = "Arme Contondante",
+    ArmeTaille = "Arme de Taille",
+    ArmeLegere = "Arme Légère",
+    Monture = "Monture",
+    MagieFeu = "Magie du Feu",
 }

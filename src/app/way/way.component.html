@@ -2,7 +2,7 @@
 
 <h5>{{way.description}}</h5>
 
-<h5><span style="font-weight: lighter;">Équipement: </span>{{way.equipment}}</h5>
+<h5 *ngIf="way.equipment"><span style="font-weight: lighter;">Équipement: </span>{{way.equipment}}</h5>
 <h5><span style="font-weight: lighter;">Atout: </span>{{way.asset}}</h5>
 <h5><span style="font-weight: lighter;">Compétences: </span></h5>
 
