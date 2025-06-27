@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { WayComponent } from './way/way.component';
+import { SkillListComponent } from './skill-list/skill-list.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'way/:id',
     component: WayComponent,
+  },
+  {
+    path: 'skills',
+    component: SkillListComponent,
   },
   {
     path: '**',
