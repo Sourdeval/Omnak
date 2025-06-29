@@ -2,6 +2,7 @@
     --card-color-1: #001ccf;
     --card-color-2: #00c3ff;
     --card-color-3: #9ffff9;
+    --card-color-4: cyan;
     border: solid 1px black;
     width: 300px;
     height: 400px;
@@ -37,7 +38,7 @@
     border-radius: 20px;
     width: 50px;
     text-align: center;
-    background-color: cyan;
+    background-color: var(--card-color-4);
 }
 
 .diff-text {
@@ -65,4 +66,22 @@
     margin: 0;
     margin-top: 6px;
     margin-bottom: 6px;
+}
+
+.minimize {
+    font-size: smaller;
+}
+
+.otherColors {
+    --card-color-1: #a72100;
+    --card-color-2: #ffb300;
+    --card-color-3: #faff74;
+    --card-color-4: yellow;
+}
+
+.idea {
+    --card-color-1: #424242;
+    --card-color-2: #7b7b7b;
+    --card-color-3: #b1b1b1;
+    --card-color-4: #ffffff;
 }

@@ -11,7 +11,8 @@ export interface Skill {
     name: string,
     difficulty: string,
     type: TypeSkill,
-    effects: string[]
+    effects: string[],
+    idea?: boolean;
 }
 
 export enum TypeSkill {
