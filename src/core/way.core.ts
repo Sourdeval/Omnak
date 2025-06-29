@@ -24,4 +24,8 @@ export enum TypeSkill {
     ArmeLegere = "Arme Légère",
     Monture = "Monture",
     MagieFeu = "Magie du Feu",
+    MagieGlace = "Magie de Glace",
+    MagieSable = "Magie du Sable",
+    MagieSang = "Magie du Sang",
+    Deplacement = "Déplacement",
 }
