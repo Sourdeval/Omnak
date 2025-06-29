@@ -12,7 +12,8 @@ export class SkillListComponent implements OnInit {
   skills: Skill[][] = [[]]
 
   ngOnInit() {
-    ways.forEach(w => this.skills[0] = this.skills[0].concat(w.skills.filter(s => s.name)));
+    this.filterByType();
+    this.sortByDiff();
   }
 
   filterByType() {
@@ -33,5 +34,15 @@ export class SkillListComponent implements OnInit {
         }
       })
     });
+  }
+
+  sortByDiff() {
+    this.skills.forEach(listSkill => {
+      listSkill.sort((s1, s2) => {
+        let s1number: number = +s1.difficulty.substring(1);
+        let s2number: number = +s2.difficulty.substring(1);
+        return s1number - s2number;
+      })
+    })
   }
 }
