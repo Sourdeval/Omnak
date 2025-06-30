@@ -4,6 +4,7 @@
     --theme-color-2: #ffe100;
     --theme-color-3: whitesmoke;
     --theme-color-4: gainsboro;
+    --theme-color-5: #ffd000;
     --theme-fonts: 'Lora', 'Trebuchet MS', Arial, sans-serif;
     --theme-font-color-1: rgb(38, 19, 0);
     --theme-font-color-2: rgb(0, 0, 0);
@@ -50,7 +51,7 @@ h3 {
 /* Key words */
 h4 {
     color: var(--theme-font-color-2);
-    text-shadow: -1px -1px 0 #ffee00, 1px -1px 0 #ffee00, -1px 1px 0 #ffee00, 1px 1px 0 #ffee00;
+    text-shadow: -1px -1px 0 var(--theme-color-5), 1px -1px 0 var(--theme-color-5), -1px 1px 0 var(--theme-color-5), 1px 1px 0 var(--theme-color-5);
 }
 
 /* Texts */
