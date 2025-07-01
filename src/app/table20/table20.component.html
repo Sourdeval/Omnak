@@ -1,0 +1,14 @@
+<h2>{{table.title}}</h2>
+
+<table>
+    <tr>
+        <th>D20</th>
+        <th>Valeur</th>
+    </tr>
+    <tr *ngFor="let line of table.values; index as i">
+        <td>{{i+1}}</td>
+        <td>
+            <h6 style="margin: 0; margin-left: 10px;">{{line}}</h6>
+        </td>
+    </tr>
+</table>

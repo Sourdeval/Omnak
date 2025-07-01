@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { WayComponent } from './way/way.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
 import { RulesComponent } from './rules/rules.component';
+import { Table20Component } from './table20/table20.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'way/:id',
     component: WayComponent,
+  },
+  {
+    path: 'table/:id',
+    component: Table20Component,
   },
   {
     path: 'skills',

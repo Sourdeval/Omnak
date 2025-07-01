@@ -8,6 +8,7 @@ import { WayComponent } from './way/way.component';
 import { SkillComponent } from './skill/skill.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
 import { RulesComponent } from './rules/rules.component';
+import { Table20Component } from './table20/table20.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RulesComponent } from './rules/rules.component';
     WayComponent,
     SkillComponent,
     SkillListComponent,
-    RulesComponent
+    RulesComponent,
+    Table20Component
   ],
   imports: [
     BrowserModule,

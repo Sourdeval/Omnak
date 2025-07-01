@@ -10,7 +10,6 @@ import { ways } from './ways';
   styleUrl: './way.component.scss'
 })
 export class WayComponent implements OnInit {
-  @Input()
   wayId: string = '';
   way: Way = {
     id: "",
