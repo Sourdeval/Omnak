@@ -90,11 +90,11 @@ export let ways: Way[] = [
         name: "Chasseur",
         description: "",
         asset: "Déplacement Rapide en Forêt",
-        equipment: "",
+        equipment: "Arc et couteau",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Tir", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
+            { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
+            { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pour les 3 prochains tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'R : tout le monde est désormais au courant de votre présence.'] },
         ]
     },
     {
@@ -136,13 +136,13 @@ export let ways: Way[] = [
     {
         id: "Rodeur",
         name: "Rôdeur",
-        description: "",
-        asset: "",
-        equipment: "",
+        description: "Les Rôdeurs de la Nation Verte sont des combattants furtifs. Ce sont les seuls à manier l'épée, mais le combat direct n'est pas leur fort, ils préfèrent la discrétion.",
+        asset: "Ombre (furtif dans les endroits naturels)",
+        equipment: "Épée",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Tranche", type: TypeSkill.ArmeGladiateur, difficulty: 'R11', effects: ['2 blessures', "ER 5 : malus à l'adversaire", 'R : la prochaine attaque réussie contre vous vous inflige une blessure de plus.'] },
+            { name: "Entaille éclair", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ["Initiative", "1 blessure", "Inflige 2 blessures de plus si la cible est en train d'effectuer une action autre que vous attaquer ou se défendre."] },
+            { name: "Disparaître", type: TypeSkill.Furtivité, difficulty: 'C14', effects: ['Vos ennemis ne sont plus au courant de votre présence.', "La difficulté est celle d'un jet de Furtivité +4."] },
         ]
     },
     {
@@ -325,7 +325,6 @@ export let ways: Way[] = [
             { idea: true, name: "Frappe", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ['2 blessures'] },
             { idea: true, name: "Enchaînement d'attaque", type: TypeSkill.ArmeGladiateur, difficulty: 'C14', effects: ['3 blessures'] },
             { idea: true, name: "Frappe plongeante", type: TypeSkill.ArmeGladiateur, difficulty: 'C16', effects: ['4 blessures', 'EE3 : malus pour se défendre au corps à corps'] },
-            { idea: true, name: "Tranche", type: TypeSkill.ArmeGladiateur, difficulty: 'R11', effects: ['2 blessures', "ER 5 : malus à l'adversaire", 'R : la prochaine attaque réussie contre vous vous inflige une blessure de plus.'] },
             { idea: true, name: "Feinte", type: TypeSkill.ArmeGladiateur, difficulty: 'R14', effects: ["Les bonus de défense de l'adversaire ne compte pas pour cette attaque.", '3 blessures', 'R : malus pour se défendre des attaques au corps à corps'] },
         ]
     },

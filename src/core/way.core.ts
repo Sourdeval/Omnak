@@ -22,6 +22,7 @@ export enum TypeSkill {
     ArmeContondante = "Arme Contondante",
     ArmeTaille = "Arme de Taille",
     ArmeLegere = "Arme Légère",
+    ArmeDistance = "Arme à Distance",
     Monture = "Monture",
     MagieFeu = "Magie du Feu",
     MagieGlace = "Magie de Glace",
@@ -29,4 +30,5 @@ export enum TypeSkill {
     MagieRoche = "Magie des Roches",
     MagieSang = "Magie du Sang",
     Deplacement = "Déplacement",
+    Furtivité = "Furtivité",
 }
