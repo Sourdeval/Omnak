@@ -10,10 +10,14 @@ import { ways } from '../way/ways';
 })
 export class SkillListComponent implements OnInit {
   skills: Skill[][] = [[]]
+  private addDuplicates = false;
 
   ngOnInit() {
     this.filterByType();
     this.sortByDiff();
+
+    console.log("categories: " + this.skills.length);
+    console.log("total of skills: " + this.skills.flat().length);
   }
 
   filterByType() {
@@ -24,7 +28,9 @@ export class SkillListComponent implements OnInit {
           let added = false;
           this.skills.forEach(alreadySkillList => {
             if (alreadySkillList[0].type == s.type) {
-              alreadySkillList.push(s);
+              if (this.addDuplicates || !alreadySkillList.find(alreadySkill => alreadySkill.name == s.name)) {
+                alreadySkillList.push(s);
+              }
               added = true;
             }
           })
