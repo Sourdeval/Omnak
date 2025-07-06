@@ -69,26 +69,26 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures"] },
-            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "R : tombe au sol"] },
+            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "R : vous êtes déséquilibré et vous tombez au sol"] },
             { name: "Coup dans les Jambes", type: TypeSkill.ArmeContondante, difficulty: 'C12', effects: ['1 blessure', "La cible ne peut pas se déplacer pendant 2 tours", "ER4 : 1 blessure"] },
         ]
     },
     {
         id: "Cueilleur",
         name: "Cueilleur",
-        description: "",
+        description: "La Nation Verte excelle pour créer potions, des poisons et autres produits de la Nature. C'est pour cela que la première tâche des recrues de son armée est de récolter les ressources nécessaires.",
         asset: "Récolte Sauvage",
-        equipment: "",
+        equipment: "Serpe (arme légère)",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Entaille rapide", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['1 blessure'] },
+            { name: "Trouver des baies", type: TypeSkill.Aucun, difficulty: 'C8', effects: ['Prends une heure.', "Vous trouvez des baies qui permettent de nourir et soigner 1 blessure à chaque personne qui en mange."] },
+            { name: "Bandages de feuilles", type: TypeSkill.Aucun, difficulty: 'C8', effects: ['Vous faites un bandage de feuille à votre cible, qui peut être vous même.', "Soigne 2 blessures.", "Utilisable qu'une fois par jour sur une même cible.", "Peut servir d'action de Premiers Soins."] },
         ]
     },
     {
         id: "Chasseur",
         name: "Chasseur",
-        description: "",
+        description: "La Nation Verte utilise les armes à distance car elles donnent un avantage certain pour survivre en forêt. Les Chasseurs apprennent à traquer des proies et survivre dans une forêt pleine de prédateurs.",
         asset: "Déplacement Rapide en Forêt",
         equipment: "Arc et couteau",
         skills: [
@@ -195,7 +195,7 @@ export let ways: Way[] = [
         name: "Enfant du Poignard",
         description: "La Nation Sable choisi ses futurs Mages dès l'enfance. Ils sont entraînés à tuer très jeunes. On leur apprend que leur mission est plus importante que tout.",
         asset: "Obstiné",
-        equipment: "Poignard",
+        equipment: "Poignard (arme légère)",
         skills: [
             { name: "Entaille rapide", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['1 blessure'] },
             { name: "Lancer de lame", type: TypeSkill.ArmeLegere, difficulty: 'C12', effects: ['2 blessures', 'ER2 : 1 blessure', 'Il vous faut 1 tour pour récupérer votre arme sur un cadavre, et réussir une action C14 si la cible se débat'] },
@@ -222,8 +222,8 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Concentration d'Émeraude", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "R : malus pour le prochain sort", ''] },
+            { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes voulant traverser cette zone subissent 2 blessures et En Sang. Dure toute la scène.'] },
             { name: "Protection", type: TypeSkill.Aucun, difficulty: 'C12', effects: ["Choisissez un type de Magie, vous avez un bonus pour vous en défendre pendant 2 tours"] },
-            { name: "", type: TypeSkill.MagieRoche, difficulty: '', effects: [''] },
         ]
     },
     {
@@ -306,8 +306,8 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Dash", type: TypeSkill.Deplacement, difficulty: 'C11', effects: ['Déplacez vous de quelques mètres', 'Rejouez'] },
-            { name: "Pas en arrière", type: TypeSkill.Deplacement, difficulty: 'C14', effects: ["Vous pouvez faire cette action après une action d'attaque", "Déplacez vous de quelques mètres pour vous éloigner du combat"] },
-            { name: "", type: TypeSkill.Deplacement, difficulty: '', effects: [''] },
+            { name: "Pas en arrière", type: TypeSkill.Deplacement, difficulty: 'C14', effects: ["Vous pouvez faire cette action après une action d'attaque réussie", "Déplacez vous de quelques mètres pour vous éloigner du combat"] },
+            { name: "Charge et série de coups", type: TypeSkill.ArmeLegere, difficulty: 'R14', effects: ["Vous vous rapprochez rapidement de votre cible.", '3 blessures', "R : vous glissez et tombez au sol."] },
         ]
     },
 
