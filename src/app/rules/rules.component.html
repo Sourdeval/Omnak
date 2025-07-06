@@ -186,6 +186,8 @@
 
 <h3>États spéciaux</h3>
 
+<h6>Par défaut les effets ne sont pas cumulables.</h6>
+
 <h4>En Feu</h4>
 <h6>Lorsqu'une personne est "En Feu", elle subit une blessure à chaque fois qu'elle termine son tour. Pour enlever cet
     état, il faut soit se rouler au sol et réussir une action C14 (ou C10 si le sol est humide ou granuleux), ou bien
@@ -200,4 +202,19 @@
 <h4>Empoisonné</h4>
 
 <h6>Lorsqu'une personne est "Empoisonnée X", elle subit une blessure tous les X tours. Exemple : Empoisonnée 3, tous les
-    3 tours elle subit une blessure.</h6>
+    3 tours elle subit une blessure. La personne subit la blessure au début de son 3e tour.<br>
+    Cet effet se termine si la cible tombe K.O. ou quelle reçoit un soin. 1 blessure soignée de moins permet d'enlever
+    l'état Empoisonné.<br>
+    Cet effet est cumulable, sauf si c'est la même source ou compétence qui inflige de nouveau Empoisonné, dans ce cas
+    cela ne se cumule pas.</h6>
+
+<h4>Toxique</h4>
+
+<h6>Exactement comme Empoisonné, sauf que l'état se l'enlève pas quand la cible tombe K.O., donc cet effet est mortel.
+</h6>
+
+<h4>Tombé au sol</h4>
+
+<h6>Lorsqu'une personne tombe au sol, elle subit un malus. Ainsi, toutes personnes voulant l'attaquer gagne un bonus. À
+    son tour, elle peut se relever en échange d'un malus à son action, ou bien rester au sol, ce qui suivant l'action
+    choisie peut tout de même lui valoir un malus.</h6>

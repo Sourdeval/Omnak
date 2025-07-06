@@ -12,7 +12,8 @@ export interface Skill {
     difficulty: string,
     type: TypeSkill,
     effects: string[],
-    idea?: boolean;
+    idea?: boolean,
+    special?: string,
 }
 
 export enum TypeSkill {
@@ -29,6 +30,7 @@ export enum TypeSkill {
     MagieSable = "Magie du Sable",
     MagieRoche = "Magie des Roches",
     MagieSang = "Magie du Sang",
+    MagieAnimale = "Magie Animale",
     Deplacement = "Déplacement",
     Furtivité = "Furtivité",
 }

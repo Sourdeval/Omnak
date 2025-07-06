@@ -69,7 +69,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures"] },
-            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "R : tombe au sol, bonus pour toute attaque ennemie jusqu'à votre prochain tour, malus au prochain tour"] },
+            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "R : tombe au sol"] },
             { name: "Coup dans les Jambes", type: TypeSkill.ArmeContondante, difficulty: 'C12', effects: ['1 blessure', "La cible ne peut pas se déplacer pendant 2 tours", "ER4 : 1 blessure"] },
         ]
     },
@@ -124,13 +124,22 @@ export let ways: Way[] = [
     {
         id: "Changeur",
         name: "Changeur",
-        description: "",
-        asset: "",
+        description: "Les mages de la Nation Verte utilisent la Magie Animale, tirant ses pouvoirs des Esprits Animaux. Les Changeurs en sont la forme la plus pure, changeant leur corps temporairement avec cette magie.",
+        asset: "Instinct Animal : une fois par jour, vous pouvez réussir automatiquement n'importe quelle sort de Magie Animale, même si vous ne le connaissez pas.",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Inspiration Animale", type: TypeSkill.MagieAnimale, difficulty: '?', effects: ["Choisissez 3 compétences parmi celles suivantes"], special: "green" },
+            { name: "Griffe de l'Ours", type: TypeSkill.MagieAnimale, difficulty: "C12", effects: ["2 blessures", "ER5: projette au sol la cible, 1 blessure supplémentaire"] },
+            { name: "Dard de la Guêpe", type: TypeSkill.MagieAnimale, difficulty: "C12", effects: ["2 blessures", "Votre cible est Empoisonnée 3"] },
+            { name: "Crocs du Serpent", type: TypeSkill.MagieAnimale, difficulty: "C14", effects: ["2 blessures", "ER2 : Votre cible est Empoisonnée 2"] },
+            { name: "Charge du Sanglier", type: TypeSkill.MagieAnimale, difficulty: "C12", effects: ["2 blessures", "ER2 : Vous projetez votre cible au sol", "ER5 : Vous continuez votre route et touchez une seconde cible derrière la première.", "Nécessite de l'élan"] },
+            { name: "Sabot du Cerf", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["Vous vous déplacez de 15m.", "Si une cible se trouve au sol sur votre route, vous lui infligez 3 blessures."] },
+            { name: "Nage de la Loutre", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["Vous vous déplacez aisément dans l'eau jusqu'à la fin de la scène."] },
+            { name: "Vision du Hibou", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["Vous voyez extrêmement bien et de nuit jusqu'à la fin de la scène.", "Si d'éventuels malus s'appliquaient à cause de cela, vous ne les avez plus."] },
+            { name: "Griffes de la Taupe", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["1 blessure", "Vous pouvez utilisez cette compétence sur le sol pour creuser d'environ 50cm de profondeur."] },
+            { name: "Épines du Hérisson", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["Vous subissez une blessure de moins des attaques pendant 1 tour.", "Si on vous attaque au corps à corps, l'ennemi gagne : 'E2 : vous subissez 1 blessure'"] },
+            { name: "Agilité de l'Écureuil", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["Vous pouvez monter aisément aux arbres et vous déplacer d'arbre en arbre.", "ER5 : vous grignottez une noisette, vous vous soignez d'une blessure. (une fois par jour)"] },
+            { name: "Langue de la Grenouille", type: TypeSkill.MagieAnimale, difficulty: "C10", effects: ["Vous attrapez avec votre langue n'importe quel objet à moins de 10m de vous.", "La difficulté augmente de 4 si l'objet est tenu par un ennemi."] },
         ]
     },
     {
@@ -393,7 +402,7 @@ export let ways: Way[] = [
         skills: [
             { idea: true, name: "Mur de Roche", type: TypeSkill.MagieRoche, difficulty: '', effects: [""] },
             { idea: true, name: "Peau de Pierre", type: TypeSkill.MagieRoche, difficulty: '', effects: [""] },
-            { idea: true, name: "Appel des Profondeurs", type: TypeSkill.MagieRoche, difficulty: '', effects: ["Fait s'écrouler le sol sous vos ennemis."] },
+            { idea: true, name: "Appel des Profondeurs", type: TypeSkill.MagieRoche, difficulty: '', effects: ["Fait s'écrouler le sol sous vos ennemis.", "Toutes les cibles dans une zone moyenne tombent au sol.", "2 blessures"] },
             { idea: true, name: "Poing de Fer", type: TypeSkill.MagieRoche, difficulty: '', effects: ["Coup de poing amélioré."] },
             { idea: true, name: "Chute de Pierres", type: TypeSkill.MagieRoche, difficulty: '', effects: [""] },
             { idea: true, name: "Lithos kinésie", type: TypeSkill.MagieRoche, difficulty: 'C16', effects: ["Déplacer les roches, construisez ce que vous souhaitez.", "La difficulté peut varier de 14 à 18 suivant l'action."] },
