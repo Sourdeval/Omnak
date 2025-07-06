@@ -11,3 +11,24 @@ span {
     font-weight: bold;
     background-color: var(--theme-color-2);
 }
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 10px;
+
+    h6 {
+        margin: 10px;
+        font-weight: bold;
+    }
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--theme-color-1);
+}
+
+td {
+    width: 50%;
+}
