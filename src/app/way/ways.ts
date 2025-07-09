@@ -10,7 +10,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Estoc", type: TypeSkill.ArmeGladiateur, difficulty: 'C8', effects: ['1 blessure'] },
             { name: "Diagonale", type: TypeSkill.ArmeGladiateur, difficulty: 'C10', effects: ['1 blessure', 'ER4 : 1 blessure'] },
-            { name: "Garde", type: TypeSkill.ArmeGladiateur, difficulty: 'R12', effects: ['bonus pour se défendre des attaques au corps à corps', 'R : malus à la place'] },
+            { name: "Garde", type: TypeSkill.ArmeGladiateur, difficulty: 'R12', effects: ['bonus pour se défendre des attaques au corps à corps', 'Risque : malus à la place'] },
         ]
     },
     {
@@ -20,9 +20,9 @@ export let ways: Way[] = [
         asset: 'Représailles de Flammes : quand attaqué au corps à corps, votre ennemi reçoit : "E3 : vous êtes brûlé, vous subissez 1 blessure"',
         equipment: "",
         skills: [
-            { name: "Boule de Feu", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ['3 blessures à toutes les cibles dans une petite zone', 'E2 : inflige En Feu', 'R : la boule de feu part dans une autre direction'] },
+            { name: "Boule de Feu", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ['3 blessures à toutes les cibles dans une petite zone', 'E2 : inflige En Feu', 'Risque : la boule de feu part dans une autre direction'] },
             { name: "Mur de flammes", type: TypeSkill.MagieFeu, difficulty: 'C12', effects: ["Crée un mur de flammes d'environ 5m (15m avec malus) qui dure 3 tours", "Ceux qui traversent le mur subissent 1 blessure et l'état En Feu"] },
-            { name: "Rage bouillante", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ["Vous pouvez vous cibler vous ou un allié", "La cible obtient le bonus Enragé pendant 2 tours pour s'énerver et frapper.", "ER4 : les attaques de la cible font 1 blessure supplémentaire", "R : la cible subit En Feu"], },
+            { name: "Rage bouillante", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ["Vous pouvez vous cibler vous ou un allié", "La cible obtient le bonus Enragé pendant 2 tours pour s'énerver et frapper.", "ER4 : les attaques de la cible font 1 blessure supplémentaire", "Risque : la cible subit En Feu"], },
         ]
     },
     {
@@ -34,7 +34,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Charge de cavalerie", type: TypeSkill.Monture, difficulty: 'C10', effects: ['3 blessures', "A besoin de beaucoup d'élan, et d'une arme d'hast ou d'une épée longue."] },
             { name: "Coup à la tête", type: TypeSkill.Monture, difficulty: 'C12', effects: ['2 blessures', "ER2 : vous touchez la tête, la cible subit 1 blessure et le malus Borgne (toute attaque à distance)", "Nécessite une arme"] },
-            { name: "Course penchée", type: TypeSkill.Monture, difficulty: 'R14', effects: ["Permet de se pencher sur le côté de sa monture au galop pour esquiver les attaques. Donne un bonus d'esquive.", "R : Vous tombez et vous subissez 2 blessures."] },
+            { name: "Course penchée", type: TypeSkill.Monture, difficulty: 'R14', effects: ["Permet de se pencher sur le côté de sa monture au galop pour esquiver les attaques. Donne un bonus d'esquive.", "Risque : Vous tombez et vous subissez 2 blessures."] },
         ]
     },
     {
@@ -46,7 +46,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Estoc", type: TypeSkill.ArmeHast, difficulty: 'C8', effects: ['1 blessure', 'ER4 : 1 blessure'] },
             { name: "Mur de Piques", type: TypeSkill.ArmeHast, difficulty: 'C10', effects: ["Si un ennemi vous charge jusqu'à votre prochain tour, il subit un malus, et 5 blessures si son attaque rate."] },
-            { name: "Gerbe de flamme", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ["Lance une gerbe de flamme à distance depuis une arme d'Hast enchantée", '2 blessures', 'E3 : inflige En Feu', 'R : 1 blessure à vous et toutes les cibles proches'] },
+            { name: "Gerbe de flamme", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ["Lance une gerbe de flamme à distance depuis une arme d'Hast enchantée", '2 blessures', 'E3 : inflige En Feu', 'Risque : 1 blessure à vous et toutes les cibles proches'] },
         ]
     },
     {
@@ -69,7 +69,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures"] },
-            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "R : vous êtes déséquilibré et vous tombez au sol"] },
+            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "Risque : vous êtes déséquilibré et vous tombez au sol"] },
             { name: "Coup dans les Jambes", type: TypeSkill.ArmeContondante, difficulty: 'C12', effects: ['1 blessure', "La cible ne peut pas se déplacer pendant 2 tours", "ER4 : 1 blessure"] },
         ]
     },
@@ -94,7 +94,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Tir", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
             { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
-            { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pour les 3 prochains tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'R : tout le monde est désormais au courant de votre présence.'] },
+            { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pour les 3 prochains tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'Risque : tout le monde est désormais au courant de votre présence.'] },
         ]
     },
     {
@@ -149,7 +149,7 @@ export let ways: Way[] = [
         asset: "Ombre (furtif dans les endroits naturels)",
         equipment: "Épée",
         skills: [
-            { name: "Tranche", type: TypeSkill.ArmeGladiateur, difficulty: 'R11', effects: ['2 blessures', "ER 5 : malus à l'adversaire", 'R : la prochaine attaque réussie contre vous vous inflige une blessure de plus.'] },
+            { name: "Tranche", type: TypeSkill.ArmeGladiateur, difficulty: 'R11', effects: ['2 blessures', "ER 5 : malus à l'adversaire", 'Risque : la prochaine attaque réussie contre vous vous inflige une blessure de plus.'] },
             { name: "Entaille éclair", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ["Initiative", "1 blessure", "Inflige 2 blessures de plus si la cible est en train d'effectuer une action autre que vous attaquer ou se défendre."] },
             { name: "Disparaître", type: TypeSkill.Furtivité, difficulty: 'C14', effects: ['Vos ennemis ne sont plus au courant de votre présence.', "La difficulté est celle d'un jet de Furtivité +4."] },
         ]
@@ -186,7 +186,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Jet de Sable", type: TypeSkill.MagieSable, difficulty: 'C8', effects: ['1 blessure', 'ER5 : met du sable dans les yeux'] },
-            { name: "Leurre de Sable", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Vous créez un double de vous qui s'il est attaqué n'est en faite que du sable.", "R : celui qui sera attaqué ce sera vous, et le double disparaîtra alors"] },
+            { name: "Leurre de Sable", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Vous créez un double de vous qui s'il est attaqué n'est en faite que du sable.", "Risque : celui qui sera attaqué ce sera vous, et le double disparaîtra alors"] },
             { name: "Parler aux Esprits du Désert", type: TypeSkill.MagieSable, difficulty: 'C10', effects: ["Vous communiquer avec ces étranges esprits qui traverse le désert en quelques minutes.", "Vous pouvez demander des informations sur tout ce qui touche le sable", "Vous pouvez envoyez un message à un autre Mage connaissant ce sort", ''] },
         ]
     },
@@ -209,8 +209,8 @@ export let ways: Way[] = [
         asset: "Solide : vos seuils de blessures sont augmentés de 4.",
         equipment: "",
         skills: [
-            { name: "Concentration Noire", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Toutes les attaques jusqu'à votre prochain tour vous infligent une blessure de moins.", "R : malus pour se défendre"] },
-            { name: "Projection d'éclats d'Obsidienne", type: TypeSkill.MagieRoche, difficulty: 'R10', effects: ['2 blessures sur une petite zone', 'ER3 : inflige En Sang', 'R : les éclats partent dans tous les sens et infligent 1 blessure à vous et aux personnes proches de vous'] },
+            { name: "Concentration Noire", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Toutes les attaques jusqu'à votre prochain tour vous infligent une blessure de moins.", "Risque : malus pour se défendre"] },
+            { name: "Projection d'éclats d'Obsidienne", type: TypeSkill.MagieRoche, difficulty: 'R10', effects: ['2 blessures sur une petite zone', 'ER3 : inflige En Sang', 'Risque : les éclats partent dans tous les sens et infligent 1 blessure à vous et aux personnes proches de vous'] },
             { name: "Secousse mineure", type: TypeSkill.MagieRoche, difficulty: 'C13', effects: ["Provoque un petit tremblement de terre, tout le monde sauf vous subit un malus Déséquilibré jusqu'à votre prochain tour."] },
         ]
     },
@@ -221,7 +221,7 @@ export let ways: Way[] = [
         asset: "Bouclier d'Émeraude : une fois par jour, vous pouvez totalement être immunisé d'un sort qui aurait dû vous toucher",
         equipment: "",
         skills: [
-            { name: "Concentration d'Émeraude", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "R : malus pour le prochain sort", ''] },
+            { name: "Concentration d'Émeraude", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "Risque : malus pour le prochain sort", ''] },
             { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes voulant traverser cette zone subissent 2 blessures et En Sang. Dure toute la scène.'] },
             { name: "Protection", type: TypeSkill.Aucun, difficulty: 'C12', effects: ["Choisissez un type de Magie, vous avez un bonus pour vous en défendre pendant 2 tours"] },
         ]
@@ -307,7 +307,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Dash", type: TypeSkill.Deplacement, difficulty: 'C11', effects: ['Déplacez vous de quelques mètres', 'Rejouez'] },
             { name: "Pas en arrière", type: TypeSkill.Deplacement, difficulty: 'C14', effects: ["Vous pouvez faire cette action après une action d'attaque réussie", "Déplacez vous de quelques mètres pour vous éloigner du combat"] },
-            { name: "Charge et série de coups", type: TypeSkill.ArmeLegere, difficulty: 'R14', effects: ["Vous vous rapprochez rapidement de votre cible.", '3 blessures', "R : vous glissez et tombez au sol."] },
+            { name: "Charge et série de coups", type: TypeSkill.ArmeLegere, difficulty: 'R14', effects: ["Vous vous rapprochez rapidement de votre cible.", '3 blessures', "Risque : vous glissez et tombez au sol."] },
         ]
     },
 
@@ -319,7 +319,7 @@ export let ways: Way[] = [
         asset: "",
         equipment: "",
         skills: [
-            { idea: true, name: "Goût du Sang", type: TypeSkill.MagieSang, difficulty: 'R14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Le groupe d'ennemi choisi devient fou de violence. Ils se battent les uns contre les autres pendant 1 tour.", "R : le groupe d'ennemi vous attaque vous à la place.", ''] },
+            { idea: true, name: "Goût du Sang", type: TypeSkill.MagieSang, difficulty: 'R14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Le groupe d'ennemi choisi devient fou de violence. Ils se battent les uns contre les autres pendant 1 tour.", "Risque : le groupe d'ennemi vous attaque vous à la place.", ''] },
             { idea: true, name: "Lame de Sang", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Vous créez une arme légère en Sang. Vous pouvez l'utiliser jusqu'à la fin de la scène."] },
             { idea: true, name: "Hémorragie Multiple", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les personnes déjà blessées (dont vous) subissent 2 blessures et l'état En Sang."] },
         ]
@@ -334,7 +334,7 @@ export let ways: Way[] = [
             { idea: true, name: "Frappe", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ['2 blessures'] },
             { idea: true, name: "Enchaînement d'attaque", type: TypeSkill.ArmeGladiateur, difficulty: 'C14', effects: ['3 blessures'] },
             { idea: true, name: "Frappe plongeante", type: TypeSkill.ArmeGladiateur, difficulty: 'C16', effects: ['4 blessures', 'EE3 : malus pour se défendre au corps à corps'] },
-            { idea: true, name: "Feinte", type: TypeSkill.ArmeGladiateur, difficulty: 'R14', effects: ["Les bonus de défense de l'adversaire ne compte pas pour cette attaque.", '3 blessures', 'R : malus pour se défendre des attaques au corps à corps'] },
+            { idea: true, name: "Feinte", type: TypeSkill.ArmeGladiateur, difficulty: 'R14', effects: ["Les bonus de défense de l'adversaire ne compte pas pour cette attaque.", '3 blessures', 'Risque : malus pour se défendre des attaques au corps à corps'] },
         ]
     },
     {
@@ -381,10 +381,10 @@ export let ways: Way[] = [
         asset: "",
         equipment: "",
         skills: [
-            { idea: true, name: "Surf du Désert", type: TypeSkill.MagieSable, difficulty: 'R10', effects: ["Vous vous déplacez sur une vague de sable rapidement.", "R : vous chutez et subissez 1 blessure."] },
+            { idea: true, name: "Surf du Désert", type: TypeSkill.MagieSable, difficulty: 'R10', effects: ["Vous vous déplacez sur une vague de sable rapidement.", "Risque : vous chutez et subissez 1 blessure."] },
 
             // Élémentaliste
-            { idea: true, name: "Réduire en poussière", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Génère une quantité de sable suffisante pour 3 sorts.", "R : quantité suffisante pour 1 sort seulement"] },
+            { idea: true, name: "Réduire en poussière", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Génère une quantité de sable suffisante pour 3 sorts.", "Risque : quantité suffisante pour 1 sort seulement"] },
             { idea: true, name: "Tempête du Sable", type: TypeSkill.MagieSable, difficulty: '', effects: [""] },
             { idea: true, name: "Psammos kinésie", type: TypeSkill.MagieSable, difficulty: 'C15', effects: ["Déplacer le sable et en faire ce que vous souhaitez.", "La difficulté peut varier de 13 à 17 suivant l'action."] },
 
