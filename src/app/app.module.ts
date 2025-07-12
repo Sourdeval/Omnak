@@ -9,6 +9,7 @@ import { SkillComponent } from './skill/skill.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { Table20Component } from './table20/table20.component';
+import { WorldComponent } from './world/world.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { Table20Component } from './table20/table20.component';
     SkillComponent,
     SkillListComponent,
     RulesComponent,
-    Table20Component
+    Table20Component,
+    WorldComponent
   ],
   imports: [
     BrowserModule,

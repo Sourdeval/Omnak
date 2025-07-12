@@ -5,6 +5,7 @@ import { WayComponent } from './way/way.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { Table20Component } from './table20/table20.component';
+import { WorldComponent } from './world/world.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'rules',
     component: RulesComponent,
+  },
+  {
+    path: 'world',
+    component: WorldComponent,
   },
   {
     path: '**',
