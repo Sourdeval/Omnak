@@ -76,12 +76,12 @@ export let ways: Way[] = [
     {
         id: "Cueilleur",
         name: "Cueilleur",
-        description: "La Nation Verte excelle pour créer potions, des poisons et autres produits de la Nature. C'est pour cela que la première tâche des recrues de son armée est de récolter les ressources nécessaires.",
+        description: "La Nation Verte excelle pour créer des potions, des poisons et autres produits de la Nature. C'est pour cela que la première tâche des recrues de son armée est de récolter les ressources nécessaires.",
         asset: "Récolte Sauvage",
         equipment: "Serpe (arme légère)",
         skills: [
             { name: "Entaille rapide", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['1 blessure'] },
-            { name: "Trouver des baies", type: TypeSkill.Aucun, difficulty: 'C8', effects: ['Prends une heure.', "Vous trouvez des baies qui permettent de nourir et soigner 1 blessure à chaque personne qui en mange."] },
+            { name: "Trouver des baies", type: TypeSkill.Aucun, difficulty: 'C8', effects: ['Prends une heure.', "Vous trouvez des baies qui permettent de nourrir et soigner 1 blessure à chaque personne qui en mange."] },
             { name: "Bandages de feuilles", type: TypeSkill.Aucun, difficulty: 'C8', effects: ['Vous faites un bandage de feuille à votre cible, qui peut être vous même.', "Soigne 2 blessures.", "Utilisable qu'une fois par jour sur une même cible.", "Peut servir d'action de Premiers Soins."] },
         ]
     },
@@ -112,13 +112,13 @@ export let ways: Way[] = [
     {
         id: "Druide",
         name: "Druide",
-        description: "",
-        asset: "",
+        description: "Les Druides de la Nation Verte sont des mages qui connaissent la Magie Végétale, utilisant les plantes.",
+        asset: "Photosynthèse : vous vous soignez d'une blessure par heure au soleil",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Lianes Surgissantes", type: TypeSkill.MagieVegetale, difficulty: 'C12', effects: ["La cible ne peut pas se déplacer pendant 3 tours", "La cible peut faire une action C14 pour se libérer, ou infliger 2 blessures aux lianes.", "ER5 : la cible ne peut plus utiliser ses bras pendant la même durée"] },
+            { name: "Ronces Envahissantes", type: TypeSkill.MagieVegetale, difficulty: 'R14', effects: ["À partir du point choisi, des ronces poussent, à chaqu'un de vos tours elles prennent plus de place. Vous choisissez quand les ronces doivent s'arrêter.", "Une cible qui touche les ronces subit 1 blessure, 2 blessures si elle veut les traverser.", "Risque : les ronces sont incontrôlables.", ''] },
+            { name: "Écorce", type: TypeSkill.MagieVegetale, difficulty: 'R10', effects: ["Votre peau se transforme en écorce, vous subissez 2 blessures de moins de chaque attaque jusqu'à la fin de la scène.", "Risque : Vous subissez 2 blessures."] },
         ]
     },
     {
@@ -206,7 +206,7 @@ export let ways: Way[] = [
         id: "PorteurObsidienne",
         name: "Porteur d'Obsidienne",
         description: "L'Obsidienne donne une résistance physique impressionnante. Leurs porteurs ne tombent jamais malades",
-        asset: "Solide : vos seuils de blessures sont augmentés de 4.",
+        asset: "Solide : vos seuils de blessures sont augmentés de 4",
         equipment: "",
         skills: [
             { name: "Concentration Noire", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Toutes les attaques jusqu'à votre prochain tour vous infligent une blessure de moins.", "Risque : malus pour se défendre"] },
@@ -242,7 +242,7 @@ export let ways: Way[] = [
         id: "PorteurTopaze",
         name: "Porteur de Topaze",
         description: "",
-        asset: "",
+        asset: "Réserve Solaire : une fois par jour, vous pouvez (sans utiliser une action) libérer la lumière solaire contenue dans votre Topaze. Il fait jour et chaud jusqu'à la fin de la scène.",
         equipment: "",
         skills: [
             { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
@@ -407,6 +407,19 @@ export let ways: Way[] = [
             { idea: true, name: "Chute de Pierres", type: TypeSkill.MagieRoche, difficulty: '', effects: [""] },
             { idea: true, name: "Lithos kinésie", type: TypeSkill.MagieRoche, difficulty: 'C16', effects: ["Déplacer les roches, construisez ce que vous souhaitez.", "La difficulté peut varier de 14 à 18 suivant l'action."] },
         ]
-    }
+    },
+
+    {
+        id: "IdeesMagieVegetale",
+        name: "Idées de sorts pour la Magie Végétale",
+        description: "",
+        asset: "",
+        equipment: "",
+        skills: [
+            { idea: true, name: "Plante Carnivore", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une plante carnivore pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle attaque tout ce qui est autour d'elle, elle utilise Morsure C8 : inflige 2 blessures.", "Elle meurt à 3 blessures."] },
+            { idea: true, name: "Fleur Hypnotisante", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une fleur hypnotisante pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle émet du pollen qui rend détraqué (malus) les personnes proches, puis loin.", "Elle meurt à 3 blessures."] },
+            { idea: true, name: "Fleur Cadavre", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une fleur cadavre pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle émet du poison dans l'air, inflige 1 blessure par tour aux personnes proches, puis loin.", "Elle meurt à 3 blessures."] },
+        ]
+    },
     //#endregion
 ]
