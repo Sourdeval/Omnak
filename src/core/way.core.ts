@@ -16,6 +16,11 @@ export interface Skill {
     special?: string,
 }
 
+export interface SkillSelectable extends Skill {
+    selected?: boolean,
+    id: number,
+}
+
 export enum TypeSkill {
     Aucun = '',
     ArmeHast = "Arme d'Hast",

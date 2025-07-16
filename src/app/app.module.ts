@@ -11,6 +11,7 @@ import { RulesComponent } from './rules/rules.component';
 import { Table20Component } from './table20/table20.component';
 import { WorldComponent } from './world/world.component';
 import { CenterComponent } from './shared/center/center.component';
+import { SkillPrintComponent } from './skill-print/skill-print.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CenterComponent } from './shared/center/center.component';
     RulesComponent,
     Table20Component,
     WorldComponent,
-    CenterComponent
+    CenterComponent,
+    SkillPrintComponent
   ],
   imports: [
     BrowserModule,

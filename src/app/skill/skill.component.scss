@@ -1,13 +1,16 @@
 .card {
     --card-color-1: #001ccf;
     --card-color-2: #00c3ff;
+    --card-color-back-1: var(--card-color-1);
+    --card-color-back-2: var(--card-color-2);
     --card-color-3: #9ffff9;
     --card-color-4: cyan;
+    --card-font-color: white;
     border: solid 1px black;
     width: 300px;
     height: 400px;
     margin: 10px;
-    background: radial-gradient(circle, var(--card-color-2) 0%, var(--card-color-1) 100%);
+    background: radial-gradient(circle, var(--card-color-back-2) 0%, var(--card-color-back-1) 100%);
     border-radius: 8px;
 }
 
@@ -61,7 +64,7 @@
 
 .desc-line {
     font-weight: normal;
-    color: white;
+    color: var(--card-font-color);
     text-align: center;
     margin: 0;
     margin-top: 6px;
@@ -91,4 +94,15 @@
     --card-color-2: #7b7b7b;
     --card-color-3: #b1b1b1;
     --card-color-4: #ffffff;
+}
+
+.print {
+    --card-color-1: #ffffff;
+    --card-color-2: #d9eeff;
+    --card-color-back-1: #7bc3ff;
+    --card-color-back-2: var(--card-color-back-1);
+    --card-color-3: #ffffff;
+    --card-color-4: #ffffff;
+    --card-font-color: black;
+    border: 3px solid black
 }

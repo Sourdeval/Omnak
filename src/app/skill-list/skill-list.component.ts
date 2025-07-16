@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Skill, TypeSkill } from '../../core/way.core';
+import { SkillSelectable } from '../../core/way.core';
 import { ways } from '../way/ways';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'omnak-skill-list',
@@ -9,8 +10,12 @@ import { ways } from '../way/ways';
   styleUrl: './skill-list.component.scss'
 })
 export class SkillListComponent implements OnInit {
-  skills: Skill[][] = [[]]
+  skills: SkillSelectable[][] = [[]]
   private addDuplicates = false;
+
+  constructor(
+    private readonly router: Router,
+  ) { }
 
   ngOnInit() {
     this.filterByType();
@@ -21,6 +26,7 @@ export class SkillListComponent implements OnInit {
   }
 
   filterByType() {
+    let nextId = 0;
     this.skills = [];
     ways.forEach(w => {
       w.skills.forEach(s => {
@@ -29,14 +35,15 @@ export class SkillListComponent implements OnInit {
           this.skills.forEach(alreadySkillList => {
             if (alreadySkillList[0].type == s.type) {
               if (this.addDuplicates || !alreadySkillList.find(alreadySkill => alreadySkill.name == s.name)) {
-                alreadySkillList.push(s);
+                alreadySkillList.push({ id: nextId, ...s });
               }
               added = true;
             }
           })
           if (!added) {
-            this.skills.push([s]);
+            this.skills.push([{ id: nextId, ...s }]);
           }
+          nextId++;
         }
       })
     });
@@ -49,6 +56,24 @@ export class SkillListComponent implements OnInit {
         let s2number: number = +s2.difficulty.substring(1);
         return s1number - s2number;
       })
+    })
+  }
+
+  selectSkill(skill: SkillSelectable) {
+    skill.selected = !skill.selected;
+  }
+
+  print() {
+    let ids: number[] = [];
+    this.skills.forEach(skillList => {
+      skillList.forEach(s => {
+        if (s.selected) {
+          ids.push(s.id);
+        }
+      })
+    })
+    this.router.navigate(['print'], {
+      queryParams: { 'skills': ids.join('.') },
     })
   }
 }

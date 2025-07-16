@@ -1,9 +1,14 @@
 <h2 style="text-align: center;">Liste des Compétences</h2>
 
+<button (click)="print()">
+    <h4 style="margin: 0; width: 100px;">Print</h4>
+</button>
+
 <div *ngFor="let listSkills of skills">
     <h3>{{listSkills[0].type}}</h3>
     <div style="margin-left: -400px; margin-right: -400px; display: flex; flex-wrap: wrap; justify-content: center;">
-        <omnak-skill *ngFor="let skill of listSkills" [skill]="skill"></omnak-skill>
+        <omnak-skill *ngFor="let skill of listSkills" [skill]="skill" [ngClass]="skill.selected ? 'selected' : ''"
+            (click)="selectSkill(skill)"></omnak-skill>
     </div>
     <div style="border: solid 5px black;"></div>
 </div>

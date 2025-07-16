@@ -7,6 +7,7 @@ import { RulesComponent } from './rules/rules.component';
 import { Table20Component } from './table20/table20.component';
 import { WorldComponent } from './world/world.component';
 import { CenterComponent } from './shared/center/center.component';
+import { SkillPrintComponent } from './skill-print/skill-print.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
         component: WorldComponent,
       },
     ],
+  },
+  {
+    path: 'print',
+    component: SkillPrintComponent,
   },
   {
     path: '**',
