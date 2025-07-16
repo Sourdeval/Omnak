@@ -21,7 +21,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Boule de Feu", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ['3 blessures à toutes les cibles dans une petite zone', 'E2 : inflige En Feu', 'Risque : la boule de feu part dans une autre direction'] },
-            { name: "Mur de flammes", type: TypeSkill.MagieFeu, difficulty: 'C12', effects: ["Crée un mur de flammes d'environ 5m (15m avec malus) qui dure 3 tours", "Ceux qui traversent le mur subissent 1 blessure et l'état En Feu"] },
+            { name: "Mur de flammes", type: TypeSkill.MagieFeu, difficulty: 'C12', effects: ["Crée un mur de flammes d'environ 5m (15m avec malus) de long qui dure 3 tours", "Ceux qui traversent le mur subissent 1 blessure et l'état En Feu"] },
             { name: "Rage bouillante", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ["Vous pouvez vous cibler vous ou un allié", "La cible obtient le bonus Enragé pendant 2 tours pour s'énerver et frapper.", "ER4 : les attaques de la cible font 1 blessure supplémentaire", "Risque : la cible subit En Feu"], },
         ]
     },
