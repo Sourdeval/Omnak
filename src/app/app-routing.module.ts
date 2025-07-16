@@ -6,31 +6,38 @@ import { SkillListComponent } from './skill-list/skill-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { Table20Component } from './table20/table20.component';
 import { WorldComponent } from './world/world.component';
+import { CenterComponent } from './shared/center/center.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'way/:id',
-    component: WayComponent,
-  },
-  {
-    path: 'table/:id',
-    component: Table20Component,
-  },
-  {
-    path: 'skills',
-    component: SkillListComponent,
-  },
-  {
-    path: 'rules',
-    component: RulesComponent,
-  },
-  {
-    path: 'world',
-    component: WorldComponent,
+    component: CenterComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'way/:id',
+        component: WayComponent,
+      },
+      {
+        path: 'table/:id',
+        component: Table20Component,
+      },
+      {
+        path: 'skills',
+        component: SkillListComponent,
+      },
+      {
+        path: 'rules',
+        component: RulesComponent,
+      },
+      {
+        path: 'world',
+        component: WorldComponent,
+      },
+    ],
   },
   {
     path: '**',

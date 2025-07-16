@@ -10,6 +10,7 @@ import { SkillListComponent } from './skill-list/skill-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { Table20Component } from './table20/table20.component';
 import { WorldComponent } from './world/world.component';
+import { CenterComponent } from './shared/center/center.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WorldComponent } from './world/world.component';
     SkillListComponent,
     RulesComponent,
     Table20Component,
-    WorldComponent
+    WorldComponent,
+    CenterComponent
   ],
   imports: [
     BrowserModule,
