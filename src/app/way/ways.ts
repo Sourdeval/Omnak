@@ -92,7 +92,7 @@ export let ways: Way[] = [
         asset: "Déplacement Rapide en Forêt",
         equipment: "Arc et couteau",
         skills: [
-            { name: "Tir", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
+            { name: "Tir direct", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
             { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
             { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pour les 3 prochains tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'Risque : tout le monde est désormais au courant de votre présence.'] },
         ]
@@ -100,20 +100,21 @@ export let ways: Way[] = [
     {
         id: "Soigneur",
         name: "Soigneur",
-        description: "",
-        asset: "",
+        description: "Les soigneurs de la Nation Verte apprennent plusieurs sortes de magie de soins pour toutes les situations. ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé.",
+        asset: "Photosynthèse : vous vous soignez d'une blessure par heure au soleil",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Eau revigorante", type: TypeSkill.MagieEau, difficulty: 'C10', effects: ["Soigne 1 blessure, la cible est rafraichie et désaltérée, ne soigne qu'une fois par jour une même cible", "ER4 : la cible gagne l'état Clairvoyant", "Vous pouvez vous cibler"] },
+            { name: "Lueur de vie", type: TypeSkill.MagieSolaire, difficulty: 'C12', effects: ["Vous émettez une lueur solaire qui soigne 1 blessure à toutes les personnes proches et les détend.", "ER5 : éblouit (malus) les personnes regardant vers vous"] },
+            { name: "Transfert de sève", type: TypeSkill.MagieVegetale, difficulty: 'R14', effects: ['Vous transférer votre énergie vitale, votre sève, pour soigner une cible.', "Soigne 4 blessures, la cible doit passer son prochain tour.", "Risque : vous subissez 2 blessures."] },
+
         ]
     },
     {
         id: "Druide",
         name: "Druide",
         description: "Les Druides de la Nation Verte sont des mages qui connaissent la Magie Végétale, utilisant les plantes.",
-        asset: "Photosynthèse : vous vous soignez d'une blessure par heure au soleil",
+        asset: "",
         equipment: "",
         skills: [
             { name: "Lianes Surgissantes", type: TypeSkill.MagieVegetale, difficulty: 'C12', effects: ["La cible ne peut pas se déplacer pendant 3 tours", "La cible peut faire une action C14 pour se libérer, ou infliger 2 blessures aux lianes.", "ER5 : la cible ne peut plus utiliser ses bras pendant la même durée"] },
@@ -173,7 +174,7 @@ export let ways: Way[] = [
         asset: "Armes à Distance",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Tir en cloche", type: TypeSkill.ArmeDistance, difficulty: 'C12', effects: [''] },
             { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
             { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
         ]
@@ -209,7 +210,7 @@ export let ways: Way[] = [
         asset: "Solide : vos seuils de blessures sont augmentés de 4",
         equipment: "",
         skills: [
-            { name: "Concentration Noire", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Toutes les attaques jusqu'à votre prochain tour vous infligent une blessure de moins.", "Risque : malus pour se défendre"] },
+            { name: "Concentration Noire", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Toutes les attaques jusqu'à votre prochain tour vous infligent une blessure de moins.", "ER6 : les projectiles ricochent sur vous", "Risque : malus pour se défendre"] },
             { name: "Projection d'éclats d'Obsidienne", type: TypeSkill.MagieRoche, difficulty: 'R10', effects: ['2 blessures sur une petite zone', 'ER3 : inflige En Sang', 'Risque : les éclats partent dans tous les sens et infligent 1 blessure à vous et aux personnes proches de vous'] },
             { name: "Secousse mineure", type: TypeSkill.MagieRoche, difficulty: 'C13', effects: ["Provoque un petit tremblement de terre, tout le monde sauf vous subit un malus Déséquilibré jusqu'à votre prochain tour."] },
         ]
@@ -217,11 +218,11 @@ export let ways: Way[] = [
     {
         id: "PorteurEmeraude",
         name: "Porteur d'Émeraude",
-        description: "Les Émeraudes ne choisissent pas souvent de porteur, exigeantes elles cherchent ceux dont les capacités magiques sont exceptionnelles.",
+        description: "Les Porteurs d'Émeraude sont des mages anti magie. Ils sont capables de diminuer les pouvoirs magiques d'autres mages, et d'annuler complètement certains sorts.",
         asset: "Bouclier d'Émeraude : une fois par jour, vous pouvez totalement être immunisé d'un sort qui aurait dû vous toucher",
         equipment: "",
         skills: [
-            { name: "Concentration d'Émeraude", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "Risque : malus pour le prochain sort", ''] },
+            { name: "Concentration Verte", type: TypeSkill.Aucun, difficulty: 'R8', effects: [] },
             { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes voulant traverser cette zone subissent 2 blessures et En Sang. Dure toute la scène.'] },
             { name: "Protection", type: TypeSkill.Aucun, difficulty: 'C12', effects: ["Choisissez un type de Magie, vous avez un bonus pour vous en défendre pendant 2 tours"] },
         ]
@@ -229,11 +230,11 @@ export let ways: Way[] = [
     {
         id: "PorteurSaphir",
         name: "Porteur de Saphir",
-        description: "",
+        description: "Les Saphirs ne choisissent pas souvent de porteur, ils sont exigeants. Ils cherchent ceux dont les capacités magiques sont exceptionnelles, pour les rendre uniques.",
         asset: "",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Concentration Bleue", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "Risque : malus pour le prochain sort", ''] },
             { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
             { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
         ]
@@ -241,13 +242,13 @@ export let ways: Way[] = [
     {
         id: "PorteurTopaze",
         name: "Porteur de Topaze",
-        description: "",
-        asset: "Réserve Solaire : une fois par jour, vous pouvez (sans utiliser une action) libérer la lumière solaire contenue dans votre Topaze. Il fait jour et chaud jusqu'à la fin de la scène.",
+        description: "Le Topaze, aussi appelé la pierre solaire, permet à son porteur de maîtriser la puissante magie du soleil. ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé.",
+        asset: "Réserve Solaire : une fois par jour, vous pouvez (sans utiliser une action) libérer la lumière solaire contenue dans votre Topaze. Il fait jour et chaud jusqu'à la fin de la scène, vous pouvez lancer 2 sorts de Magie Solaire sans qu'ils comptent dans votre limite.",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Flash", type: TypeSkill.MagieSolaire, difficulty: 'C10', effects: ['Éblouit (malus) toutes les personnes proches regardant vers vous.', "ER4 : touche toute personne qui vous as dans son champ de vision", "Dure jusqu'à votre prochain tour"] },
+            { name: "Révélation Radieuse", type: TypeSkill.MagieSolaire, difficulty: 'C12', effects: ['Envoie un rayon de lumière dans une direction, révélant des choses cachées même magiquement.', "Sur une cible seule, peut lui faire avouer un secret."] },
+            { name: "Soleil Réduit", type: TypeSkill.MagieSolaire, difficulty: 'R14', effects: ["Vous lancez une boule de Magie Solaire en l'air, elle illumine et brûle les personnes dans la zone en dessous d'elle, au rythme d'une blessure par tour.", "Commence maintenant et dure 2 tours", "Risque : la boule explose, brûlant toute personne présente de 2 blessures", ''] },
         ]
     },
     {
@@ -363,6 +364,7 @@ export let ways: Way[] = [
             { idea: true, name: "Brasier", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Autour de vous"] },
             { idea: true, name: "Incendie", type: TypeSkill.MagieFeu, difficulty: '', effects: [""] },
             { idea: true, name: "Explosion", type: TypeSkill.MagieFeu, difficulty: '', effects: [""] },
+            { idea: true, name: "Touché carbonisant", type: TypeSkill.MagieFeu, difficulty: "R14", effects: ["Vous attrapez une cible avec vos mains, elle brûle à l'endroit où vous la tenez.", "4 blessures", "Risque : malus pour se défendre des attaques au corps à corps"] },
             // volcan
             { idea: true, name: "Éruption", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Gerbes sortent du sol"] },
             { idea: true, name: "Élémentaire du Volcan", type: TypeSkill.MagieFeu, difficulty: '', effects: ["famillier"] },
@@ -377,7 +379,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieSable",
         name: "Idées de sorts pour la Magie du Sable",
-        description: "",
+        description: "ATTENTION : La Magie du Sable nécessite du Sable.",
         asset: "",
         equipment: "",
         skills: [
@@ -419,6 +421,21 @@ export let ways: Way[] = [
             { idea: true, name: "Plante Carnivore", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une plante carnivore pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle attaque tout ce qui est autour d'elle, elle utilise Morsure C8 : inflige 2 blessures.", "Elle meurt à 3 blessures."] },
             { idea: true, name: "Fleur Hypnotisante", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une fleur hypnotisante pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle émet du pollen qui rend détraqué (malus) les personnes proches, puis loin.", "Elle meurt à 3 blessures."] },
             { idea: true, name: "Fleur Cadavre", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une fleur cadavre pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle émet du poison dans l'air, inflige 1 blessure par tour aux personnes proches, puis loin.", "Elle meurt à 3 blessures."] },
+        ]
+    },
+
+    {
+        id: "IdeesMagieSolaire",
+        name: "Idées de sorts pour la Magie Solaire",
+        description: "ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé.",
+        asset: "",
+        equipment: "",
+        skills: [
+            // Arbréen ?
+            { idea: true, name: "Halo Purificateur", type: TypeSkill.MagieSolaire, difficulty: 'C12', effects: ["Vous apposez vos mains sur une cible immobile, elle perd toute malédiction, poison, ou contrôle.", "ER5 : soigne 1 blessure"] },
+
+            { idea: true, name: "Rayon Solaire", type: TypeSkill.MagieSolaire, difficulty: 'C14', effects: ["3 blessures, traverse pour toucher 3 cibles", "ER2 : éblouit (malus) toute personne dans la direction du rayon.", "Compte pour 2 sorts dans la limite Solaire."] },
+            { idea: true, name: "Ultra Rayon Solaire", type: TypeSkill.MagieSolaire, difficulty: 'C16', effects: ["5 blessures, traverse et touche toutes les cibles", "ER2 : éblouit (malus) toute personne dans la direction du rayon.", "Compte pour 3 sorts dans la limite Solaire."] },
         ]
     },
     //#endregion
