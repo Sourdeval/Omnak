@@ -39,6 +39,7 @@ export enum TypeSkill {
     MagieAnimale = "Magie Animale",
     MagieVegetale = "Magie Végétale",
     MagieSolaire = "Magie Solaire",
+    MagieInvisible = "Magie d'Invisibilité",
     Deplacement = "Déplacement",
     Furtivité = "Furtivité",
     Apothicaire = "Apothicaire",

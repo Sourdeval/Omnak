@@ -68,7 +68,7 @@ export let ways: Way[] = [
         asset: "Marteau Enchanté (Ignore l'Armure, 1 Effet aléatoire) (ou bien une Masse ou équivalent)",
         equipment: "",
         skills: [
-            { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures"] },
+            { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures", "EE5 : inflige le malus Sonné pendant 1 tour"] },
             { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "Risque : vous êtes déséquilibré et vous tombez au sol"] },
             { name: "Coup dans les Jambes", type: TypeSkill.ArmeContondante, difficulty: 'C12', effects: ['1 blessure', "La cible ne peut pas se déplacer pendant 2 tours", "ER4 : 1 blessure"] },
         ]
@@ -94,7 +94,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Tir direct", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
             { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
-            { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pour les 3 prochains tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'Risque : tout le monde est désormais au courant de votre présence.'] },
+            { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pendant 3 tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'Risque : tout le monde est désormais au courant de votre présence.'] },
         ]
     },
     {
@@ -114,12 +114,12 @@ export let ways: Way[] = [
         id: "Druide",
         name: "Druide",
         description: "Les Druides de la Nation Verte sont des mages qui connaissent la Magie Végétale, utilisant les plantes.",
-        asset: "",
+        asset: "Odeur d'humus : Les animaux sauvages sont moins enclins à vous attaquer, et les animaux passifs deviennent amicaux.",
         equipment: "",
         skills: [
             { name: "Lianes Surgissantes", type: TypeSkill.MagieVegetale, difficulty: 'C12', effects: ["La cible ne peut pas se déplacer pendant 3 tours", "La cible peut faire une action C14 pour se libérer, ou infliger 2 blessures aux lianes.", "ER5 : la cible ne peut plus utiliser ses bras pendant la même durée"] },
             { name: "Ronces Envahissantes", type: TypeSkill.MagieVegetale, difficulty: 'R14', effects: ["À partir du point choisi, des ronces poussent, à chaqu'un de vos tours elles prennent plus de place. Vous choisissez quand les ronces doivent s'arrêter.", "Une cible qui touche les ronces subit 1 blessure, 2 blessures si elle veut les traverser.", "Risque : les ronces sont incontrôlables.", ''] },
-            { name: "Écorce", type: TypeSkill.MagieVegetale, difficulty: 'R10', effects: ["Votre peau se transforme en écorce, vous subissez 2 blessures de moins de chaque attaque jusqu'à la fin de la scène.", "Risque : Vous subissez 2 blessures."] },
+            { name: "Écorce", type: TypeSkill.MagieVegetale, difficulty: 'R12', effects: ["Votre peau se transforme en écorce, vous subissez 1 blessure de moins de chaque attaque jusqu'à la fin de la scène.", "Risque : Vous subissez 2 blessures."] },
         ]
     },
     {
@@ -158,25 +158,25 @@ export let ways: Way[] = [
     {
         id: "TireurVenimeux",
         name: "Tireur Venimeux",
-        description: "",
-        asset: "",
-        equipment: "",
+        description: "Les Tireurs Venimeux pensent que la flèche n'a pas pour but de tuer, juste d'amener le poison dans les veines de leur cible.",
+        asset: "Doigts de fée : Vous pouvez appliquer des doses d'Apothicaire sans prendre une action.",
+        equipment: "Sarbacane : permet de tirer des fléchettes, innofensives (0 blessure) mais discrètes.",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Venin", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A appliquer sur une flèche ou une arme.', "Inflige Empoisonné 3"] },
+            { name: "Piqûre", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A appliquer sur une flèche ou une arme.', "Inflige 1 blessure"] },
+            { name: "Anti-Venin", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A consommer.', "Enlève les états Empoisonné et Toxique"] },
         ]
     },
     {
         id: "TireurElite",
         name: "Tireur d'Élite",
-        description: "",
+        description: "Les tireurs d'élite de la Nation Verte sont les meilleurs archers d'Omnak. Ils maîtrisent l'arc long et sont capables de tirer plus loin que n'importe qui d'autre.",
         asset: "Armes à Distance",
-        equipment: "",
+        equipment: "Arc long",
         skills: [
-            { name: "Tir en cloche", type: TypeSkill.ArmeDistance, difficulty: 'C12', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Tir puissant", type: TypeSkill.ArmeDistance, difficulty: 'C12', effects: ['2 blessures', "ER18 : 1 blessure supplémentaire", "Distance : 1-25m"] },
+            { name: "Tir en cloche", type: TypeSkill.ArmeDistance, difficulty: 'C14', effects: ['1 blessure', "Distance: 50-125m"] },
+            { name: "Viser un point faible", type: TypeSkill.ArmeDistance, difficulty: 'C16', effects: ["Avant de faire l'action choisissez entre : état En Sang, état Immobilisé (pendant 2 tours), malus Borgne (toute la scène) et malus Incapable de se servir de [membre au choix] (toute la scène).", "1 blessure, le choix est infligé à la cible.", "Distance : 1-25m", ""] },
         ]
     },
     {
@@ -222,8 +222,8 @@ export let ways: Way[] = [
         asset: "Bouclier d'Émeraude : une fois par jour, vous pouvez totalement être immunisé d'un sort qui aurait dû vous toucher",
         equipment: "",
         skills: [
-            { name: "Concentration Verte", type: TypeSkill.Aucun, difficulty: 'R8', effects: [] },
-            { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes voulant traverser cette zone subissent 2 blessures et En Sang. Dure toute la scène.'] },
+            { name: "Concentration Verte", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Vous neutralisez toutes la magie autour de vous. Tous les sorts jusqu'à votre prochain tour ont un malus.", "ER6 : les sorts qui sont tout de même réussis infligent 1 blessure de moins", "Risque : vous ne pouvez plus lancer de sort ou cette compétence. Dure 2 tours", ''] },
+            { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes se trouvant ou voulant traverser cette zone subissent 2 blessures et En Sang. Dure toute la scène.'] },
             { name: "Protection", type: TypeSkill.Aucun, difficulty: 'C12', effects: ["Choisissez un type de Magie, vous avez un bonus pour vous en défendre pendant 2 tours"] },
         ]
     },
@@ -231,12 +231,12 @@ export let ways: Way[] = [
         id: "PorteurSaphir",
         name: "Porteur de Saphir",
         description: "Les Saphirs ne choisissent pas souvent de porteur, ils sont exigeants. Ils cherchent ceux dont les capacités magiques sont exceptionnelles, pour les rendre uniques.",
-        asset: "",
+        asset: "Magie Impressionnante : vos sorts ont 'ER18 : le sort est magnifique, toute personne présente est impressionnée.'",
         equipment: "",
         skills: [
             { name: "Concentration Bleue", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "Risque : malus pour le prochain sort", ''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Projection de pierres bleues", type: TypeSkill.MagieRoche, difficulty: 'C12', effects: ["Vous lancez sur une cible une rangée de pierres bleues lévitantes.", "1 blessure", "ER3 : vous attaquez une seconde cible avec ce sort", "ER5 : inflige le malus Sonné pendant 1 tour"] },
+            { name: "Garder son calme", type: TypeSkill.Aucun, difficulty: 'C11', effects: ["Vous pouvez utiliser cette compétence lorsque vous subissez un état d'énervement, de confusion, de persuasion ou de peur.", "Vous ne subissez pas cet état.", "ER5 : Vous obtenez l'état Clairvoyant", ""] },
         ]
     },
     {
@@ -254,25 +254,25 @@ export let ways: Way[] = [
     {
         id: "PorteurRubis",
         name: "Porteur de Rubis",
-        description: "",
-        asset: "",
-        equipment: "",
+        description: "Ceux qui se lient avec un Rubis ont souvent une courte vie. Fulgurante, furieuse, foudroyante, mais sans retour.",
+        asset: "Rage du Rubis : une fois par scène, si vous avez le bonus Enragé, vous pouvez vous en servir pour lancer des sorts offensifs. Dure aussi longtemps que le bonus.",
+        equipment: "Poignard (arme légère)",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Surf du Désert", type: TypeSkill.MagieSable, difficulty: 'R10', effects: ["Vous vous déplacez sur une vague de sable rapidement.", "Risque : vous chutez et subissez 1 blessure."] },
+            { name: "Assault Frénétique", type: TypeSkill.ArmeLegere, difficulty: 'R12', effects: ["Ne peut être utilisé qu'avec le bonus Enragé.", "3 blessures", "Risque : dans votre rage, la cible de cette compétence est choisie aléatoirement"] },
+            { name: "S'énerver", type: TypeSkill.Aucun, difficulty: 'C11', effects: ["", "Vous pouvez utiliser cette compétence lorsque vous subissez un état d'apaisement, d'intimidation, de contrôle ou de peur. Sinon, subissez 1 blessure pour lancer.", "Vous ne subissez pas cet état et obtenez le bonus Enragé (frapper) pendant 2 tours.", ""] },
         ]
     },
     {
         id: "PorteurPyrite",
         name: "Porteur de Pyrite",
-        description: "",
-        asset: "",
+        description: "On raconte que ceux qui portent une Pyrite finissent par devenir d'habiles manipulateurs.",
+        asset: "Habile Menteur",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Lame de Sable", type: TypeSkill.MagieSable, difficulty: 'C10', effects: ["Génère un poignard (Arme Légère) en sable.", "Vous pouvez aussitôt utiliser une action d'Arme Légère", "Redevient du sable à la fin de votre tour."] },
+            { name: "Statuette de Sable", type: TypeSkill.MagieSable, difficulty: 'C12', effects: ["Génère un petit objet au choix à l'apparence réelle.", "Dure toute la scène ou jusqu'à ce que quelque chose le touche. Après il redevient du sable."] },
+            { name: "Masque de Sable", type: TypeSkill.MagieSable, difficulty: 'R14', effects: ["Vous vous faites passer pour quelqu'un d'autre pendant la scène grâce à un masque reprenant les traits physiques d'un autre. Votre voix est aussi modifiée.", "Risque : le masque s'effrite à votre prochain tour."] },
         ]
     },
     {
@@ -282,9 +282,9 @@ export let ways: Way[] = [
         asset: "Pas Furtif : impossible d'être repéré par le seul bruit des pas",
         equipment: "",
         skills: [
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
-            { name: "", type: TypeSkill.Aucun, difficulty: '', effects: [''] },
+            { name: "Fumigène", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ['Vous faites exploser un fumigène à vos pied, vos ennemis vous perdent de vue.', "Dure 2 tours.", "Risque : vous subissez le malus Asphyxié pendant 2 tours"] },
+            { name: "", type: TypeSkill.MagieInvisible, difficulty: '', effects: [''] },
+            { name: "Concentration Violette", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Vous vous concentrez pour votre action furtive du prochain tour, décrivez la intégralement, vous gagnez un bonus.", "Si un élément de votre description a changé, vous subissez un malus à la place.", "Risque : malus à la place, action obligatoire", ""] },
         ]
     },
     {
@@ -383,12 +383,10 @@ export let ways: Way[] = [
         asset: "",
         equipment: "",
         skills: [
-            { idea: true, name: "Surf du Désert", type: TypeSkill.MagieSable, difficulty: 'R10', effects: ["Vous vous déplacez sur une vague de sable rapidement.", "Risque : vous chutez et subissez 1 blessure."] },
-
             // Élémentaliste
             { idea: true, name: "Réduire en poussière", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Génère une quantité de sable suffisante pour 3 sorts.", "Risque : quantité suffisante pour 1 sort seulement"] },
             { idea: true, name: "Tempête du Sable", type: TypeSkill.MagieSable, difficulty: '', effects: [""] },
-            { idea: true, name: "Psammos kinésie", type: TypeSkill.MagieSable, difficulty: 'C15', effects: ["Déplacer le sable et en faire ce que vous souhaitez.", "La difficulté peut varier de 13 à 17 suivant l'action."] },
+            { idea: true, name: "Psammos kinésie", type: TypeSkill.MagieSable, difficulty: 'C15', effects: ["Déplacer le sable et en faire ce que vous souhaitez.", "La difficulté peut varier de 12 à 16 suivant l'action."] },
 
             // Verrier
             { idea: true, name: "Jet de lames de verre", type: TypeSkill.MagieSable, difficulty: '', effects: [""] },
@@ -408,6 +406,7 @@ export let ways: Way[] = [
             { idea: true, name: "Poing de Fer", type: TypeSkill.MagieRoche, difficulty: '', effects: ["Coup de poing amélioré."] },
             { idea: true, name: "Chute de Pierres", type: TypeSkill.MagieRoche, difficulty: '', effects: [""] },
             { idea: true, name: "Lithos kinésie", type: TypeSkill.MagieRoche, difficulty: 'C16', effects: ["Déplacer les roches, construisez ce que vous souhaitez.", "La difficulté peut varier de 14 à 18 suivant l'action."] },
+            { idea: true, name: "Mur transparent de Saphir", type: TypeSkill.MagieRoche, difficulty: 'R12', effects: ["Vous érigez un mur ou un dôme autour de vous et des personnes proches. Le son et les effets magiques ne le traversent pas.", "Le mur est détruit au bout de 3 blessures.", "Risque : le mur est extrêmement fragile et se brisera en éclats coupants (1 blessure)", ""] },
         ]
     },
 
@@ -421,6 +420,7 @@ export let ways: Way[] = [
             { idea: true, name: "Plante Carnivore", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une plante carnivore pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle attaque tout ce qui est autour d'elle, elle utilise Morsure C8 : inflige 2 blessures.", "Elle meurt à 3 blessures."] },
             { idea: true, name: "Fleur Hypnotisante", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une fleur hypnotisante pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle émet du pollen qui rend détraqué (malus) les personnes proches, puis loin.", "Elle meurt à 3 blessures."] },
             { idea: true, name: "Fleur Cadavre", type: TypeSkill.MagieVegetale, difficulty: 'C10', effects: ["Une fleur cadavre pousse à l'endroit désigné pendant 1 tour.", "Une fois poussée, elle émet du poison dans l'air, inflige 1 blessure par tour aux personnes proches, puis loin.", "Elle meurt à 3 blessures."] },
+            { idea: true, name: "Souvenirs du Bois", type: TypeSkill.MagieVegetale, difficulty: 'C14', effects: ["En touchant un arbre, vous pouvez ressassez un de ses souvenirs. Quelque chose de marquant, imprégné dans son bois.", "Vous vous trouvez à la place de l'arbre, vous voyez flou et entendez peu."] },
         ]
     },
 
@@ -436,6 +436,19 @@ export let ways: Way[] = [
 
             { idea: true, name: "Rayon Solaire", type: TypeSkill.MagieSolaire, difficulty: 'C14', effects: ["3 blessures, traverse pour toucher 3 cibles", "ER2 : éblouit (malus) toute personne dans la direction du rayon.", "Compte pour 2 sorts dans la limite Solaire."] },
             { idea: true, name: "Ultra Rayon Solaire", type: TypeSkill.MagieSolaire, difficulty: 'C16', effects: ["5 blessures, traverse et touche toutes les cibles", "ER2 : éblouit (malus) toute personne dans la direction du rayon.", "Compte pour 3 sorts dans la limite Solaire."] },
+        ]
+    },
+
+    {
+        id: "IdeesArc",
+        name: "Idées de sorts pour les Armes à Distance",
+        description: "",
+        asset: "",
+        equipment: "",
+        skills: [
+            { idea: true, name: "Tirs en mouvement", type: TypeSkill.ArmeDistance, difficulty: "R14", effects: ["Vous courrez dans une direction en décochant 2 fléches, sur 1 ou 2 cibles.", "1 blessure par flèche", "Risque : Vous glissez et tombez au sol, tout le monde est au courant de votre présence."] },
+            { idea: true, name: "Salve", type: TypeSkill.ArmeDistance, difficulty: "C16", effects: ["Vous lancez 3 flèches sur 3 cibles différentes.", "1 blessure par flèche", "EE3 : l'une des 3 flèches atteint sa cible", "Distance : 1-10m"] },
+            { idea: true, name: "Pluie de flèche", type: TypeSkill.ArmeDistance, difficulty: "C16", effects: ["Vous lancez 3 flèches en cloche sur une zone", "Chaque personne dans la zone lance 1D20, sur 1-12 elle prend une flèche, et subit donc 1 blessure.", "Distance : 1-50m"] },
         ]
     },
     //#endregion
