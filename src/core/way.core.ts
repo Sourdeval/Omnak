@@ -1,7 +1,7 @@
 export interface Way {
     id: string,
     name: string,
-    description: string,
+    description: string[],
     asset: string,
     equipment: string,
     skills: Skill[],

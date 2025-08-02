@@ -4,7 +4,7 @@ export let ways: Way[] = [
     {
         id: "Soldat",
         name: "Soldat",
-        description: "Toute l'armée de la Nation Rouge commence par une formation de soldat. Les bases du combat et de la discipline y sont acquises.",
+        description: ["Toute l'armée de la Nation Rouge commence par une formation de soldat. Les bases du combat et de la discipline y sont acquises."],
         asset: "Honorable",
         equipment: "Glaive, cotte de mailles",
         skills: [
@@ -16,7 +16,7 @@ export let ways: Way[] = [
     {
         id: "MageFeu",
         name: "Mage de Feu",
-        description: "La Nation Rouge est la seule à maîtriser la Magie du Feu. Puissante et destructrice, son apprentissage ne se fait pas sans brûlures.",
+        description: ["La Nation Rouge est la seule à maîtriser la Magie du Feu. Puissante et destructrice, son apprentissage ne se fait pas sans brûlures."],
         asset: 'Représailles de Flammes : quand attaqué au corps à corps, votre ennemi reçoit : "E3 : vous êtes brûlé, vous subissez 1 blessure"',
         equipment: "",
         skills: [
@@ -28,7 +28,7 @@ export let ways: Way[] = [
     {
         id: "Cavalier",
         name: "Cavalier",
-        description: "Éclaireurs et force rapide de frappe, les Cavaliers sont très attachés à leur monture.",
+        description: ["Éclaireurs et force rapide de frappe, les Cavaliers sont très attachés à leur monture."],
         asset: "Équitation (toute action avec le cheval autre qu'une attaque)",
         equipment: "Possède un cheval, une lance (Anti-Cavalerie) ou une épée longue (Duel).",
         skills: [
@@ -40,7 +40,7 @@ export let ways: Way[] = [
     {
         id: "LancierEnchante",
         name: "Lancier Enchanté",
-        description: "Les Lanciers de la Nation Rouge sont positionnés sur les flancs de l'armée, pour décimer toute attaque de cavalerie ennemie.",
+        description: ["Les Lanciers de la Nation Rouge sont positionnés sur les flancs de l'armée, pour décimer toute attaque de cavalerie ennemie."],
         asset: "Lance Enchantée (Anti Cavalerie, 1 Effet aléatoire) (ou bien un Trident ou équivalent)",
         equipment: "",
         skills: [
@@ -52,7 +52,7 @@ export let ways: Way[] = [
     {
         id: "FantassinEnchante",
         name: "Fantassin Enchanté",
-        description: "Les Fantassins de la Nations Rouge sont le coeur de l'armée. Expert dans le combat rapproché, c'est leur nombre qui fait leur force contre des mages.",
+        description: ["Les Fantassins de la Nations Rouge sont le coeur de l'armée. Expert dans le combat rapproché, c'est leur nombre qui fait leur force contre des mages."],
         asset: "Épée Enchantée (Duel, 1 Effet aléatoire) (ou bien un Sabre ou équivalent)",
         equipment: "",
         skills: [
@@ -64,7 +64,7 @@ export let ways: Way[] = [
     {
         id: "CogneurEnchante",
         name: "Cogneur Enchanté",
-        description: "Les Cogneurs sont facilement reconnaissables par leur carrure. Peu d'hommes sont capables de porter et de frapper avec leurs armes.",
+        description: ["Les Cogneurs sont facilement reconnaissables par leur carrure. Peu d'hommes sont capables de porter et de frapper avec leurs armes."],
         asset: "Marteau Enchanté (Ignore l'Armure, 1 Effet aléatoire) (ou bien une Masse ou équivalent)",
         equipment: "",
         skills: [
@@ -76,7 +76,7 @@ export let ways: Way[] = [
     {
         id: "Cueilleur",
         name: "Cueilleur",
-        description: "La Nation Verte excelle pour créer des potions, des poisons et autres produits de la Nature. C'est pour cela que la première tâche des recrues de son armée est de récolter les ressources nécessaires.",
+        description: ["La Nation Verte excelle pour créer des potions, des poisons et autres produits de la Nature. C'est pour cela que la première tâche des recrues de son armée est de récolter les ressources nécessaires."],
         asset: "Récolte Sauvage",
         equipment: "Serpe (arme légère)",
         skills: [
@@ -88,7 +88,7 @@ export let ways: Way[] = [
     {
         id: "Chasseur",
         name: "Chasseur",
-        description: "La Nation Verte utilise les armes à distance car elles donnent un avantage certain pour survivre en forêt. Les Chasseurs apprennent à traquer des proies et survivre dans une forêt pleine de prédateurs.",
+        description: ["La Nation Verte utilise les armes à distance car elles donnent un avantage certain pour survivre en forêt. Les Chasseurs apprennent à traquer des proies et survivre dans une forêt pleine de prédateurs."],
         asset: "Déplacement Rapide en Forêt",
         equipment: "Arc et couteau",
         skills: [
@@ -100,7 +100,7 @@ export let ways: Way[] = [
     {
         id: "Soigneur",
         name: "Soigneur",
-        description: "Les soigneurs de la Nation Verte apprennent plusieurs sortes de magie de soins pour toutes les situations. ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé.",
+        description: ["Les soigneurs de la Nation Verte apprennent plusieurs sortes de magie de soins pour toutes les situations.", "ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé."],
         asset: "Photosynthèse : vous vous soignez d'une blessure par heure au soleil",
         equipment: "",
         skills: [
@@ -113,7 +113,7 @@ export let ways: Way[] = [
     {
         id: "Druide",
         name: "Druide",
-        description: "Les Druides de la Nation Verte sont des mages qui connaissent la Magie Végétale, utilisant les plantes.",
+        description: ["Les Druides de la Nation Verte sont des mages qui connaissent la Magie Végétale, utilisant les plantes."],
         asset: "Odeur d'humus : Les animaux sauvages sont moins enclins à vous attaquer, et les animaux passifs deviennent amicaux.",
         equipment: "",
         skills: [
@@ -125,7 +125,7 @@ export let ways: Way[] = [
     {
         id: "Changeur",
         name: "Changeur",
-        description: "Les mages de la Nation Verte utilisent la Magie Animale, tirant ses pouvoirs des Esprits Animaux. Les Changeurs en sont la forme la plus pure, changeant leur corps temporairement avec cette magie.",
+        description: ["Les mages de la Nation Verte utilisent la Magie Animale, tirant ses pouvoirs des Esprits Animaux. Les Changeurs en sont la forme la plus pure, changeant leur corps temporairement avec cette magie."],
         asset: "Instinct Animal : une fois par jour, vous pouvez réussir automatiquement n'importe quelle sort de Magie Animale, même si vous ne le connaissez pas.",
         equipment: "",
         skills: [
@@ -146,7 +146,7 @@ export let ways: Way[] = [
     {
         id: "Rodeur",
         name: "Rôdeur",
-        description: "Les Rôdeurs de la Nation Verte sont des combattants furtifs. Ce sont les seuls à manier l'épée, mais le combat direct n'est pas leur fort, ils préfèrent la discrétion.",
+        description: ["Les Rôdeurs de la Nation Verte sont des combattants furtifs. Ce sont les seuls à manier l'épée, mais le combat direct n'est pas leur fort, ils préfèrent la discrétion."],
         asset: "Ombre (furtif dans les endroits naturels)",
         equipment: "Épée",
         skills: [
@@ -158,7 +158,7 @@ export let ways: Way[] = [
     {
         id: "TireurVenimeux",
         name: "Tireur Venimeux",
-        description: "Les Tireurs Venimeux pensent que la flèche n'a pas pour but de tuer, juste d'amener le poison dans les veines de leur cible.",
+        description: ["Les Tireurs Venimeux pensent que la flèche n'a pas pour but de tuer, juste d'amener le poison dans les veines de leur cible."],
         asset: "Doigts de fée : Vous pouvez appliquer des doses d'Apothicaire sans prendre une action.",
         equipment: "Sarbacane : permet de tirer des fléchettes, innofensives (0 blessure) mais discrètes.",
         skills: [
@@ -170,7 +170,7 @@ export let ways: Way[] = [
     {
         id: "TireurElite",
         name: "Tireur d'Élite",
-        description: "Les tireurs d'élite de la Nation Verte sont les meilleurs archers d'Omnak. Ils maîtrisent l'arc long et sont capables de tirer plus loin que n'importe qui d'autre.",
+        description: ["Les tireurs d'élite de la Nation Verte sont les meilleurs archers d'Omnak. Ils maîtrisent l'arc long et sont capables de tirer plus loin que n'importe qui d'autre."],
         asset: "Armes à Distance",
         equipment: "Arc long",
         skills: [
@@ -182,7 +182,7 @@ export let ways: Way[] = [
     {
         id: "MageSable",
         name: "Mage de Sable",
-        description: "La Nation Sable envoie ses futurs Mages au milieu du désert. Livrés à eux mêmes, les survivants ne font plus qu'un avec le sable. ATTENTION : La Magie du Sable nécessite du Sable.",
+        description: ["La Nation Sable envoie ses futurs Mages au milieu du désert. Livrés à eux mêmes, les survivants ne font plus qu'un avec le sable.", "ATTENTION : La Magie du Sable nécessite du Sable."],
         asset: "Survie en milieu désertique",
         equipment: "",
         skills: [
@@ -194,7 +194,7 @@ export let ways: Way[] = [
     {
         id: "EnfantPoignard",
         name: "Enfant du Poignard",
-        description: "La Nation Sable choisi ses futurs Mages dès l'enfance. Ils sont entraînés à tuer très jeunes. On leur apprend que leur mission est plus importante que tout.",
+        description: ["La Nation Sable choisi ses futurs Mages dès l'enfance. Ils sont entraînés à tuer très jeunes. On leur apprend que leur mission est plus importante que tout."],
         asset: "Obstiné",
         equipment: "Poignard (arme légère)",
         skills: [
@@ -206,7 +206,7 @@ export let ways: Way[] = [
     {
         id: "PorteurObsidienne",
         name: "Porteur d'Obsidienne",
-        description: "L'Obsidienne donne une résistance physique impressionnante. Leurs porteurs ne tombent jamais malades",
+        description: ["L'Obsidienne donne une résistance physique impressionnante. Leurs porteurs ne tombent jamais malades"],
         asset: "Solide : vos seuils de blessures sont augmentés de 4",
         equipment: "",
         skills: [
@@ -218,7 +218,7 @@ export let ways: Way[] = [
     {
         id: "PorteurEmeraude",
         name: "Porteur d'Émeraude",
-        description: "Les Porteurs d'Émeraude sont des mages anti magie. Ils sont capables de diminuer les pouvoirs magiques d'autres mages, et d'annuler complètement certains sorts.",
+        description: ["Les Porteurs d'Émeraude sont des mages anti magie. Ils sont capables de diminuer les pouvoirs magiques d'autres mages, et d'annuler complètement certains sorts."],
         asset: "Bouclier d'Émeraude : une fois par jour, vous pouvez totalement être immunisé d'un sort qui aurait dû vous toucher",
         equipment: "",
         skills: [
@@ -230,7 +230,7 @@ export let ways: Way[] = [
     {
         id: "PorteurSaphir",
         name: "Porteur de Saphir",
-        description: "Les Saphirs ne choisissent pas souvent de porteur, ils sont exigeants. Ils cherchent ceux dont les capacités magiques sont exceptionnelles, pour les rendre uniques.",
+        description: ["Les Saphirs ne choisissent pas souvent de porteur, ils sont exigeants. Ils cherchent ceux dont les capacités magiques sont exceptionnelles, pour les rendre uniques."],
         asset: "Magie Impressionnante : vos sorts ont 'ER18 : le sort est magnifique, toute personne présente est impressionnée.'",
         equipment: "",
         skills: [
@@ -242,7 +242,7 @@ export let ways: Way[] = [
     {
         id: "PorteurTopaze",
         name: "Porteur de Topaze",
-        description: "Le Topaze, aussi appelé la pierre solaire, permet à son porteur de maîtriser la puissante magie du soleil. ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé.",
+        description: ["Le Topaze, aussi appelé la pierre solaire, permet à son porteur de maîtriser la puissante magie du soleil.", "ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé."],
         asset: "Réserve Solaire : une fois par jour, vous pouvez (sans utiliser une action) libérer la lumière solaire contenue dans votre Topaze. Il fait jour et chaud jusqu'à la fin de la scène, vous pouvez lancer 2 sorts de Magie Solaire sans qu'ils comptent dans votre limite.",
         equipment: "",
         skills: [
@@ -254,7 +254,7 @@ export let ways: Way[] = [
     {
         id: "PorteurRubis",
         name: "Porteur de Rubis",
-        description: "Ceux qui se lient avec un Rubis ont souvent une courte vie. Fulgurante, furieuse, foudroyante, mais sans retour.",
+        description: ["Ceux qui se lient avec un Rubis ont souvent une courte vie. Fulgurante, furieuse, foudroyante, mais sans retour."],
         asset: "Rage du Rubis : une fois par scène, si vous avez le bonus Enragé, vous pouvez vous en servir pour lancer des sorts offensifs. Dure aussi longtemps que le bonus.",
         equipment: "Poignard (arme légère)",
         skills: [
@@ -266,8 +266,8 @@ export let ways: Way[] = [
     {
         id: "PorteurPyrite",
         name: "Porteur de Pyrite",
-        description: "On raconte que ceux qui portent une Pyrite finissent par devenir d'habiles manipulateurs.",
-        asset: "Habile Menteur",
+        description: ["On raconte que ceux qui portent une Pyrite finissent par devenir d'habiles manipulateurs."],
+        asset: "Menteur",
         equipment: "",
         skills: [
             { name: "Lame de Sable", type: TypeSkill.MagieSable, difficulty: 'C10', effects: ["Génère un poignard (Arme Légère) en sable.", "Vous pouvez aussitôt utiliser une action d'Arme Légère", "Redevient du sable à la fin de votre tour."] },
@@ -278,7 +278,7 @@ export let ways: Way[] = [
     {
         id: "PorteurAmethyste",
         name: "Porteur d'Améthyste",
-        description: "",
+        description: [""],
         asset: "Pas Furtif : impossible d'être repéré par le seul bruit des pas",
         equipment: "",
         skills: [
@@ -290,7 +290,7 @@ export let ways: Way[] = [
     {
         id: "PorteurHematite",
         name: "Porteur d'Hématite",
-        description: "La Magie du Sang est rare et dangereuse, les Porteurs d'Hématite peuvent en maîtriser les bases.",
+        description: ["La Magie du Sang est rare et dangereuse, les Porteurs d'Hématite peuvent en maîtriser les bases."],
         asset: "Coagulation Rapide : vous ne pouvez pas subir En Sang. Vous régénérez une blessure de plus par repos.",
         equipment: "",
         skills: [
@@ -302,7 +302,7 @@ export let ways: Way[] = [
     {
         id: "PorteurTurquoise",
         name: "Porteur de Turquoise",
-        description: "Les Porteurs de Turquoise font preuve de rapidité. Ils se déplacent, attaquent et fuient plus vite que les autres.",
+        description: ["Les Porteurs de Turquoise font preuve de rapidité. Ils se déplacent, attaquent et fuient plus vite que les autres."],
         asset: "Initiative (vous pouvez toujours jouer en premier)",
         equipment: "",
         skills: [
@@ -312,11 +312,25 @@ export let ways: Way[] = [
         ]
     },
 
+    //#region Neutre
+
+    {
+        id: "Cheval",
+        name: "Cheval",
+        description: ["Les chevaux sont de fidèles destriers, rapides et intelligents.",
+            "4 blessures : désarçonne son cavalier et fuit. Le cavalier doit réussir une action C14 pour ne pas subir 2 blessures.",
+            "6 blessures : K.O.",
+            "8 blessures : mort."],
+        asset: "",
+        equipment: "",
+        skills: []
+    },
+
     //#region Idées pour plus tard 
     {
         id: "IdeesMagieSang",
         name: "Idées de sorts pour la Magie du Sang",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [
@@ -328,7 +342,7 @@ export let ways: Way[] = [
     {
         id: "IdeesGladiator",
         name: "Idées de sorts pour l'épée etc.",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [
@@ -341,7 +355,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieGlace",
         name: "Idées de sorts pour la Magie de Glace",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [
@@ -352,7 +366,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieFeu",
         name: "Idées de sorts pour la Magie de Feu",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [
@@ -379,7 +393,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieSable",
         name: "Idées de sorts pour la Magie du Sable",
-        description: "ATTENTION : La Magie du Sable nécessite du Sable.",
+        description: ["ATTENTION : La Magie du Sable nécessite du Sable."],
         asset: "",
         equipment: "",
         skills: [
@@ -396,7 +410,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieRoche",
         name: "Idées de sorts pour la Magie des Roches",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [
@@ -413,7 +427,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieVegetale",
         name: "Idées de sorts pour la Magie Végétale",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [
@@ -427,7 +441,7 @@ export let ways: Way[] = [
     {
         id: "IdeesMagieSolaire",
         name: "Idées de sorts pour la Magie Solaire",
-        description: "ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé.",
+        description: ["ATTENTION : On ne peut lancer que 2 sorts de Magie Solaire par jour, 5 s'il fait ensoleillé."],
         asset: "",
         equipment: "",
         skills: [
@@ -442,7 +456,7 @@ export let ways: Way[] = [
     {
         id: "IdeesArc",
         name: "Idées de sorts pour les Armes à Distance",
-        description: "",
+        description: [],
         asset: "",
         equipment: "",
         skills: [

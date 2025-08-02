@@ -1,10 +1,12 @@
-<h2>{{way.name}}</h2>
+<h2 style="text-align: center;">{{way.name}}</h2>
 
-<h5>{{way.description}}</h5>
+<div *ngFor="let d of way.description">
+    <h5>{{d}}</h5>
+</div>
 
 <h5 *ngIf="way.equipment"><span style="font-weight: lighter;">Équipement: </span>{{way.equipment}}</h5>
-<h5><span style="font-weight: lighter;">Atout: </span>{{way.asset}}</h5>
-<h5><span style="font-weight: lighter;">Compétences: </span></h5>
+<h5 *ngIf="way.asset"><span style="font-weight: lighter;">Atout: </span>{{way.asset}}</h5>
+<h5 *ngIf="way.skills.length > 0"><span style="font-weight: lighter;">Compétences: </span></h5>
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; row-gap: 30px;">
     <omnak-skill *ngFor="let skill of way.skills" [skill]="skill">
@@ -13,13 +15,17 @@
 
 <br>
 <br>
-<h5>Lexique des compétences</h5>
-<h6>C8 signifie Complexité 8, il faut faire 8 ou plus pour réussir la Compétence.<br>R8 signifie Risque 8, il faut faire
-    8 ou plus pour réussir la Compétence, si elle est échouée l'effet "Risque" s'active.<br>ER4 signifie Effet Réussite
-    4, en cas de réussite, si le dé est un multiple de 4 (4, 8, 12, 16 ou 20) alors un effet supplémentaire s'active.
-    <br> EE4 signifie Effet Échec 4, en cas d'échec, si le dé est un multiple de 4 alors un effet s'active. <br> E4
-    signifie Effet 4, c'est la même chose mais quelque soit la réussite ou l'échec.<br>EI signifie Effet Impair, si le
-    dé fait un nombre impair (1, 3, 5, ..., 19) alors un effet s'active.<br>
-    Pendant/Dure 1 tour : signifie que l'effet persiste jusqu'à la fin de VOTRE prochain tour.<br>
-    Jusqu'à votre prochain tour : signifie que l'effet persiste jusqu'au début de votre prochain tour.<br>
-</h6>
+<div *ngIf="way.skills.length > 0">
+    <h5>Lexique des compétences</h5>
+    <h6>C8 signifie Complexité 8, il faut faire 8 ou plus pour réussir la Compétence.<br>
+        R8 signifie Risque 8, il faut faire 8 ou plus pour réussir la Compétence, si elle est échouée l'effet "Risque"
+        s'active.<br>
+        ER4 signifie Effet Réussite 4, en cas de réussite, si le dé est un multiple de 4 (4, 8, 12, 16 ou 20) alors un
+        effet supplémentaire s'active.<br>
+        EE4 signifie Effet Échec 4, en cas d'échec, si le dé est un multiple de 4 alors un effet s'active.<br>
+        E4 signifie Effet 4, c'est la même chose mais quelque soit la réussite ou l'échec.<br>EI signifie Effet Impair,
+        si le dé fait un nombre impair (1, 3, 5, ..., 19) alors un effet s'active.<br>
+        Pendant/Dure 1 tour : signifie que l'effet persiste jusqu'à la fin de VOTRE prochain tour.<br>
+        Jusqu'à votre prochain tour : signifie que l'effet persiste jusqu'au début de votre prochain tour.<br>
+    </h6>
+</div>

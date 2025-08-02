@@ -14,7 +14,7 @@ export class WayComponent implements OnInit {
   way: Way = {
     id: "",
     name: "",
-    description: "",
+    description: [],
     asset: "",
     equipment: "",
     skills: []
