@@ -278,13 +278,13 @@ export let ways: Way[] = [
     {
         id: "PorteurAmethyste",
         name: "Porteur d'Améthyste",
-        description: [""],
+        description: ["Les Porteurs d'Améthystes sont les premiers à avoir utilisé la Magie d'Invisibilité, avant qu'elle soit utilisée par les Mages Assassins et les Invisibles."],
         asset: "Pas Furtif : impossible d'être repéré par le seul bruit des pas",
         equipment: "",
         skills: [
-            { name: "Fumigène", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ['Vous faites exploser un fumigène à vos pied, vos ennemis vous perdent de vue.', "Dure 2 tours.", "Risque : vous subissez le malus Asphyxié pendant 2 tours"] },
-            { name: "", type: TypeSkill.MagieInvisible, difficulty: '', effects: [''] },
             { name: "Concentration Violette", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Vous vous concentrez pour votre action furtive du prochain tour, décrivez la intégralement, vous gagnez un bonus.", "Si un élément de votre description a changé, vous subissez un malus à la place.", "Risque : malus à la place, action obligatoire", ""] },
+            { name: "Flou", type: TypeSkill.MagieInvisible, difficulty: "C10", effects: ["Votre cible gagne le bonus Flou (difficile à viser et à reconnaître) pendant 2 tours.", "Vous pouvez vous cibler.", "ER4 : dure un tour de plus"] },
+            { name: "Intraçable", type: TypeSkill.MagieInvisible, difficulty: "C12", effects: ["Vous faites effacer des empreintes par magie. Peut être utilisé tout en marchant.", "ER5 : vous créer de fausses empreintes."] },
         ]
     },
     {
@@ -370,6 +370,7 @@ export let ways: Way[] = [
         asset: "",
         equipment: "",
         skills: [
+            { idea: true, name: "Fumigène", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ['Vous faites exploser un fumigène à vos pied, vos ennemis vous perdent de vue.', "Dure 2 tours.", "Risque : vous subissez le malus Asphyxié pendant 2 tours"] },
             { idea: true, name: "Mains brûlantes", type: TypeSkill.MagieFeu, difficulty: 'C10', effects: [""] },
             { idea: true, name: "Lame de feu", type: TypeSkill.MagieFeu, difficulty: 'C10', effects: ["Vous faites apparaître une lame de feu d'environ 1m de type Arme de Gladiateur.", "Seul vous pouvez la manier, elle dure jusqu'à la fin de la scène.", "Une attaque réussie avec inflige En Feu et 1 blessure supplémentaire."] },
             { idea: true, name: "Tempête de flammes", type: TypeSkill.MagieFeu, difficulty: 'C16', effects: ["Fait apparaître une immense tempête de flammes", "Tout le monde sauf vous est projeté au sol et subit 4 blessures."] },
@@ -386,7 +387,7 @@ export let ways: Way[] = [
             //Souffleur de Feu
             { idea: true, name: "Souffle de feu", type: TypeSkill.MagieFeu, difficulty: '', effects: ["monocible ultra puissant"] },
             //Pyromancien
-            { idea: true, name: "Sollicitation Infernale", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Mains en l'air, vous demandez à toutes les flammes présentes de s'intensifier."] },
+            { idea: true, name: "Sollicitation Infernale", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Mains en l'air, vous demandez à toutes les flammes présentes de s'intensifier.", "Toutes les personnes qui ont l'état En Feu subissent 2 blessures."] },
         ]
     },
 
@@ -463,6 +464,22 @@ export let ways: Way[] = [
             { idea: true, name: "Tirs en mouvement", type: TypeSkill.ArmeDistance, difficulty: "R14", effects: ["Vous courrez dans une direction en décochant 2 fléches, sur 1 ou 2 cibles.", "1 blessure par flèche", "Risque : Vous glissez et tombez au sol, tout le monde est au courant de votre présence."] },
             { idea: true, name: "Salve", type: TypeSkill.ArmeDistance, difficulty: "C16", effects: ["Vous lancez 3 flèches sur 3 cibles différentes.", "1 blessure par flèche", "EE3 : l'une des 3 flèches atteint sa cible", "Distance : 1-10m"] },
             { idea: true, name: "Pluie de flèche", type: TypeSkill.ArmeDistance, difficulty: "C16", effects: ["Vous lancez 3 flèches en cloche sur une zone", "Chaque personne dans la zone lance 1D20, sur 1-12 elle prend une flèche, et subit donc 1 blessure.", "Distance : 1-50m"] },
+        ]
+    },
+
+    {
+        id: "IdeesMagieInvisible",
+        name: "Idées de sorts pour la Magie d'Invisiblité",
+        description: [],
+        asset: "",
+        equipment: "",
+        skills: [
+            // Mage Assassin
+            { idea: true, name: "Reflets miroirs", type: TypeSkill.MagieInvisible, difficulty: "C12", effects: ["Vous rendez un petit objet, comme une arme légère, complètement invisible jusqu'à la fin de la scène.", "Si l'objet est utilisé il redevient visible.", "Vous pouvez cibler un objet à distance raisonnable.", ""] },
+
+            // Invisible
+            { idea: true, name: "Phase", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous entrez en phase, dans un autre plan d'existence, réalité alternative à la notre.", "Lors de votre prochain tour, vous agissez dans cet autre plan.", "Vous revenez dans le plan réel au début du tour suivant.", "Risque : vous subissez 4 blessures."] },
+            { idea: true, name: "Oubli", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous modifiez la mémoire immédiate d'une cible.", "Si elle n'a pas fait particulièrement attention à vous, elle vous oublie.", "Risque : la cible reste bloquée sur vous."] },
         ]
     },
     //#endregion
