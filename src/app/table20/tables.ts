@@ -3,7 +3,7 @@ import { Table } from "../../core/table.core";
 export let tables: Table[] = [
     {
         id: "EffetArmesEnchantees",
-        title: "Tables des Effets des Armes Enchantées",
+        title: "Table des Effets des Armes Enchantées",
         values: [
             "Capricieuse, ER2 : inflige une blessure de moins, deviens un autre effet au choix une fois l'arme maîtrisée.",
             "Braisière, E5 : une flammèche apparaît et inflige 1 blessure",
@@ -25,6 +25,32 @@ export let tables: Table[] = [
             "",
             "",
             "Choisissez"
+        ]
+    },
+    {
+        id: "Empty",
+        title: "Titre",
+        values: [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
 ]
