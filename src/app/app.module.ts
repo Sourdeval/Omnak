@@ -12,6 +12,7 @@ import { Table20Component } from './table20/table20.component';
 import { WorldComponent } from './world/world.component';
 import { CenterComponent } from './shared/center/center.component';
 import { SkillPrintComponent } from './skill-print/skill-print.component';
+import { GameMasterComponent } from './game-master/game-master.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SkillPrintComponent } from './skill-print/skill-print.component';
     Table20Component,
     WorldComponent,
     CenterComponent,
-    SkillPrintComponent
+    SkillPrintComponent,
+    GameMasterComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Table20Component } from './table20/table20.component';
 import { WorldComponent } from './world/world.component';
 import { CenterComponent } from './shared/center/center.component';
 import { SkillPrintComponent } from './skill-print/skill-print.component';
+import { GameMasterComponent } from './game-master/game-master.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
         path: 'world',
         component: WorldComponent,
       },
+      {
+        path: 'gm',
+        component: GameMasterComponent,
+      }
     ],
   },
   {
