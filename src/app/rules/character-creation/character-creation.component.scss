@@ -1,0 +1,52 @@
+.text-container h6 {
+    font-size: medium;
+    font-weight: normal;
+}
+
+.button-next {
+    margin: 5px;
+    width: 100px;
+}
+
+.text-container {
+    height: 800px;
+    border: 1px black solid;
+    flex-grow: 1;
+    overflow: scroll;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+span {
+    font-weight: bold;
+    background-color: var(--theme-color-2);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.warning {
+    background-color: orange;
+}
+
+table {
+    width: 98%;
+    border-collapse: collapse;
+    margin: 10px;
+
+    h6 {
+        margin: 10px;
+        font-weight: bold;
+    }
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--theme-color-1);
+}
+
+td {
+    width: 50%;
+}

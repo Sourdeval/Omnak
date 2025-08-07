@@ -9,6 +9,7 @@ import { WorldComponent } from './world/world.component';
 import { CenterComponent } from './shared/center/center.component';
 import { SkillPrintComponent } from './skill-print/skill-print.component';
 import { GameMasterComponent } from './game-master/game-master.component';
+import { CharacterCreationComponent } from './rules/character-creation/character-creation.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path: 'rules',
         component: RulesComponent,
+      },
+      {
+        path: 'rules/character-creation',
+        component: CharacterCreationComponent,
       },
       {
         path: 'world',

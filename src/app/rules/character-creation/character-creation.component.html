@@ -1,0 +1,44 @@
+<h2 style="text-align: center;">Création de Personnage</h2>
+
+
+<h4 style="text-align: end;">Page {{index+1}}/{{pages.length}}</h4>
+<div class="text-container" [innerHTML]="pages[index]"></div>
+
+
+<div style="display: flex; justify-content: space-between;">
+    <button class="button-next" (click)="next(-1)">Précédent</button>
+    <button class="button-next" (click)="next(1)">Suivant</button>
+</div>
+
+<h3>Fiche Perso</h3>
+
+<table>
+    <tr>
+        <td>
+            <h6 style="text-align: center;">Personnage</h6>
+            <h6>Pays :<br>Nom :<br>Grade :<br>Présentation :<br><br></h6>
+        </td>
+        <td>
+            <h6 style="text-align: center;">VOIES<br><br><br><br><br><br></h6>
+        </td>
+    </tr>
+    <tr style="height: 200px; font-size: larger;">
+        <td>
+            <h6>
+                <h6 style="text-align: center;">ATOUTS<br><br><br><br><br><br><br><br><br><br><br><br></h6>
+            </h6>
+        </td>
+        <td>
+            <h6>
+                <h6 style="text-align: center;">COMPÉTENCES<br><br><br><br><br><br><br><br><br><br><br><br></h6>
+            </h6>
+        </td>
+    </tr>
+    <tr style="height: 200px; font-size: larger;">
+        <td colspan="2">
+            <h6>
+                <h6 style="text-align: center;">LORE<br><br><br><br><br><br><br><br><br><br><br><br></h6>
+            </h6>
+        </td>
+    </tr>
+</table>

@@ -13,6 +13,7 @@ import { WorldComponent } from './world/world.component';
 import { CenterComponent } from './shared/center/center.component';
 import { SkillPrintComponent } from './skill-print/skill-print.component';
 import { GameMasterComponent } from './game-master/game-master.component';
+import { CharacterCreationComponent } from './rules/character-creation/character-creation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GameMasterComponent } from './game-master/game-master.component';
     WorldComponent,
     CenterComponent,
     SkillPrintComponent,
-    GameMasterComponent
+    GameMasterComponent,
+    CharacterCreationComponent
   ],
   imports: [
     BrowserModule,
