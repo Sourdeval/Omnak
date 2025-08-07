@@ -45,7 +45,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Estoc", type: TypeSkill.ArmeHast, difficulty: 'C8', effects: ['1 blessure', 'ER4 : 1 blessure'] },
-            { name: "Mur de Piques", type: TypeSkill.ArmeHast, difficulty: 'C10', effects: ["Si un ennemi vous charge jusqu'à votre prochain tour, il subit un malus, et 5 blessures si son attaque rate."] },
+            { name: "Mur de Piques", type: TypeSkill.ArmeHast, difficulty: 'C10', effects: ["Si un ennemi vous charge jusqu'à votre prochain tour, il subit un malus.", "Si son attaque rate, il se fait empaler et subit 5 blessures"] },
             { name: "Gerbe de flamme", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ["Lance une gerbe de flamme à distance depuis une arme d'Hast enchantée", '2 blessures', 'E3 : inflige En Feu', 'Risque : 1 blessure à vous et toutes les cibles proches'] },
         ]
     },
@@ -379,6 +379,7 @@ export let ways: Way[] = [
             { idea: true, name: "Brasier", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Autour de vous"] },
             { idea: true, name: "Incendie", type: TypeSkill.MagieFeu, difficulty: '', effects: [""] },
             { idea: true, name: "Explosion", type: TypeSkill.MagieFeu, difficulty: '', effects: [""] },
+            { idea: true, name: "Fournaise", type: TypeSkill.MagieFeu, difficulty: 'C10', effects: ["L'effet est différent suivant le nombre de fois que le sort est réussi d'affilé.", "1ère fois : il fait chaud. 2e : Malus surchauffe à toutes les personnes dans la salle sauf le lanceur. 3e et plus : 1 blessure à tous sauf au lanceur"] },
             { idea: true, name: "Touché carbonisant", type: TypeSkill.MagieFeu, difficulty: "R14", effects: ["Vous attrapez une cible avec vos mains, elle brûle à l'endroit où vous la tenez.", "4 blessures", "Risque : malus pour se défendre des attaques au corps à corps"] },
             // volcan
             { idea: true, name: "Éruption", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Gerbes sortent du sol"] },
