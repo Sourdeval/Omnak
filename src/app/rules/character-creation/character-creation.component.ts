@@ -14,7 +14,7 @@ export class CharacterCreationComponent {
     "Imaginez et parlez en à votre MJ !<br><br>" +
     "Bonne création de personnage !! :)",
     "<h4>Naissance, enfance, famille</h4>" +
-    "Choisir la <span>Nation</span> dans lequel est né votre personnage.<br><br>" +
+    "Choisir la <span>Nation</span> dans laquelle est né votre personnage.<br><br>" +
     "Inventer un <span>Atout</span> à votre personnage.<br>" +
     '<div class="italic">' +
     "Quand je suis né...<br>" +
@@ -46,7 +46,7 @@ export class CharacterCreationComponent {
     "Ennui total dans un bureau administratif ?<br>" +
     "C'est le D20 qui choisi !<br><br>" +
     "</div>" +
-    "Votre MJ vous donne alors le contexte et quelques possibilités, mais pas ce qui s'y passe, c'est à vous de l'inventer !<br><br>" +
+    "Votre MJ vous donne alors le contexte de votre mission et quelques possibilités, mais pas ce qui s'y passe, c'est à vous de l'inventer !<br><br>" +
     "Inventez et écrivez le <span>Lore</span> de cette mission, quel était l'objectif, qu'avez vous essayé de faire ?<br>" +
     "Avec votre MJ, voyez quelles sont les possibilités de cette tentative.<br>" +
     "Lancez de nouveau un D20 pour obtenir l'issue de cette mission.<br>" +
@@ -64,12 +64,12 @@ export class CharacterCreationComponent {
     "oublier.<br>" +
     "<br>" +
     "<h4>Votre personnage aujourd'hui</h4>" +
-    "Décriver l'apparence de votre personnage dans <span>Présentation</span>, ses vêtements, sa façon d'être, ses " +
+    "Décrivez l'apparence de votre personnage dans <span>Présentation</span>, ses vêtements, sa façon d'être, ses " +
     "particularités physiques.<br><br>" +
     "Inventer un <span>Atout</span> qui sera une évolution de votre personnage durant cette période où son regard " +
     "change sur le monde, qu'il devient de plus en plus expérimenté et qu'il fonde peut-être une famille.<br>" +
-    "<span class='warning'>ATTENTION</span>: si votre personnage n'a pour l'instant que des Atouts " +
-    "positifs, vous devez alors créer un Atout négatif.<br>" +
+    "<span class='warning'>ATTENTION</span>: prenez garde aux points de vos Atouts, si vous avez déjà de nombreux " +
+    "Atouts positifs, vous devez alors créer un Atout négatif. Voyez avec votre MJ.<br>" +
     "<div class='italic'>" +
     "Un trait de caractère ? <br>" +
     "Une nouvelle relation ? <br>" +
