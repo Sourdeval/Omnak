@@ -164,7 +164,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Venin", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A appliquer sur une flèche ou une arme.', "Inflige Empoisonné 3"] },
             { name: "Piqûre", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A appliquer sur une flèche ou une arme.', "Inflige 1 blessure"] },
-            { name: "Anti-Venin", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A consommer.', "Enlève les états Empoisonné et Toxique"] },
+            { name: "Anti-Venin", type: TypeSkill.Apothicaire, difficulty: '3 D', effects: ['A consommer.', "Enlève les états Empoisonné et Intoxiqué"] },
         ]
     },
     {
