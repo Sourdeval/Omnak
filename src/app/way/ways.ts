@@ -481,6 +481,8 @@ export let ways: Way[] = [
             // Invisible
             { idea: true, name: "Phase", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous entrez en phase, dans un autre plan d'existence, réalité alternative à la notre.", "Lors de votre prochain tour, vous agissez dans cet autre plan.", "Vous revenez dans le plan réel au début du tour suivant.", "Risque : vous subissez 4 blessures."] },
             { idea: true, name: "Oubli", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous modifiez la mémoire immédiate d'une cible.", "Si elle n'a pas fait particulièrement attention à vous, elle vous oublie.", "Risque : la cible reste bloquée sur vous."] },
+
+            { idea: true, name: "Mirage", type: TypeSkill.MagieInvisible, difficulty: "", effects: ["Vous faites croire à une cible ou un groupe de cible qu'une partie du paysage est différent."] },
         ]
     },
     //#endregion
