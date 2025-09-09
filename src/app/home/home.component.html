@@ -27,7 +27,7 @@
     s'exerce au combat pour manier les armes enchantées.</h6>
 
 <h5>Valeurs : Honneur, Courage, Destruction, Perfection</h5>
-<h5>Domaines magiques : Feu, Combat avec des armes, Cavalier, Commandement</h5>
+<h5>Domaines : Feu, Combat avec des armes, Cavalier, Commandement</h5>
 
 <div style="position: relative;">
     <img style="max-width: 100%;" src="PaysRouge.jpg">
@@ -52,7 +52,7 @@
     pour but d'étendre la forêt au delà de ses limites.</h6>
 
 <h5>Valeurs : Unité, Nature, Bestialité, Évolution</h5>
-<h5>Domaines magiques : Animaux, Végétaux, Tir à l'Arc, Poisons, Soins</h5>
+<h5>Domaines : Animaux, Végétaux, Tir à l'Arc, Poisons, Soins</h5>
 
 <div style="position: relative;">
     <img style="max-width: 100%;" src="PaysVert.jpg">
@@ -74,12 +74,36 @@
     humaine.</h6>
 
 <h5>Valeurs : Communauté, Sang-Froid, Puissance, Détermination</h5>
-<h5>Domaines magiques : Sable, Roches, Invisibilité, Assassinat, Magies Multiples grâce aux Gemmes</h5>
+<h5>Domaines : Sable, Roches, Invisibilité, Assassinat, Magies Multiples grâce aux Gemmes</h5>
 
 <div style="position: relative;">
     <img style="max-width: 100%;" src="PaysSable.jpg">
     <div *ngFor="let zone of zonesSable" style="position: absolute; border: solid 1px black; cursor: pointer;"
         [style.top.%]="zone.top" [style.left.%]="zone.left" [style.width.%]="9.4" [style.height.%]="8.6"
+        (click)="goToWay(zone.id)">
+    </div>
+</div>
+
+<h2>La Nation Grise</h2>
+<h5 style="font-style: italic;">« Que le sang et l'hydromel coulent à flots »</h5>
+
+<h6>
+    Sur une île gelée sont nés les grands guerriers Gris. Vivant dans cet environnement hostile, ils se sont peu à peu
+    imprégnés des forces élémentaires destructrices de la nature, jusqu'à devenir des mages de la Foudre et de la
+    Tempête. Les plus puissants guerriers se sont nommés Jarl, ils dirigent chacun leurs terres tout en s'entraidant.
+    Manquant de ressources, la Nation Grise pillent celle de ses rivaux, entreprenant de grands raids à l'aide
+    de leur nombreux navires. On raconte qu'ils ne laissent pas de survivants là où ils passent. Enfin, certains mages
+    de cette Nation ont développé une ancienne magie très puissante : la Magie des Galdrar. Avec des chants, de la
+    musique ou des mots, les adeptes des Galdrar lancent de puissants sorts.
+</h6>
+
+<h5>Valeurs : Courage, Colère, Brutalité, Indépendance</h5>
+<h5>Domaines : Tempête, Foudre, Galdrar, Combat à la Hache</h5>
+
+<div style="position: relative;">
+    <img style="max-width: 100%;" src="PaysGris.jpg">
+    <div *ngFor="let zone of zonesGrises" style="position: absolute; border: solid 1px black; cursor: pointer;"
+        [style.top.%]="zone.top" [style.left.%]="zone.left" [style.width.%]="9.4" [style.height.%]="8.1"
         (click)="goToWay(zone.id)">
     </div>
 </div>
