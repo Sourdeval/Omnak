@@ -46,7 +46,7 @@ export class HomeComponent {
     { id: 'Marin', top: 27.7, left: 4.2 },
     { id: 'Artiste', top: 40.8, left: 4.3 },
     { id: 'Brave', top: 58.2, left: 4.4 },
-    { id: 'JeteurOrbeTempete', top: 14.8, left: 25 },
+    { id: 'JeteurOrbesTempete', top: 14.8, left: 25 },
     { id: 'FaiseurPluie', top: 27.8, left: 25 },
     { id: 'DresseurPygargues', top: 40.8, left: 25 },
     { id: 'LanceurHaches', top: 58.2, left: 25 },

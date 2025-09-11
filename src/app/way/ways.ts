@@ -93,7 +93,7 @@ export let ways: Way[] = [
         equipment: "Arc et couteau",
         skills: [
             { name: "Tir direct", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
-            { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C10', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
+            { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C12', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
             { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pendant 3 tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'Risque : tout le monde est désormais au courant de votre présence.'] },
         ]
     },
@@ -235,7 +235,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Concentration Bleue", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "Risque : malus pour le prochain sort", ''] },
-            { name: "Projection de pierres bleues", type: TypeSkill.MagieRoche, difficulty: 'C12', effects: ["Vous lancez sur une cible une rangée de pierres bleues lévitantes.", "1 blessure", "ER3 : vous attaquez une seconde cible avec ce sort", "ER5 : inflige le malus Sonné pendant 1 tour"] },
+            { name: "Projection de pierres bleues", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ["Vous lancez sur une cible une rangée de pierres bleues lévitantes.", "1 blessure", "ER4 : vous attaquez une seconde cible avec ce sort", "ER5 : inflige le malus Sonné pendant 1 tour"] },
             { name: "Garder son calme", type: TypeSkill.Aucun, difficulty: 'C11', effects: ["Vous pouvez utiliser cette compétence lorsque vous subissez un état d'énervement, de confusion, de persuasion ou de peur.", "Vous ne subissez pas cet état.", "ER5 : Vous obtenez l'état Clairvoyant", ""] },
         ]
     },
@@ -295,7 +295,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Vertiges Sanglants", type: TypeSkill.MagieSang, difficulty: 'C14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Votre ennemi devient Désorienté (malus) pendant 1 tour."] },
-            { name: "Hémorragie", type: TypeSkill.MagieSang, difficulty: 'C10', effects: ['Uniquement sur une cible déjà blessée', "Les blessures de la cible saignent abondemment. Elle subit 1 blessure pour chaque blessure qu'elle a déjà, jusqu'à un maximum de 3."] },
+            { name: "Hémorragie", type: TypeSkill.MagieSang, difficulty: 'C10', effects: ['', 'Vous vous infligez 1 blessure avant de lancer ce sort.', 'Uniquement sur une cible déjà blessée', "Les blessures de la cible saignent abondemment. Elle subit 1 blessure pour chaque blessure qu'elle a déjà, jusqu'à un maximum de 3."] },
             { name: "Appel du Sang", type: TypeSkill.MagieSang, difficulty: 'C10', effects: ['Vous vous infligez 3 blessures avant de lancer ce sort.', 'Vous aspirez le sang de tous vous ennemis à 10m environ. Ils subissent 2 blessures.'] },
         ]
     },
@@ -311,6 +311,109 @@ export let ways: Way[] = [
             { name: "Charge et série de coups", type: TypeSkill.ArmeLegere, difficulty: 'R14', effects: ["Vous vous rapprochez rapidement de votre cible.", '3 blessures', "Risque : vous glissez et tombez au sol."] },
         ]
     },
+    {
+        id: "Marin",
+        name: "Marin",
+        description: ["La Nation Grise recrute de nombreux marins pour ses navires. Ils deviennent vite habitués aux tempêtes."],
+        asset: "Pied marin (tout ce qui se passe sur un navire)",
+        equipment: "",
+        skills: [
+            { name: "Course Venteuse", type: TypeSkill.MagieTempetes, difficulty: 'C8', effects: ["Lorsque vous courrez, le vent est avec vous.", "Vous vous déplacez de deux fois la distance maximale.", "ER5 : vous gagnez un bonus Esquive jusqu'à votre prochain tour"] },
+            { name: "Poing électrostatique", type: TypeSkill.MagieFoudre, difficulty: 'C10', effects: ["1 blessure", "ER10 : la cible subit l'état Paralysé"] },
+            { name: "Chant des marins", type: TypeSkill.MagieGaldrar, difficulty: 'C6', effects: ['', "Améliore le moral, instaure une cadence et une coordination des actions du groupe.", "Lors de plusieurs actions coordonnées par le groupe, la dernière gagne un bonus. Ce bonus est utilisable jusqu'à la fin de la scène.", ''] },
+        ]
+    },
+    {
+        id: "Artiste",
+        name: "Artiste",
+        description: ["La Nation Grise voit les artistes comme une véritable force armée, capable d'encourager ses guerriers et marins. Poètes, musiciens, bardes, tous ceux qui peuvent remonter le moral sont engagés."],
+        asset: "Charismatique",
+        equipment: "Vous pouvez avoir un instrument de musique, ou un recueil de poésie, ou ce que vous voulez.",
+        skills: [
+            { name: "Galdr d'encouragement", type: TypeSkill.MagieGaldrar, difficulty: 'R8', effects: ["Vous encouragez vos alliés", "Ils résistent mieux à la peur, aux intimidations et au désespoir.", "Le groupe est plus soudé, cela limite les tensions.", "Risque : effet inverse"] },
+            { name: "Galdr de vitesse", type: TypeSkill.MagieGaldrar, difficulty: 'C10', effects: ["Vous motivez vos alliés en accélérant peu à peu votre rythme", "Ils courent plus vite, ou s'ils font des actions longues, ils les font plus rapidement."] },
+            { name: "Galdr d'amour", type: TypeSkill.MagieGaldrar, difficulty: 'R12', effects: ["Vous séduisez une cible", "Si la cible veut refuser vos avances, elle doit réussir une action C12 pour garder ses esprits", "Risque : vous repoussez la cible"] },
+        ]
+    },
+    {
+        id: "Brave",
+        name: "Brave",
+        description: ["Les Braves de la Nation Grise sont élevés depuis tout jeune à combattre. Musclés, imposants, rustres, il ne vaut mieux pas s'y confronter.",
+            "ATTENTION : les Armes de Taille (comme la Hache de Guerre) ont le bonus Tranchant (ER2 : inflige En Sang)"
+        ],
+        asset: "Courageux (faire des actions dangereuses, vaincre la peur)",
+        equipment: "Hache de guerre",
+        skills: [
+            { name: "Coup Lourd", type: TypeSkill.ArmeTaille, difficulty: 'C14', effects: ["2 blessures", "ER4 : fait tomber la cible au sol"] },
+            { name: "Tranche Bouclier", type: TypeSkill.ArmeTaille, difficulty: 'C12', effects: ["1 blessure", "Peut cibler un bouclier ou une armure, la détruit"] },
+            { name: "Feinte Coup de Genou", type: TypeSkill.Aucun, difficulty: 'C10', effects: ["Vous levez votre hache, mais vous frappez avec votre genou", "1 blessure", "ER2 : inflige le malus 'Douleur au ventre' pendant 1 tour"] },
+        ]
+    },
+    {
+        id: "JeteurOrbesTempete",
+        name: "Jeteur d'Orbes (Tempête)",
+        description: ["Les Orbes sont des objets magiques renfermant un sort. Les Jeteurs d'Orbes n'ont pas encore de grands pouvoirs, mais ils savent très bien lancer des Orbes."],
+        asset: "Améliorateur d'Orbe : quand vous lancez une orbe, vous pouvez lancer 1D20 : de 1 à 7 vous annulez ses effets, de 8 à 15 l'effet est normal, au dessus vous l'améliorez comme bon vous semble",
+        equipment: "",
+        skills: [
+            { name: "Orbe d'Aspiration", type: TypeSkill.Apothicaire, difficulty: '3', effects: ["A lancer, s'active en se brisant", "Crée un flux de vent vers l'orbe venant de toutes les directions", "Donne un bonus pour se déplacer vers l'orbe, il faut réussir l'action 'C14 vous vous éloignez de l'orbe, Rejouez'", "Dure 2 tours"] },
+            { name: "Orbe d'Éclairs", type: TypeSkill.Apothicaire, difficulty: '3', effects: ["A lancer, s'active en se brisant", "Des éclairs sortent de l'orbe aléatoirement, à chaque tour une cible proche est frappée par un éclair, elle subit 2 blessures.", "Dure 3 tours, commence maintenant"] },
+            { name: "Orbe Nuageuse", type: TypeSkill.Apothicaire, difficulty: '3', effects: ["A lancer, s'active en se brisant", "Installe un brouillard dans la zone.", "Aux tours 1 et 4, malus pour viser. Aux tours 2 et 3, impossible de viser, malus pour attaquer."] },
+        ]
+    },
+    {
+        id: "FaiseurPluie",
+        name: "Faiseur de Pluie",
+        description: ["Les autres nations n'étant pas habitués à se battre dans des conditions extrêmes, la Nation Grise aime les invoquer pour se battre dans son élément. Les Faiseurs de Pluie sont là pour ça."],
+        asset: "Enfant de la Pluie : une fois par scène s'il pleut, l'un de vos sorts 'Magie des Tempêtes' ou 'Magie de la Foudre' ou 'Magie de l'Eau' a un bonus",
+        equipment: "",
+        skills: [
+            { name: "Danse de la Pluie", type: TypeSkill.MagieTempetes, difficulty: 'C8', effects: ["En chantant et dansant, vous appelez la pluie", "Le temps change, il passe d'un niveau sur cette liste : ensoleillé, nuageux, pluvieux, tempête.", "Cette compétence est plus difficile (C14) dans les régions désertiques."] },
+            { name: "Pluie Coupante", type: TypeSkill.MagieEau, difficulty: 'C12', effects: ["Ne peut être lancé que s'il pleut", "La pluie devient si violente dans une petite zone qu'elle coupe la peau", "Inflige 2 blessures à toutes les cibles dans la zone", "E3 : le sol à cet endroit devient glissant"] },
+            { name: "Pluie Cathartique", type: TypeSkill.MagieEau, difficulty: 'C6', effects: ["Ne peut être lancé que s'il ne pleut pas", "Doit être lancé après une épreuve compliquée", "Fais tomber la pluie, qui appaise les esprits et restaure le calme.", "Soigne 1 blessure à tous vos alliés"] },
+        ]
+    },
+    {
+        id: "DresseurPygargues",
+        name: "Dresseur de Pygargues",
+        description: ["Les pygargues sont les oiseaux les plus admirés par la Nation Grise car ils incarnent le courage, la résistance face aux tempêtes, et le retour à la côte. Les Dresseurs de Pygargues sont quant à eux très respectés, à la fois pour les valeurs de leurs oiseaux, mais aussi pour leur utilité au combat.",
+            "ATTENTION : si vous sifflez, action gratuite, vous annulez tous les ordres et tous vos pygargues retournent dans le ciel"
+        ],
+        asset: "Dressage d'oiseaux (toute action en lien avec les oiseaux sauf attaque)",
+        equipment: "Possède 2 Pygargues domestiqués (oiseaux marins de la taille d'un aigle, ils volent toujours non loin de vous, ils fuient à 2 blessures, meurent à 4)",
+        skills: [
+            { name: "Ordre d'attaque", type: TypeSkill.Aucun, difficulty: 'R12', effects: ["Vous désignez une cible qu'un de vos pygargue attaque", "A chaque tour, le pygargue inflige 1 blessure", "ER4 : inflige le malus Borgne", "Risque : le pygargue ne fait aucune blessure au premier tour"] },
+            { name: "Ordre de dérober", type: TypeSkill.Aucun, difficulty: 'R14', effects: ["Vous désignez un objet qu'un de vos pygargue va récupérer", "Risque : il s'est trompé d'objet"] },
+            { name: "Ordre de survol", type: TypeSkill.Aucun, difficulty: 'R10', effects: ['', "Vous désignez une large zone où l'un de vos pygargue va surveiller", "Si le pygargue repère quelque chose, il vous préviendra avec son chant", "Risque : le pygargue est parti chasser quand il se passe quelque chose", ''] },
+        ]
+    },
+    {
+        id: "LanceurHaches",
+        name: "Lanceur de Haches",
+        description: ["Attaquer à distance est perçu partout comme un avantage. La Nation Grise a décidé qu'il n'était pas nécessaire de changer d'arme pour cela.",
+            "ATTENTION : les Haches de lancer sont aussi des armes de Taille, elles ont donc Tranchante (ER2 : inflige En Sang)"
+        ],
+        asset: "Lanceur d'armes",
+        equipment: "Haches de lancer (x4)",
+        skills: [
+            { name: "Jet de Hache", type: TypeSkill.ArmeTaille, difficulty: 'C12', effects: ["1 blessure", "Portée de 10m maximum"] },
+            { name: "Retour du bras", type: TypeSkill.ArmeTaille, difficulty: 'C14', effects: ["Peut être lancé après un 'Jet de Hache' réussi", "Vous pouvez tenter un nouveau 'Jet de Hache', pas forcément sur la même cible."] },
+            { name: "Lancer de toutes ses forces", type: TypeSkill.ArmeTaille, difficulty: 'C16', effects: ["2 blessures, fais tomber au sol la cible", "Portée de 10m maximum"] },
+        ]
+    },
+    {
+        id: "SouffleurMots",
+        name: "Souffleur de Mots",
+        description: ["La Magie des Galdrar a de nombreuses facettes. L'une d'entre elle est la faculté de souffler des mots d'une langue ancienne qui se matérialisent de différentes manières. Les Souffleur de Mots de la Nation Grise sont quasiment les seuls à connaître et utiliser cette langue."],
+        asset: "Voix Magique : lorsque vous parlez ou lancez un sort de Magie des Galdrar vous avez 'EE3 : suivant le ton utilisé, réconforte, intimide ou donne du courage à la cible'",
+        equipment: "",
+        skills: [
+            { name: "Vraam (Flamme)", type: TypeSkill.MagieGaldrar, difficulty: 'C11', effects: ["Crache une gerbe de flamme sur une cible proche, elle subit 2 blessures", "ER5: elle subit l'état 'En Feu'"] },
+            { name: "Shlii (Bouclier)", type: TypeSkill.MagieGaldrar, difficulty: 'C12', effects: ["Crée un bouclier invisible qui diminue la puissance des projectiles vous ciblant d'une blessure jusqu'à votre prochain tour"] },
+            { name: "Fouss (Souffle)", type: TypeSkill.MagieGaldrar, difficulty: 'C14', effects: ["Repousse les cibles proches de 5 mètres environ, elles subissent 1 blessure.", "ER5: elles sont repoussées de 10m."] },
+        ]
+    },
+
 
     //#region Neutre
 
@@ -485,5 +588,29 @@ export let ways: Way[] = [
             { idea: true, name: "Mirage", type: TypeSkill.MagieInvisible, difficulty: "", effects: ["Vous faites croire à une cible ou un groupe de cible qu'une partie du paysage est différent."] },
         ]
     },
+
+    {
+        id: "IdeesMagieTempête",
+        name: "Idées de sorts pour la Magie des Tempêtes",
+        description: ["ATTENTION : la Magie des Tempêtes a un bonus pendant une tempête."],
+        asset: "",
+        equipment: "",
+        skills: [
+            // Elementaliste Vent
+            { idea: true, name: "Tourbillon ascendant", type: TypeSkill.MagieTempetes, difficulty: "C10", effects: ["Un tourbillon de vent et de poussières apparait à vos pieds et vous propulse en l'air. Vous volez."] },
+        ]
+    },
+    {
+        id: "IdeesMagieFoudre",
+        name: "Idées de sorts pour la Magie de la Foudre",
+        description: [],
+        asset: "",
+        equipment: "",
+        skills: [
+            { idea: true, name: "Chaîne d'éclairs", type: TypeSkill.MagieFoudre, difficulty: "", effects: ["Plusieurs cibles qui s'enchaînent"] },
+            { idea: true, name: "Chute de Foudre", type: TypeSkill.MagieFoudre, difficulty: "", effects: ["Une cible ou petite zone ?"] },
+            { idea: true, name: "Lance de Foudre", type: TypeSkill.MagieFoudre, difficulty: "", effects: ["Monocible mais peut transpercer et en toucher une 2e."] },
+        ]
+    }
     //#endregion
 ]
