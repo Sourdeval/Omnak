@@ -492,6 +492,8 @@ export let ways: Way[] = [
             { idea: true, name: "Souffle de feu", type: TypeSkill.MagieFeu, difficulty: '', effects: ["monocible ultra puissant"] },
             //Pyromancien
             { idea: true, name: "Sollicitation Infernale", type: TypeSkill.MagieFeu, difficulty: '', effects: ["Mains en l'air, vous demandez à toutes les flammes présentes de s'intensifier.", "Toutes les personnes qui ont l'état En Feu subissent 2 blessures."] },
+            //Assoifeur
+            { idea: true, name: "", type: TypeSkill.MagieFeu, difficulty: '', effects: ["A la première réussite d'affilée de ce sort sur une même cible : malus Faible", "2e : malus Faible et malus Déshydraté", "3e et plus : malus Faible et malus Déshydraté et 2 blessures"] },
         ]
     },
 
@@ -505,6 +507,7 @@ export let ways: Way[] = [
             // Élémentaliste
             { idea: true, name: "Réduire en poussière", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Génère une quantité de sable suffisante pour 3 sorts.", "Risque : quantité suffisante pour 1 sort seulement"] },
             { idea: true, name: "Tempête du Sable", type: TypeSkill.MagieSable, difficulty: '', effects: [""] },
+            { idea: true, name: "Enrober de sable", type: TypeSkill.MagieSable, difficulty: '', effects: ["Fait des dégâts et un malus, énorme malus pour une cible en armure"] },
             { idea: true, name: "Psammos kinésie", type: TypeSkill.MagieSable, difficulty: 'C15', effects: ["Déplacer le sable et en faire ce que vous souhaitez.", "La difficulté peut varier de 12 à 16 suivant l'action."] },
 
             // Verrier
