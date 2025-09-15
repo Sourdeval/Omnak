@@ -13,15 +13,17 @@ export class CharacterCreationComponent {
     "<h4>Inventez ce que vous aimez !</h4>Avant tout, l'univers est modelable, c'est à dire que vous pouvez imaginez n'importe quoi !<br>" +
     "Imaginez et parlez en à votre MJ !<br><br>" +
     "Bonne création de personnage !! :)",
+
     "<h4>Naissance, enfance, famille</h4>" +
     "Choisir la <span>Nation</span> dans laquelle est né votre personnage.<br><br>" +
-    "Inventer un <span>Atout</span> à votre personnage.<br>" +
+    "Inventer un <span>Atout</span> à votre personnage. Les phrases suivantes sont des idées de comment vous avez eu cet atout.<br>" +
     '<div class="italic">' +
     "Quand je suis né...<br>" +
     "Quand j'étais enfant...<br>" +
     "Un membre de ma famille est...<br>" +
     "...<br>" +
     "</div>" +
+    "Si votre atout nécessite des précisions, ou une explication, écrivez dans <span>Lore</span>." +
     "<br>" +
     "<h4>Entrée dans l'armée</h4>" +
     "Écrivez un <span>Lore</span> : la raison pour laquelle votre personnage entre dans les forces militaires de sa Nation.<br>" +
@@ -36,7 +38,8 @@ export class CharacterCreationComponent {
     "Un trait de caractère ? <br>" +
     "Une nouvelle relation ? <br>" +
     "Une particularité acquise ?<br>" +
-    "</div>",
+    "</div>" +
+    "Si votre atout nécessite des précisions, ou une explication, écrivez dans <span>Lore</span>.",
 
     "<h4>La Première Mission</h4>" +
     "Appelez votre MJ, un D20 à la main.<br><br>" +
@@ -47,10 +50,10 @@ export class CharacterCreationComponent {
     "C'est le D20 qui choisi !<br><br>" +
     "</div>" +
     "Votre MJ vous donne alors le contexte de votre mission et quelques possibilités, mais pas ce qui s'y passe, c'est à vous de l'inventer !<br><br>" +
-    "Inventez et écrivez le <span>Lore</span> de cette mission, quel était l'objectif, qu'avez vous essayé de faire ?<br>" +
+    "Inventez et écrivez le <span>Lore</span> de cette mission, quel était l'objectif, qu'avez vous essayé de faire ? Ne précisez pas la fin !<br>" +
     "Avec votre MJ, voyez quelles sont les possibilités de cette tentative.<br>" +
     "Lancez de nouveau un D20 pour obtenir l'issue de cette mission.<br>" +
-    "Écrivez une phrase de conclusion, en indiquant l'<span>Atout</span> gagné.<br>",
+    "Écrivez une phrase de conclusion dans <span>Lore</span>, et indiquez l'<span>Atout</span> gagné.<br>",
 
     "<h4>Montée en Grade !</h4>" +
     "Choisissez votre seconde <span>Voie</span> dans l'armée de votre Nation.<br>" +
@@ -75,7 +78,7 @@ export class CharacterCreationComponent {
     "Une nouvelle relation ? <br>" +
     "Une particularité acquise ?<br>" +
     "</div><br>" +
-    "<h4>Voilà qu'arrive votre seconde Mission...</h4><br>" +
+    "<h4>Voilà qu'arrive votre seconde Mission...</h4>" +
     "A partir de ce point, certains de vos Atouts peuvent changer, ou disparaître.<br>",
   ]
 
