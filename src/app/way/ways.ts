@@ -368,7 +368,7 @@ export let ways: Way[] = [
         asset: "Enfant de la Pluie : une fois par scène s'il pleut, l'un de vos sorts 'Magie des Tempêtes' ou 'Magie de la Foudre' ou 'Magie de l'Eau' a un bonus",
         equipment: "",
         skills: [
-            { name: "Danse de la Pluie", type: TypeSkill.MagieTempetes, difficulty: 'C8', effects: ["En chantant et dansant, vous appelez la pluie", "Le temps change, il passe d'un niveau sur cette liste : ensoleillé, nuageux, pluvieux, tempête.", "Cette compétence est plus difficile (C14) dans les régions désertiques."] },
+            { name: "Danse de la Pluie", type: TypeSkill.MagieTempetes, difficulty: 'C8', effects: ["En chantant et dansant, vous appelez la pluie", "Le temps change, il passe d'un niveau sur cette liste : ensoleillé, nuageux, pluvieux, tempête.", "Cette compétence est plus difficile (C12) dans les régions désertiques."] },
             { name: "Pluie Coupante", type: TypeSkill.MagieEau, difficulty: 'C12', effects: ["Ne peut être lancé que s'il pleut", "La pluie devient si violente dans une petite zone qu'elle coupe la peau", "Inflige 2 blessures à toutes les cibles dans la zone", "E3 : le sol à cet endroit devient glissant"] },
             { name: "Pluie Cathartique", type: TypeSkill.MagieEau, difficulty: 'C6', effects: ["Ne peut être lancé que s'il ne pleut pas", "Doit être lancé après une épreuve compliquée", "Fais tomber la pluie, qui appaise les esprits et restaure le calme.", "Soigne 1 blessure à tous vos alliés"] },
         ]
