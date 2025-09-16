@@ -20,9 +20,9 @@ export let ways: Way[] = [
         asset: 'Représailles de Flammes : quand attaqué au corps à corps, votre ennemi reçoit : "E3 : vous êtes brûlé, vous subissez 1 blessure"',
         equipment: "",
         skills: [
-            { name: "Boule de Feu", type: TypeSkill.MagieFeu, difficulty: 'R12', effects: ['3 blessures à toutes les cibles dans une petite zone', 'E2 : inflige En Feu', 'Risque : la boule de feu part dans une autre direction'] },
+            { name: "Boule de Feu", type: TypeSkill.MagieFeu, difficulty: 'S12', effects: ['3 blessures à toutes les cibles dans une petite zone', 'E2 : inflige En Feu', 'Séquelle : la boule de feu part dans une autre direction'] },
             { name: "Mur de flammes", type: TypeSkill.MagieFeu, difficulty: 'C12', effects: ["Crée un mur de flammes d'environ 5m (15m avec malus) de long qui dure 3 tours", "Ceux qui traversent le mur subissent 1 blessure et l'état En Feu"] },
-            { name: "Rage bouillante", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ["Vous pouvez vous cibler vous ou un allié", "La cible obtient le bonus Enragé pendant 2 tours pour s'énerver et frapper.", "ER4 : les attaques de la cible font 1 blessure supplémentaire", "Risque : la cible subit En Feu"], },
+            { name: "Rage bouillante", type: TypeSkill.MagieFeu, difficulty: 'S14', effects: ["Vous pouvez vous cibler vous ou un allié", "La cible obtient le bonus Enragé pendant 2 tours pour s'énerver et frapper.", "ER4 : les attaques de la cible font 1 blessure supplémentaire", "Séquelle : la cible subit En Feu"], },
         ]
     },
     {
@@ -118,8 +118,8 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Lianes Surgissantes", type: TypeSkill.MagieVegetale, difficulty: 'C12', effects: ["La cible ne peut pas se déplacer pendant 3 tours", "La cible peut faire une action C14 pour se libérer, ou infliger 2 blessures aux lianes.", "ER5 : la cible ne peut plus utiliser ses bras pendant la même durée"] },
-            { name: "Ronces Envahissantes", type: TypeSkill.MagieVegetale, difficulty: 'R14', effects: ["À partir du point choisi, des ronces poussent, à chaqu'un de vos tours elles prennent plus de place. Vous choisissez quand les ronces doivent s'arrêter.", "Une cible qui touche les ronces subit 1 blessure, 2 blessures si elle veut les traverser.", "Risque : les ronces sont incontrôlables.", ''] },
-            { name: "Écorce", type: TypeSkill.MagieVegetale, difficulty: 'R12', effects: ["Votre peau se transforme en écorce, vous subissez 1 blessure de moins de chaque attaque jusqu'à la fin de la scène.", "Risque : Vous subissez 2 blessures."] },
+            { name: "Ronces Envahissantes", type: TypeSkill.MagieVegetale, difficulty: 'S14', effects: ["À partir du point choisi, des ronces poussent, à chaqu'un de vos tours elles prennent plus de place. Vous choisissez quand les ronces doivent s'arrêter.", "Une cible qui touche les ronces subit 1 blessure, 2 blessures si elle veut les traverser.", "Séquelle : les ronces sont incontrôlables.", ''] },
+            { name: "Écorce", type: TypeSkill.MagieVegetale, difficulty: 'S12', effects: ["Votre peau se transforme en écorce, vous subissez 1 blessure de moins de chaque attaque jusqu'à la fin de la scène.", "Séquelle : Vous subissez 2 blessures."] },
         ]
     },
     {
@@ -187,7 +187,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Jet de Sable", type: TypeSkill.MagieSable, difficulty: 'C8', effects: ['1 blessure', 'ER5 : met du sable dans les yeux'] },
-            { name: "Leurre de Sable", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Vous créez un double de vous qui s'il est attaqué n'est en faite que du sable.", "Risque : celui qui sera attaqué ce sera vous, et le double disparaîtra alors"] },
+            { name: "Leurre de Sable", type: TypeSkill.MagieSable, difficulty: 'S12', effects: ["Vous créez un double de vous qui s'il est attaqué n'est en faite que du sable.", "Séquelle : celui qui sera attaqué ce sera vous, et le double disparaîtra alors"] },
             { name: "Parler aux Esprits du Désert", type: TypeSkill.MagieSable, difficulty: 'C10', effects: ["Vous communiquer avec ces étranges esprits qui traverse le désert en quelques minutes.", "Vous pouvez demander des informations sur tout ce qui touche le sable", "Vous pouvez envoyez un message à un autre Mage connaissant ce sort", ''] },
         ]
     },
@@ -259,7 +259,7 @@ export let ways: Way[] = [
         equipment: "Poignard (arme légère)",
         skills: [
             { name: "Surf du Désert", type: TypeSkill.MagieSable, difficulty: 'R10', effects: ["Vous vous déplacez sur une vague de sable rapidement.", "Risque : vous chutez et subissez 1 blessure."] },
-            { name: "Assault Frénétique", type: TypeSkill.ArmeLegere, difficulty: 'R12', effects: ["Ne peut être utilisé qu'avec le bonus Enragé.", "3 blessures", "Risque : dans votre rage, la cible de cette compétence est choisie aléatoirement"] },
+            { name: "Assault Frénétique", type: TypeSkill.ArmeLegere, difficulty: 'S12', effects: ["Ne peut être utilisé qu'avec le bonus Enragé.", "3 blessures", "Séquelle : dans votre rage, la cible de cette compétence est choisie aléatoirement"] },
             { name: "S'énerver", type: TypeSkill.Aucun, difficulty: 'C11', effects: ["", "Vous pouvez utiliser cette compétence lorsque vous subissez un état d'apaisement, d'intimidation, de contrôle ou de peur. Sinon, subissez 1 blessure pour lancer.", "Vous ne subissez pas cet état et obtenez le bonus Enragé (frapper) pendant 2 tours.", ""] },
         ]
     },
@@ -272,7 +272,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Lame de Sable", type: TypeSkill.MagieSable, difficulty: 'C10', effects: ["Génère un poignard (Arme Légère) en sable.", "Vous pouvez aussitôt utiliser une action d'Arme Légère", "Redevient du sable à la fin de votre tour."] },
             { name: "Statuette de Sable", type: TypeSkill.MagieSable, difficulty: 'C12', effects: ["Génère un petit objet au choix à l'apparence réelle.", "Dure toute la scène ou jusqu'à ce que quelque chose le touche. Après il redevient du sable."] },
-            { name: "Masque de Sable", type: TypeSkill.MagieSable, difficulty: 'R14', effects: ["Vous vous faites passer pour quelqu'un d'autre pendant la scène grâce à un masque reprenant les traits physiques d'un autre. Votre voix est aussi modifiée.", "Risque : le masque s'effrite à votre prochain tour."] },
+            { name: "Masque de Sable", type: TypeSkill.MagieSable, difficulty: 'S14', effects: ["Vous vous faites passer pour quelqu'un d'autre pendant la scène grâce à un masque reprenant les traits physiques d'un autre. Votre voix est aussi modifiée.", "Séquelle : le masque s'effrite à votre prochain tour."] },
         ]
     },
     {
@@ -382,9 +382,9 @@ export let ways: Way[] = [
         asset: "Dressage d'oiseaux (toute action en lien avec les oiseaux sauf attaque)",
         equipment: "Possède 2 Pygargues domestiqués (oiseaux marins de la taille d'un aigle, ils volent toujours non loin de vous, ils fuient à 2 blessures, meurent à 4)",
         skills: [
-            { name: "Ordre d'attaque", type: TypeSkill.Aucun, difficulty: 'R12', effects: ["Vous désignez une cible qu'un de vos pygargue attaque", "A chaque tour, le pygargue inflige 1 blessure", "ER4 : inflige le malus Borgne", "Risque : le pygargue ne fait aucune blessure au premier tour"] },
-            { name: "Ordre de dérober", type: TypeSkill.Aucun, difficulty: 'R14', effects: ["Vous désignez un objet qu'un de vos pygargue va récupérer", "Risque : il s'est trompé d'objet"] },
-            { name: "Ordre de survol", type: TypeSkill.Aucun, difficulty: 'R10', effects: ['', "Vous désignez une large zone où l'un de vos pygargue va surveiller", "Si le pygargue repère quelque chose, il vous préviendra avec son chant", "Risque : le pygargue est parti chasser quand il se passe quelque chose", ''] },
+            { name: "Ordre d'attaque", type: TypeSkill.Aucun, difficulty: 'S12', effects: ["Vous désignez une cible qu'un de vos pygargue attaque", "A chaque tour, le pygargue inflige 1 blessure", "ER4 : inflige le malus Borgne", "Séquelle : le pygargue ne fait aucune blessure au premier tour"] },
+            { name: "Ordre de dérober", type: TypeSkill.Aucun, difficulty: 'S14', effects: ["Vous désignez un objet qu'un de vos pygargue va récupérer", "Séquelle : il s'est trompé d'objet"] },
+            { name: "Ordre de survol", type: TypeSkill.Aucun, difficulty: 'S10', effects: ['', "Vous désignez une large zone où l'un de vos pygargue va surveiller", "Si le pygargue repère quelque chose, il vous préviendra avec son chant", "Séquelle : le pygargue est parti chasser quand il se passe quelque chose", ''] },
         ]
     },
     {
@@ -437,7 +437,7 @@ export let ways: Way[] = [
         asset: "",
         equipment: "",
         skills: [
-            { idea: true, name: "Goût du Sang", type: TypeSkill.MagieSang, difficulty: 'R14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Le groupe d'ennemi choisi devient fou de violence. Ils se battent les uns contre les autres pendant 1 tour.", "Risque : le groupe d'ennemi vous attaque vous à la place.", ''] },
+            { idea: true, name: "Goût du Sang", type: TypeSkill.MagieSang, difficulty: 'S14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Le groupe d'ennemi choisi devient fou de violence. Ils se battent les uns contre les autres pendant 1 tour.", "Séquelle : le groupe d'ennemi vous attaque vous à la place.", ''] },
             { idea: true, name: "Lame de Sang", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Vous créez une arme légère en Sang. Vous pouvez l'utiliser jusqu'à la fin de la scène."] },
             { idea: true, name: "Hémorragie Multiple", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les personnes déjà blessées (dont vous) subissent 2 blessures et l'état En Sang."] },
         ]
@@ -473,7 +473,7 @@ export let ways: Way[] = [
         asset: "",
         equipment: "",
         skills: [
-            { idea: true, name: "Fumigène", type: TypeSkill.MagieFeu, difficulty: 'R14', effects: ['Vous faites exploser un fumigène à vos pied, vos ennemis vous perdent de vue.', "Dure 2 tours.", "Risque : vous subissez le malus Asphyxié pendant 2 tours"] },
+            { idea: true, name: "Fumigène", type: TypeSkill.MagieFeu, difficulty: 'S14', effects: ['Vous faites exploser un fumigène à vos pied, vos ennemis vous perdent de vue.', "Dure 2 tours.", "Séquelle : vous subissez le malus Asphyxié pendant 2 tours"] },
             { idea: true, name: "Mains brûlantes", type: TypeSkill.MagieFeu, difficulty: 'C10', effects: [""] },
             { idea: true, name: "Lame de feu", type: TypeSkill.MagieFeu, difficulty: 'C10', effects: ["Vous faites apparaître une lame de feu d'environ 1m de type Arme de Gladiateur.", "Seul vous pouvez la manier, elle dure jusqu'à la fin de la scène.", "Une attaque réussie avec inflige En Feu et 1 blessure supplémentaire."] },
             { idea: true, name: "Tempête de flammes", type: TypeSkill.MagieFeu, difficulty: 'C16', effects: ["Fait apparaître une immense tempête de flammes", "Tout le monde sauf vous est projeté au sol et subit 4 blessures."] },
@@ -505,7 +505,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             // Élémentaliste
-            { idea: true, name: "Réduire en poussière", type: TypeSkill.MagieSable, difficulty: 'R12', effects: ["Génère une quantité de sable suffisante pour 3 sorts.", "Risque : quantité suffisante pour 1 sort seulement"] },
+            { idea: true, name: "Réduire en poussière", type: TypeSkill.MagieSable, difficulty: 'S12', effects: ["Génère une quantité de sable suffisante pour 3 sorts.", "Séquelle : quantité suffisante pour 1 sort seulement"] },
             { idea: true, name: "Tempête du Sable", type: TypeSkill.MagieSable, difficulty: '', effects: [""] },
             { idea: true, name: "Enrober de sable", type: TypeSkill.MagieSable, difficulty: '', effects: ["Fait des dégâts et un malus, énorme malus pour une cible en armure"] },
             { idea: true, name: "Psammos kinésie", type: TypeSkill.MagieSable, difficulty: 'C15', effects: ["Déplacer le sable et en faire ce que vous souhaitez.", "La difficulté peut varier de 12 à 16 suivant l'action."] },
@@ -528,7 +528,7 @@ export let ways: Way[] = [
             { idea: true, name: "Poing de Fer", type: TypeSkill.MagieRoche, difficulty: '', effects: ["Coup de poing amélioré."] },
             { idea: true, name: "Chute de Pierres", type: TypeSkill.MagieRoche, difficulty: '', effects: [""] },
             { idea: true, name: "Lithos kinésie", type: TypeSkill.MagieRoche, difficulty: 'C16', effects: ["Déplacer les roches, construisez ce que vous souhaitez.", "La difficulté peut varier de 14 à 18 suivant l'action."] },
-            { idea: true, name: "Mur transparent de Saphir", type: TypeSkill.MagieRoche, difficulty: 'R12', effects: ["Vous érigez un mur ou un dôme autour de vous et des personnes proches. Le son et les effets magiques ne le traversent pas.", "Le mur est détruit au bout de 3 blessures.", "Risque : le mur est extrêmement fragile et se brisera en éclats coupants (1 blessure)", ""] },
+            { idea: true, name: "Mur transparent de Saphir", type: TypeSkill.MagieRoche, difficulty: 'S12', effects: ["Vous érigez un mur ou un dôme autour de vous et des personnes proches. Le son et les effets magiques ne le traversent pas.", "Le mur est détruit au bout de 3 blessures.", "Séquelle : le mur est extrêmement fragile et se brisera en éclats coupants infligant 1 blessure", ""] },
         ]
     },
 
@@ -585,8 +585,8 @@ export let ways: Way[] = [
             { idea: true, name: "Reflets miroirs", type: TypeSkill.MagieInvisible, difficulty: "C12", effects: ["Vous rendez un petit objet, comme une arme légère, complètement invisible jusqu'à la fin de la scène.", "Si l'objet est utilisé il redevient visible.", "Vous pouvez cibler un objet à distance raisonnable.", ""] },
 
             // Invisible
-            { idea: true, name: "Phase", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous entrez en phase, dans un autre plan d'existence, réalité alternative à la notre.", "Lors de votre prochain tour, vous agissez dans cet autre plan.", "Vous revenez dans le plan réel au début du tour suivant.", "Risque : vous subissez 4 blessures."] },
-            { idea: true, name: "Oubli", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous modifiez la mémoire immédiate d'une cible.", "Si elle n'a pas fait particulièrement attention à vous, elle vous oublie.", "Risque : la cible reste bloquée sur vous."] },
+            { idea: true, name: "Phase", type: TypeSkill.MagieInvisible, difficulty: "S14", effects: ["Vous entrez en phase, dans un autre plan d'existence, réalité alternative à la notre.", "Lors de votre prochain tour, vous agissez dans cet autre plan.", "Vous revenez dans le plan réel au début du tour suivant.", "Séquelle : vous subissez 4 blessures."] },
+            { idea: true, name: "Oubli", type: TypeSkill.MagieInvisible, difficulty: "R14", effects: ["Vous modifiez la mémoire immédiate d'une cible.", "Si elle n'a pas fait particulièrement attention à vous, elle vous oublie.", "Risque : l'esprit de la cible reste concentré sur vous."] },
 
             { idea: true, name: "Mirage", type: TypeSkill.MagieInvisible, difficulty: "", effects: ["Vous faites croire à une cible ou un groupe de cible qu'une partie du paysage est différent."] },
         ]
