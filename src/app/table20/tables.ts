@@ -28,6 +28,32 @@ export let tables: Table[] = [
         ]
     },
     {
+        id: "Gemmes",
+        title: "Table des Gemmes Magiques",
+        values: [
+            "Améthyste (Voile, Furtivité)",
+            "Cryolithe (Glace)",
+            "Émeraude (Protection Magique)",
+            "Grenat (Combat)",
+            "Hématite (Sang)",
+            "Jade (Guérison)",
+            "Lapis-lazuli (???)",
+            "Malachite (Mutation, Poison)",
+            "Obsidienne (Résistance)",
+            "Onyx (Ténèbres)",
+            "Opale (Prophétie, Divination)",
+            "Pyrite (Manipulation, Sable)",
+            "Rubis (Rage)",
+            "Saphir (Calme, Magie Impressionnante)",
+            "Sélénite (Lune)",
+            "Topaze (Lumière Solaire)",
+            "Turquoise (Rapidité)",
+            "",
+            "",
+            "Choisissez"
+        ]
+    },
+    {
         id: "Empty",
         title: "Titre",
         values: [
