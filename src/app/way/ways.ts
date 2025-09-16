@@ -332,7 +332,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Galdr d'encouragement", type: TypeSkill.MagieGaldrar, difficulty: 'R8', effects: ["Vous encouragez vos alliés", "Ils résistent mieux à la peur, aux intimidations et au désespoir.", "Le groupe est plus soudé, cela limite les tensions.", "Risque : effet inverse"] },
             { name: "Galdr de vitesse", type: TypeSkill.MagieGaldrar, difficulty: 'C10', effects: ["Vous motivez vos alliés en accélérant peu à peu votre rythme", "Ils courent plus vite, ou s'ils font des actions longues, ils les font plus rapidement."] },
-            { name: "Galdr d'amour", type: TypeSkill.MagieGaldrar, difficulty: 'R12', effects: ["Vous séduisez une cible", "Si la cible veut refuser vos avances, elle doit réussir une action C12 pour garder ses esprits", "Risque : vous repoussez la cible"] },
+            { name: "Bouteille d'Hydromel", type: TypeSkill.Apothicaire, difficulty: '3', effects: ["À boire ou à partager", "Lorsque vous partagez cette boisson, ou que vous vous enivrez avec, vous gagnez un bonus pour votre prochaine action sociale ou de Magie des Galdrar"] },
         ]
     },
     {
@@ -410,7 +410,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Vraam (Flamme)", type: TypeSkill.MagieGaldrar, difficulty: 'C11', effects: ["Crache une gerbe de flamme sur une cible proche, elle subit 2 blessures", "ER5: elle subit l'état 'En Feu'"] },
             { name: "Shlii (Bouclier)", type: TypeSkill.MagieGaldrar, difficulty: 'C12', effects: ["Crée un bouclier invisible qui diminue la puissance des projectiles vous ciblant d'une blessure jusqu'à votre prochain tour"] },
-            { name: "Fouss (Souffle)", type: TypeSkill.MagieGaldrar, difficulty: 'C14', effects: ["Repousse les cibles proches de 5 mètres environ, elles subissent 1 blessure.", "ER5: elles sont repoussées de 10m."] },
+            { name: "Fouss (Souffle)", type: TypeSkill.MagieGaldrar, difficulty: 'C14', effects: ["Repousse les cibles proches de 5 mètres environ, elles subissent 1 blessure.", "ER5: elles sont repoussées de 10m et subissent 1 blessure supplémentaire"] },
         ]
     },
 
@@ -614,6 +614,16 @@ export let ways: Way[] = [
             { idea: true, name: "Chute de Foudre", type: TypeSkill.MagieFoudre, difficulty: "", effects: ["Une cible ou petite zone ?"] },
             { idea: true, name: "Lance de Foudre", type: TypeSkill.MagieFoudre, difficulty: "", effects: ["Monocible mais peut transpercer et en toucher une 2e."] },
         ]
-    }
+    },
+    {
+        id: "IdeesMagieGaldrar",
+        name: "Idées de sorts pour la Magie des Galdrar",
+        description: [],
+        asset: "",
+        equipment: "",
+        skills: [
+            { idea: true, name: "Galdr d'amour", type: TypeSkill.MagieGaldrar, difficulty: 'R12', effects: ["Vous séduisez une cible", "Si la cible veut refuser vos avances, elle doit réussir une action C12 pour garder ses esprits", "Risque : vous repoussez la cible"] },
+        ]
+    },
     //#endregion
 ]
