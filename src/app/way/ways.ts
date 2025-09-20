@@ -428,6 +428,30 @@ export let ways: Way[] = [
         equipment: "",
         skills: []
     },
+    {
+        id: "Bandit",
+        name: "Bandit",
+        description: ["Les bandits sont souvent armés de masses d'armes, ils détroussent les honnêtes gens en les menaçant."],
+        asset: "Intimidant",
+        equipment: "Masse d'armes (Arme Contondante)",
+        skills: [
+            { name: "Coup d'épaule", type: TypeSkill.Aucun, difficulty: "C8", effects: ["Repousse la cible de quelques mètres", "ER4 : inflige le malus Déséquilibré"] },
+            { name: "Brise os", type: TypeSkill.ArmeContondante, difficulty: "C12", effects: ["2 blessures", "E2 : vous obtenez le malus Essoufflé (déplacement et frapper) pendant 1 tour"] },
+            { name: "Éclate crâne", type: TypeSkill.ArmeContondante, difficulty: "C15", effects: ["2 blessures", "Inflige le malus Sonné pendant 2 tours", "EE3 : inflige le malus Sonné pendant 1 tour"] },
+        ]
+    },
+    {
+        id: "Voleur",
+        name: "Voleur",
+        description: ["Le voleur est discret et habile, il ne cherche pas à tuer, juste à dérober sans se faire prendre."],
+        asset: "Ombre (furtif dans les endroits urbains)",
+        equipment: "",
+        skills: [
+            { name: "Vol à la tire", type: TypeSkill.Furtivité, difficulty: "R12", effects: ["Nécessite que la cible ne soit pas au courant de votre présence", "Vous dérobez ce que la cible a dans ses poches sans être vu.", "Risque : vous êtes pris en flagrant délit"] },
+            { name: "Fuite", type: TypeSkill.Deplacement, difficulty: "C12", effects: ["Vous courez très vite, escaladez les murets et vous vous faufilez aisément dans une foule."] },
+            { name: "Crochetage", type: TypeSkill.Furtivité, difficulty: "C10", effects: ["La difficulté dépend du verrou, de C8 à C16 pour un verrou magique. Certains verrous magiques ne sont pas crochetable.", "Vous cassez le verrou", "E3 : vous faites du bruit"] },
+        ]
+    },
 
     //#region Idées pour plus tard 
     {
