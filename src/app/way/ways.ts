@@ -69,7 +69,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Assommer", type: TypeSkill.ArmeContondante, difficulty: 'C18', effects: ["Assomme l'ennemi et lui inflige 2 blessures", "EE5 : inflige le malus Sonné pendant 1 tour"] },
-            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R8', effects: ["2 blessures", "Risque : vous êtes déséquilibré et vous tombez au sol"] },
+            { name: "Fracasser", type: TypeSkill.ArmeContondante, difficulty: 'R9', effects: ["2 blessures", "Risque : vous êtes déséquilibré et vous tombez au sol"] },
             { name: "Coup dans les Jambes", type: TypeSkill.ArmeContondante, difficulty: 'C12', effects: ['1 blessure', "La cible ne peut pas se déplacer pendant 2 tours", "ER4 : 1 blessure"] },
         ]
     },
@@ -93,7 +93,7 @@ export let ways: Way[] = [
         equipment: "Arc et couteau",
         skills: [
             { name: "Tir direct", type: TypeSkill.ArmeDistance, difficulty: 'C10', effects: ['1 blessure', 'La difficulté augmente avec la distance. 1-10m : C10, 11-25m : C12, 26-50m : C14.'] },
-            { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C12', effects: ['2 blessures', "E3 : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
+            { name: "Poignarder", type: TypeSkill.ArmeLegere, difficulty: 'C12', effects: ['2 blessures', "EI : La cible gagne un bonus pour vous attaquer au corps à corps à son prochain tour.", "Si la cible n'est pas au courant de votre présence vous lui infligez 1 blessure supplémentaire."] },
             { name: "Traque silencieuse", type: TypeSkill.Furtivité, difficulty: 'R14', effects: ["Pendant 3 tours, vous êtes totalement discret tant que vous vous déplacez lentement et hors d'un angle de vue direct.", 'Risque : tout le monde est désormais au courant de votre présence.'] },
         ]
     },
@@ -118,7 +118,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Lianes Surgissantes", type: TypeSkill.MagieVegetale, difficulty: 'C12', effects: ["La cible ne peut pas se déplacer pendant 3 tours", "La cible peut faire une action C14 pour se libérer, ou infliger 2 blessures aux lianes.", "ER5 : la cible ne peut plus utiliser ses bras pendant la même durée"] },
-            { name: "Ronces Envahissantes", type: TypeSkill.MagieVegetale, difficulty: 'S14', effects: ["À partir du point choisi, des ronces poussent, à chaqu'un de vos tours elles prennent plus de place. Vous choisissez quand les ronces doivent s'arrêter.", "Une cible qui touche les ronces subit 1 blessure, 2 blessures si elle veut les traverser.", "Séquelle : les ronces sont incontrôlables.", ''] },
+            { name: "Ronces Envahissantes", type: TypeSkill.MagieVegetale, difficulty: 'S14', effects: ['', "À partir du point choisi, des ronces poussent, à chaqu'un de vos tours elles prennent plus de place. Vous choisissez quand les ronces doivent s'arrêter.", "Une cible qui touche les ronces subit 1 blessure, 2 blessures si elle veut les traverser.", "Séquelle : les ronces sont incontrôlables.", ''] },
             { name: "Écorce", type: TypeSkill.MagieVegetale, difficulty: 'S12', effects: ["Votre peau se transforme en écorce, vous subissez 1 blessure de moins de chaque attaque jusqu'à la fin de la scène.", "Séquelle : Vous subissez 2 blessures."] },
         ]
     },
@@ -174,8 +174,8 @@ export let ways: Way[] = [
         asset: "Armes à Distance",
         equipment: "Arc long",
         skills: [
-            { name: "Tir puissant", type: TypeSkill.ArmeDistance, difficulty: 'C12', effects: ['2 blessures', "ER18 : 1 blessure supplémentaire", "Distance : 1-25m"] },
-            { name: "Tir en cloche", type: TypeSkill.ArmeDistance, difficulty: 'C14', effects: ['1 blessure', "Distance: 50-125m"] },
+            { name: "Tir puissant", type: TypeSkill.ArmeDistance, difficulty: 'C12', effects: ["Obtenez un malus pour vous défendre au corps à corps jusqu'à votre prochain tour avant de lancer cette attaque", '2 blessures', "ER18 : inflige le malus 'Peur d'être à découvert' pendant 2 tours", "Distance : 1-25m"] },
+            { name: "Tir en cloche", type: TypeSkill.ArmeDistance, difficulty: 'C14', effects: ["Obtenez un malus pour vous défendre au corps à corps jusqu'à votre prochain tour avant de lancer cette attaque", '1 blessure', "Distance: 50-125m"] },
             { name: "Viser un point faible", type: TypeSkill.ArmeDistance, difficulty: 'C16', effects: ["Avant de faire l'action choisissez entre : état En Sang, état Immobilisé (pendant 2 tours), malus Borgne (toute la scène) et malus Incapable de se servir de [membre au choix] (toute la scène).", "1 blessure, le choix est infligé à la cible.", "Distance : 1-25m", ""] },
         ]
     },
@@ -235,7 +235,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Concentration Bleue", type: TypeSkill.Aucun, difficulty: 'R8', effects: ['Vous concentrez vos capacités magiques. Vous gagnez un bonus pour le prochain sort que vous lancez durant la scène.', "ER6 : le sort infligera 1 blessure supplémentaire s'il réussi", "Risque : malus pour le prochain sort", ''] },
-            { name: "Projection de pierres bleues", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ["Vous lancez sur une cible une rangée de pierres bleues lévitantes.", "1 blessure", "ER4 : vous attaquez une seconde cible avec ce sort", "ER5 : inflige le malus Sonné pendant 1 tour"] },
+            { name: "Projection de pierres bleues", type: TypeSkill.MagieRoche, difficulty: 'C5', effects: ["Vous lancez sur une cible une rangée de pierres bleues lévitantes.", "1 blessure", "ER4 : vous attaquez une seconde cible avec ce sort", "ER5 : inflige le malus Sonné pendant 1 tour"] },
             { name: "Garder son calme", type: TypeSkill.Aucun, difficulty: 'C11', effects: ["Vous pouvez utiliser cette compétence lorsque vous subissez un état d'énervement, de confusion, de persuasion ou de peur.", "Vous ne subissez pas cet état.", "ER5 : Vous obtenez l'état Clairvoyant", ""] },
         ]
     },
@@ -259,7 +259,7 @@ export let ways: Way[] = [
         equipment: "Poignard (arme légère)",
         skills: [
             { name: "Surf du Désert", type: TypeSkill.MagieSable, difficulty: 'R10', effects: ["Vous vous déplacez sur une vague de sable rapidement.", "Risque : vous chutez et subissez 1 blessure."] },
-            { name: "Assault Frénétique", type: TypeSkill.ArmeLegere, difficulty: 'S12', effects: ["Ne peut être utilisé qu'avec le bonus Enragé.", "3 blessures", "Séquelle : dans votre rage, la cible de cette compétence est choisie aléatoirement"] },
+            { name: "Assault Frénétique", type: TypeSkill.ArmeLegere, difficulty: 'S12', effects: ["Ne peut être utilisé qu'avec le bonus Enragé.", "3 blessures", "Séquelle : dans votre rage, la cible de cette compétence est choisie aléatoirement (ne peut pas être la cible actuelle)"] },
             { name: "S'énerver", type: TypeSkill.Aucun, difficulty: 'C11', effects: ["", "Vous pouvez utiliser cette compétence lorsque vous subissez un état d'apaisement, d'intimidation, de contrôle ou de peur. Sinon, subissez 1 blessure pour lancer.", "Vous ne subissez pas cet état et obtenez le bonus Enragé (frapper) pendant 2 tours.", ""] },
         ]
     },
@@ -294,7 +294,7 @@ export let ways: Way[] = [
         asset: "Coagulation Rapide : vous ne pouvez pas subir En Sang. Vous régénérez une blessure de plus par repos.",
         equipment: "",
         skills: [
-            { name: "Vertiges Sanglants", type: TypeSkill.MagieSang, difficulty: 'C14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Votre ennemi devient Désorienté (malus) pendant 1 tour."] },
+            { name: "Vertiges Sanglants", type: TypeSkill.MagieSang, difficulty: 'C8', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Inflige le malus Désorienté pendant 1 tour."] },
             { name: "Hémorragie", type: TypeSkill.MagieSang, difficulty: 'C10', effects: ['', 'Vous vous infligez 1 blessure avant de lancer ce sort.', 'Uniquement sur une cible déjà blessée', "Les blessures de la cible saignent abondemment. Elle subit 1 blessure pour chaque blessure qu'elle a déjà, jusqu'à un maximum de 3."] },
             { name: "Appel du Sang", type: TypeSkill.MagieSang, difficulty: 'C10', effects: ['Vous vous infligez 3 blessures avant de lancer ce sort.', 'Vous aspirez le sang de tous vous ennemis à 10m environ. Ils subissent 2 blessures.'] },
         ]
@@ -308,7 +308,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Dash", type: TypeSkill.Deplacement, difficulty: 'C11', effects: ['Déplacez vous de quelques mètres', 'Rejouez'] },
             { name: "Pas en arrière", type: TypeSkill.Deplacement, difficulty: 'C14', effects: ["Vous pouvez faire cette action après une action d'attaque réussie", "Déplacez vous de quelques mètres pour vous éloigner du combat"] },
-            { name: "Charge et série de coups", type: TypeSkill.ArmeLegere, difficulty: 'R14', effects: ["Vous vous rapprochez rapidement de votre cible.", '3 blessures', "Risque : vous glissez et tombez au sol."] },
+            { name: "Charge et série de coups", type: TypeSkill.ArmeLegere, difficulty: 'C14', effects: ["Vous vous rapprochez rapidement de votre cible.", '3 blessures', "EE2 : vous glissez et tombez au sol"] },
         ]
     },
     {
@@ -344,9 +344,9 @@ export let ways: Way[] = [
         asset: "Courageux (faire des actions dangereuses, vaincre la peur)",
         equipment: "Hache de guerre",
         skills: [
-            { name: "Coup Lourd", type: TypeSkill.ArmeTaille, difficulty: 'C14', effects: ["2 blessures", "ER4 : fait tomber la cible au sol"] },
-            { name: "Tranche Bouclier", type: TypeSkill.ArmeTaille, difficulty: 'C12', effects: ["1 blessure", "Peut cibler un bouclier ou une armure, la détruit"] },
-            { name: "Feinte Coup de Genou", type: TypeSkill.Aucun, difficulty: 'C10', effects: ["Vous levez votre hache, mais vous frappez avec votre genou", "1 blessure", "ER2 : inflige le malus 'Douleur au ventre' pendant 1 tour"] },
+            { name: "Coup Lourd", type: TypeSkill.ArmeTaille, difficulty: 'C14', effects: ["2 blessures", "ER4 : fait tomber la cible au sol", "EE4 : vous subissez un malus pour vous défendre jusqu'à votre prochain tour"] },
+            { name: "Tranche Bouclier", type: TypeSkill.ArmeTaille, difficulty: 'C12', effects: ["1 blessure", "Peut cibler un bouclier, une armure ou une protection non magique, le détruit (ou le rend inutilisable)"] },
+            { name: "Feinte Coup de Genou", type: TypeSkill.Aucun, difficulty: 'C10', effects: ["Vous levez votre arme, mais vous frappez avec votre genou", "1 blessure", "ER2 : inflige le malus 'Douleur au ventre' pendant 1 tour"] },
         ]
     },
     {
@@ -370,19 +370,19 @@ export let ways: Way[] = [
         skills: [
             { name: "Danse de la Pluie", type: TypeSkill.MagieTempetes, difficulty: 'C8', effects: ["En chantant et dansant, vous appelez la pluie", "Le temps change, il passe d'un niveau sur cette liste : ensoleillé, nuageux, pluvieux, tempête.", "Cette compétence est plus difficile (C12) dans les régions désertiques."] },
             { name: "Pluie Coupante", type: TypeSkill.MagieEau, difficulty: 'C12', effects: ["Ne peut être lancé que s'il pleut", "La pluie devient si violente dans une petite zone qu'elle coupe la peau", "Inflige 2 blessures à toutes les cibles dans la zone", "E3 : le sol à cet endroit devient glissant"] },
-            { name: "Pluie Cathartique", type: TypeSkill.MagieEau, difficulty: 'C6', effects: ["Ne peut être lancé que s'il ne pleut pas", "Doit être lancé après une épreuve compliquée", "Fais tomber la pluie, qui appaise les esprits et restaure le calme.", "Soigne 1 blessure à tous vos alliés"] },
+            { name: "Pluie Cathartique", type: TypeSkill.MagieEau, difficulty: 'C6', effects: ["Ne peut être lancé que s'il ne pleut pas", "Doit être lancé après une épreuve compliquée", "Fais tomber la pluie, qui apaise les esprits et restaure le calme.", "Soigne 1 blessure à vous et vos alliés"] },
         ]
     },
     {
         id: "DresseurPygargues",
         name: "Dresseur de Pygargues",
         description: ["Les pygargues sont les oiseaux les plus admirés par la Nation Grise car ils incarnent le courage, la résistance face aux tempêtes, et le retour à la côte. Les Dresseurs de Pygargues sont quant à eux très respectés, à la fois pour les valeurs de leurs oiseaux, mais aussi pour leur utilité au combat.",
-            "ATTENTION : si vous sifflez, action gratuite, vous annulez tous les ordres et tous vos pygargues retournent dans le ciel"
+            "ATTENTION : si vous sifflez, action gratuite à votre tour, vous annulez tous les ordres et tous vos pygargues retournent dans le ciel"
         ],
         asset: "Dressage d'oiseaux (toute action en lien avec les oiseaux sauf attaque)",
         equipment: "Possède 2 Pygargues domestiqués (oiseaux marins de la taille d'un aigle, ils volent toujours non loin de vous, ils fuient à 2 blessures, meurent à 4)",
         skills: [
-            { name: "Ordre d'attaque", type: TypeSkill.Aucun, difficulty: 'S12', effects: ["Vous désignez une cible qu'un de vos pygargue attaque", "A chaque tour, le pygargue inflige 1 blessure", "ER4 : inflige le malus Borgne", "Séquelle : le pygargue ne fait aucune blessure au premier tour"] },
+            { name: "Ordre d'attaque", type: TypeSkill.Aucun, difficulty: 'S12', effects: ["Vous désignez une cible qu'un de vos pygargue attaque", "A chaque tour, le pygargue inflige 1 blessure, commence maintenant", "ER4 : inflige le malus Borgne", "Séquelle : le pygargue ne fait aucune blessure au premier tour"] },
             { name: "Ordre de dérober", type: TypeSkill.Aucun, difficulty: 'S14', effects: ["Vous désignez un objet qu'un de vos pygargue va récupérer", "Séquelle : il s'est trompé d'objet"] },
             { name: "Ordre de survol", type: TypeSkill.Aucun, difficulty: 'S10', effects: ['', "Vous désignez une large zone où l'un de vos pygargue va surveiller", "Si le pygargue repère quelque chose, il vous préviendra avec son chant", "Séquelle : le pygargue est parti chasser quand il se passe quelque chose", ''] },
         ]
@@ -464,6 +464,7 @@ export let ways: Way[] = [
             { idea: true, name: "Goût du Sang", type: TypeSkill.MagieSang, difficulty: 'S14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Le groupe d'ennemi choisi devient fou de violence. Ils se battent les uns contre les autres pendant 1 tour.", "Séquelle : le groupe d'ennemi vous attaque vous à la place.", ''] },
             { idea: true, name: "Lame de Sang", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Vous créez une arme légère en Sang. Vous pouvez l'utiliser jusqu'à la fin de la scène."] },
             { idea: true, name: "Hémorragie Multiple", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les personnes déjà blessées (dont vous) subissent 2 blessures et l'état En Sang."] },
+            { idea: true, name: "Vision d'horreur", type: TypeSkill.MagieSang, difficulty: '', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les cibles ont leur vue qui passe au rouge, voient du sang couler de leur membres.", "Elles subissent le malus 'Peur du sang et de vous' pendant 2 tours.", "ER4 : dure un tour de plus"] },
         ]
     },
     {
