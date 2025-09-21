@@ -380,7 +380,7 @@ export let ways: Way[] = [
             "ATTENTION : si vous sifflez, action gratuite à votre tour, vous annulez tous les ordres et tous vos pygargues retournent dans le ciel"
         ],
         asset: "Dressage d'oiseaux (toute action en lien avec les oiseaux sauf attaque)",
-        equipment: "Possède 2 Pygargues domestiqués (oiseaux marins de la taille d'un aigle, ils volent toujours non loin de vous, ils fuient à 2 blessures, meurent à 4)",
+        equipment: "Possède 2 Pygargues domestiqués (ils volent toujours non loin de vous)",
         skills: [
             { name: "Ordre d'attaque", type: TypeSkill.Aucun, difficulty: 'S12', effects: ["Vous désignez une cible qu'un de vos pygargue attaque", "A chaque tour, le pygargue inflige 1 blessure, commence maintenant", "ER4 : inflige le malus Borgne", "Séquelle : le pygargue ne fait aucune blessure au premier tour"] },
             { name: "Ordre de dérober", type: TypeSkill.Aucun, difficulty: 'S14', effects: ["Vous désignez un objet qu'un de vos pygargue va récupérer", "Séquelle : il s'est trompé d'objet"] },
@@ -424,6 +424,16 @@ export let ways: Way[] = [
             "4 blessures : désarçonne son cavalier et fuit. Le cavalier doit réussir une action C14 pour ne pas subir 2 blessures.",
             "6 blessures : K.O.",
             "8 blessures : mort."],
+        asset: "",
+        equipment: "",
+        skills: []
+    },
+    {
+        id: "Pygargue",
+        name: "Pygargue",
+        description: ["Oiseau marin de la taille d'un aigle",
+            "2 blessures : il fuit dans les airs",
+            "4 blessures : mort"],
         asset: "",
         equipment: "",
         skills: []
