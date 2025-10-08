@@ -9,3 +9,21 @@ button {
 .neutral:hover {
     background-color: white;
 }
+
+.center-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-start {
+    width: 100%;
+    max-width: 1300px;
+}
+
+.text-start {
+    max-width: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

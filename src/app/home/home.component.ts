@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'omnak-home',
@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  isPresentation: boolean = false;
+
   zonesRouge = [
     { id: 'Soldat', top: 48, left: 4.6 },
     { id: 'MageFeu', top: 17, left: 24.6 },
@@ -55,7 +57,14 @@ export class HomeComponent {
 
   constructor(
     private readonly router: Router,
+    private readonly route: ActivatedRoute,
   ) { }
+
+  ngOnInit(): void {
+    this.route.data.subscribe(dataDict => {
+      this.isPresentation = dataDict['show'];
+    })
+  }
 
   goToWay(zoneId: string) {
     this.router.navigate(['way', zoneId]);

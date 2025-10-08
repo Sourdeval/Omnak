@@ -55,6 +55,11 @@ const routes: Routes = [
     component: SkillPrintComponent,
   },
   {
+    path: 'show',
+    component: HomeComponent,
+    data: { show: true },
+  },
+  {
     path: '**',
     redirectTo: ''
   }
