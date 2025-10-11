@@ -462,6 +462,78 @@ export let ways: Way[] = [
             { name: "Crochetage", type: TypeSkill.Furtivité, difficulty: "C10", effects: ["La difficulté dépend du verrou, de C8 à C16 pour un verrou magique. Certains verrous magiques ne sont pas crochetable.", "Vous cassez le verrou", "E3 : vous faites du bruit"] },
         ]
     },
+    {
+        id: "CombattantRapiere",
+        name: "Combattant Rapière",
+        description: [""],
+        asset: "",
+        equipment: "Rapière (Arme de Gladiateur : Duel)",
+        skills: [
+            { name: "Estoc", type: TypeSkill.ArmeGladiateur, difficulty: 'C8', effects: ['1 blessure'] },
+            { name: "Attaque en jeu de jambe", type: TypeSkill.ArmeGladiateur, difficulty: 'C10', effects: ['1 blessure', "ER4 : vous reculez, votre ennemi subit un malus pour vous attaquer au corps à corps jusqu'à votre prochain tour"] },
+            { name: "Garde", type: TypeSkill.ArmeGladiateur, difficulty: 'R12', effects: ['bonus pour se défendre des attaques au corps à corps', 'Risque : malus à la place'] },
+        ]
+    },
+    {
+        id: "DuellisteRapiere",
+        name: "Duelliste Rapière",
+        description: [""],
+        asset: "Au Grade 3 : Bonus Combat à la Rapière",
+        equipment: "Rapière (Arme de Gladiateur : Duel)",
+        skills: [
+            { name: "Cercle de positionnement", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ['1 blessure', "Vous gagnez un bonus pour vous défendre au corps à corps jusqu'à votre prochain tour"] },
+            { name: "Cercle d'attaque", type: TypeSkill.ArmeGladiateur, difficulty: 'C12', effects: ['1 blessure', "ER2 : Vous gagnez un bonus pour attaquer au corps à corps pendant 1 tour"] },
+            { name: "Coup à la volée", type: TypeSkill.ArmeGladiateur, difficulty: 'R10', effects: ["2 blessures", "Risque : si votre cible réussit une attaque au corps à corps contre vous jusqu'à votre prochain tour, elle vous désarme"] },
+        ]
+    },
+    {
+        id: "ApprentiSoufre",
+        name: "Apprenti Soufre",
+        description: ["ATTENTION : Chaque sort de Magie du Soufre nécessite une petite quantité de Soufre. Une bourse de soufre permet d'en lancer 5."],
+        asset: "",
+        equipment: "Bourse de soufre",
+        skills: [
+            { name: "Flammèche Bleue", type: TypeSkill.MagieSoufre, difficulty: 'C10', effects: ["1 blessure", "ER4 : la cible subit le malus Asphyxié pendant 1 tour"] },
+            { name: "Encens", type: TypeSkill.MagieSoufre, difficulty: 'C6', effects: ["Libère du soufre dans la pièce, comme un baton d'encens.", "Les personnes qui le respirent sont détendues et gagnent un bonus 'Purifié' pour combattre des maladies ou des corruptions."] },
+            { name: "Souffle Soufre", type: TypeSkill.MagieSoufre, difficulty: 'C6', effects: ["Souffle de la fumée de soufre vers une cible", "La cible subit le malus Asphyxié pendant 1 tour", "Si la prochaine action de la cible est un déplacement ou une action physique, elle subit 1 blessure"] },
+        ]
+    },
+    {
+        id: "MageSoufre",
+        name: "Mage de Soufre",
+        description: ["ATTENTION : Chaque sort de Magie du Soufre nécessite une petite quantité de Soufre. Une bourse de soufre permet d'en lancer 5."],
+        asset: "",
+        equipment: "Seconde bourse de soufre",
+        skills: [
+            { name: "Brasier Fondant", type: TypeSkill.MagieSoufre, difficulty: 'C10', effects: ["A votre prochain tour, une gigantesque flamme bleue apparaît à l'endroit choisi.", "Si une cible touche la flamme, elle subit 1 blessure.", "Si une cible passe dans la flamme, elle subit 3 blessures et l'état 'En Feu'", 'Tout ce qui reste dans la flamme fond'] },
+            { name: "Vapeurs brûlantes toxiques", type: TypeSkill.MagieSoufre, difficulty: 'C12', effects: ["Un nuage s'étend rapidement autour de vous, les personnes proches subissent 1 blessure et le malus Asphyxié pendant 1 tour", "Dure un tour supplémentaire dans un lieu confiné"] },
+            { name: "Flamme révélatrice", type: TypeSkill.MagieSoufre, difficulty: 'C8', effects: ["Permet de révéler par une flamme bleue de soufre des choses cachées même magiquement."] },
+        ]
+    },
+    {
+        id: "Artificier",
+        name: "Artificier",
+        description: ["ATTENTION : Chaque sort de Magie du Soufre nécessite une petite quantité de Soufre. Une bourse de soufre permet d'en lancer 5."],
+        asset: "Magie du Soufre",
+        equipment: "",
+        skills: [
+            { name: "Feu d'Artifice", type: TypeSkill.MagieSoufre, difficulty: 'C12', effects: ["Lance une boule d'artifice qui explose, touchant toutes les personnes proches", "2 blessures", "ER4 : inflige En Feu", "ER3 : projette et fait tomber au sol"] },
+            { name: "Soleil d'Artifice", type: TypeSkill.MagieSoufre, difficulty: 'C10', effects: ["Pose un soleil qui tournoie en envoyant des flammèches bleues", "Chaque tour pendant 3 tours, la première personne dans chaque direction subit 1 blessure", "Commence au prochain tour"] },
+            { name: "Mitraillette de Pêtards", type: TypeSkill.MagieSoufre, difficulty: 'S14', effects: ["Chaque personne dans une petite zone choisie doit réussir une action de défense face à une explosion C12 pour ne pas subir 1 blessure", "E2 : C14 pour se défendre", "E5 : 1 blessure supplémentaire", "Séquelle : la zone se trouve à vos pieds"] },
+        ]
+    },
+    {
+        id: "MaitreSoufre",
+        name: "Maître du Soufre",
+        description: ["ATTENTION : Chaque sort de Magie du Soufre nécessite une petite quantité de Soufre. Une bourse de soufre permet d'en lancer 5."],
+        asset: "Contact Explosif : lorsque quelqu'un vous attaque au corps à corps ou que vous recevez un projectile, une explosion de soufre inflige 2 blessures autour de vous. Vous perdez une dose de soufre.",
+        equipment: "Sceptre de soufre (10 doses)",
+        skills: [
+            { name: "Craquelures Purificatrices", type: TypeSkill.MagieSoufre, difficulty: 'C14', effects: ["Dans une zone au choix le sol se craquêle et d'immenses flammes bleues apparaissent, le lanceur y est insensible", "3 blessures", "Inflige le malus Asphyxié pendant 1 tour"] },
+            { name: "Avatar sulfuré", type: TypeSkill.MagieSoufre, difficulty: 'R10', effects: ["Vous devenez une flamme bleue jusqu'à votre prochain tour", "Vous ne subissez aucune blessure de quoi que ce soit (sauf anti feu) et vous planez dans les airs", "Risque : vous subissez En Feu"] },
+            { name: "Brouillard toxique", type: TypeSkill.MagieSoufre, difficulty: 'S14', effects: ['', "Crée un gigantesque brouillard toxique, inflige 1 blessure par tour à toutes les personnes présentes sauf vous, dure 3 tours, ou 5 dans une pièce fermée", "On ne voit plus rien dans la zone", "Séquelle : vous subissez aussi les blessures", ''] },
+        ]
+    },
 
     //#region Idées pour plus tard 
     {
