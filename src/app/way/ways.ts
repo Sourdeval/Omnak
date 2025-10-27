@@ -176,7 +176,7 @@ export let ways: Way[] = [
         skills: [
             { name: "Tir puissant", type: TypeSkill.ArmeDistance, difficulty: 'C12', effects: ["Obtenez un malus pour vous défendre au corps à corps jusqu'à votre prochain tour avant de lancer cette attaque", '2 blessures', "ER18 : inflige le malus 'Peur d'être à découvert' pendant 2 tours", "Distance : 1-25m"] },
             { name: "Tir en cloche", type: TypeSkill.ArmeDistance, difficulty: 'C14', effects: ["Obtenez un malus pour vous défendre au corps à corps jusqu'à votre prochain tour avant de lancer cette attaque", '1 blessure', "Distance: 50-125m"] },
-            { name: "Viser un point faible", type: TypeSkill.ArmeDistance, difficulty: 'C16', effects: ["Avant de faire l'action choisissez entre : état En Sang, état Immobilisé (pendant 2 tours), malus Borgne (toute la scène) et malus Incapable de se servir de [membre au choix] (toute la scène).", "1 blessure, le choix est infligé à la cible.", "Distance : 1-25m", ""] },
+            { name: "Viser un point faible", type: TypeSkill.ArmeDistance, difficulty: 'C16', effects: ["Avant de faire l'action choisissez entre : état Ensanglanté, état Immobilisé (pendant 2 tours), malus Borgne (toute la scène) et malus Incapable de se servir de [membre au choix] (toute la scène).", "1 blessure, le choix est infligé à la cible.", "Distance : 1-25m", ""] },
         ]
     },
     {
@@ -211,7 +211,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Concentration Noire", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Toutes les attaques jusqu'à votre prochain tour vous infligent une blessure de moins.", "ER6 : les projectiles ricochent sur vous", "Risque : malus pour se défendre"] },
-            { name: "Projection d'éclats d'Obsidienne", type: TypeSkill.MagieRoche, difficulty: 'R10', effects: ['2 blessures sur une petite zone', 'ER3 : inflige En Sang', 'Risque : les éclats partent dans tous les sens et infligent 1 blessure à vous et aux personnes proches de vous'] },
+            { name: "Projection d'éclats d'Obsidienne", type: TypeSkill.MagieRoche, difficulty: 'R10', effects: ['2 blessures sur une petite zone', 'ER3 : inflige Ensanglanté', 'Risque : les éclats partent dans tous les sens et infligent 1 blessure à vous et aux personnes proches de vous'] },
             { name: "Secousse mineure", type: TypeSkill.MagieRoche, difficulty: 'C13', effects: ["Provoque un petit tremblement de terre, tout le monde sauf vous subit un malus Déséquilibré jusqu'à votre prochain tour."] },
         ]
     },
@@ -223,7 +223,7 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { name: "Concentration Verte", type: TypeSkill.Aucun, difficulty: 'R8', effects: ["Vous neutralisez toutes la magie autour de vous. Tous les sorts jusqu'à votre prochain tour ont un malus.", "ER6 : les sorts qui sont tout de même réussis infligent 1 blessure de moins", "Risque : vous ne pouvez plus lancer de sort ou cette compétence. Dure 2 tours", ''] },
-            { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes se trouvant ou voulant traverser cette zone subissent 2 blessures et En Sang. Dure toute la scène.'] },
+            { name: "Tapis de Pointes d'Émeraude", type: TypeSkill.MagieRoche, difficulty: 'C10', effects: ['Choisissez une zone, au début de votre prochain tour des pointes vertes y apparaissent. Les personnes se trouvant ou voulant traverser cette zone subissent 2 blessures et Ensanglanté. Dure toute la scène.'] },
             { name: "Protection", type: TypeSkill.Aucun, difficulty: 'C12', effects: ["Choisissez un type de Magie, vous avez un bonus pour vous en défendre pendant 2 tours"] },
         ]
     },
@@ -291,7 +291,7 @@ export let ways: Way[] = [
         id: "PorteurHematite",
         name: "Porteur d'Hématite",
         description: ["La Magie du Sang est rare et dangereuse, les Porteurs d'Hématite peuvent en maîtriser les bases."],
-        asset: "Coagulation Rapide : vous ne pouvez pas subir En Sang. Vous régénérez une blessure de plus par repos.",
+        asset: "Coagulation Rapide : vous ne pouvez pas subir Ensanglanté. Vous régénérez une blessure de plus par repos.",
         equipment: "",
         skills: [
             { name: "Vertiges Sanglants", type: TypeSkill.MagieSang, difficulty: 'C8', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Inflige le malus Désorienté pendant 1 tour."] },
@@ -339,7 +339,7 @@ export let ways: Way[] = [
         id: "Brave",
         name: "Brave",
         description: ["Les Braves de la Nation Grise sont élevés depuis tout jeune à combattre. Musclés, imposants, rustres, il ne vaut mieux pas s'y confronter.",
-            "ATTENTION : les Armes de Taille (comme la Hache de Guerre) ont le bonus Tranchant (ER2 : inflige En Sang)"
+            "ATTENTION : les Armes de Taille (comme la Hache de Guerre) ont le bonus Tranchant (ER2 : inflige Ensanglanté)"
         ],
         asset: "Courageux (faire des actions dangereuses, vaincre la peur)",
         equipment: "Hache de guerre",
@@ -391,7 +391,7 @@ export let ways: Way[] = [
         id: "LanceurHaches",
         name: "Lanceur de Haches",
         description: ["Attaquer à distance est perçu partout comme un avantage. La Nation Grise a décidé qu'il n'était pas nécessaire de changer d'arme pour cela.",
-            "ATTENTION : les Haches de lancer sont aussi des armes de Taille, elles ont donc Tranchante (ER2 : inflige En Sang)"
+            "ATTENTION : les Haches de lancer sont aussi des armes de Taille, elles ont donc Tranchante (ER2 : inflige Ensanglanté)"
         ],
         asset: "Lanceur d'armes",
         equipment: "Haches de lancer (x4)",
@@ -544,8 +544,8 @@ export let ways: Way[] = [
         equipment: "",
         skills: [
             { idea: true, name: "Goût du Sang", type: TypeSkill.MagieSang, difficulty: 'S14', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Le groupe d'ennemi choisi devient fou de violence. Ils se battent les uns contre les autres pendant 1 tour.", "Séquelle : le groupe d'ennemi vous attaque vous à la place.", ''] },
-            { idea: true, name: "Lame de Sang", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Vous créez une arme légère en Sang. Vous pouvez l'utiliser jusqu'à la fin de la scène."] },
-            { idea: true, name: "Hémorragie Multiple", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les personnes déjà blessées (dont vous) subissent 2 blessures et l'état En Sang."] },
+            { idea: true, name: "Lame de Sang", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Vous créez une arme légère en sang. Vous pouvez l'utiliser jusqu'à la fin de la scène."] },
+            { idea: true, name: "Hémorragie Multiple", type: TypeSkill.MagieSang, difficulty: 'C6', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les personnes déjà blessées (dont vous) subissent 2 blessures et l'état Ensanglanté."] },
             { idea: true, name: "Vision d'horreur", type: TypeSkill.MagieSang, difficulty: '', effects: ['Vous vous infligez 1 blessure avant de lancer ce sort.', "Toutes les cibles ont leur vue qui passe au rouge, voient du sang couler de leur membres.", "Elles subissent le malus 'Peur du sang et de vous' pendant 2 tours.", "ER4 : dure un tour de plus"] },
         ]
     },
