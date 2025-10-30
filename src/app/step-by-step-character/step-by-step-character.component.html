@@ -1,0 +1,26 @@
+<button style="position: absolute; opacity: 50%;" routerLink="/">
+    <i class="material-icons">home</i>
+</button>
+
+<h2 style="text-align: center;">Création de Personnage</h2>
+
+
+<div class="back">
+    <div class="progress-gray">
+        <div class="progress progress-ok" *ngFor="let i of OkSteps"></div>
+        <div class="progress progress-actual"></div>
+        <div class="progress progress-future" *ngFor="let i of FutureSteps"></div>
+    </div>
+
+    <div class="body">
+        <p class="text" [innerHTML]="steps[stepIndex-1]"></p>
+    </div>
+
+    <div class="buttons">
+        <button [disabled]="stepIndex < 2" [ngClass]="stepIndex > 1 ? '' : 'hidden'" (click)="back()">Retour</button>
+        <button [disabled]="!showInspireButton(stepIndex)" [ngClass]="showInspireButton(stepIndex) ? '' : 'hidden'"
+            (click)="goInspire(stepIndex)">Inspirations</button>
+        <button [disabled]="stepIndex > maxStep - 1" [ngClass]="stepIndex < maxStep ? '' : 'hidden'"
+            (click)="next()">Suivant</button>
+    </div>
+</div>

@@ -1,16 +1,5 @@
 <h2 style="text-align: center;">Création de Personnage</h2>
 
-
-<h4 style="text-align: end;">Page {{index+1}}/{{pages.length}}</h4>
-<div class="text-container" [innerHTML]="pages[index]"></div>
-
-
-<div style="display: flex; justify-content: space-between;">
-    <button [ngClass]="index == 0 ? 'invisibleButton' : ''" class="button-next" (click)="next(-1)">Précédent</button>
-    <button [ngClass]="index == pages.length-1 ? 'invisibleButton' : ''" class="button-next"
-        (click)="next(1)">Suivant</button>
-</div>
-
 <h3>Fiche Perso</h3>
 
 <table>

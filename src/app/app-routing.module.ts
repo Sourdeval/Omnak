@@ -10,6 +10,7 @@ import { CenterComponent } from './shared/center/center.component';
 import { SkillPrintComponent } from './skill-print/skill-print.component';
 import { GameMasterComponent } from './game-master/game-master.component';
 import { CharacterCreationComponent } from './rules/character-creation/character-creation.component';
+import { StepByStepCharacterComponent } from './step-by-step-character/step-by-step-character.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,14 @@ const routes: Routes = [
   {
     path: 'print',
     component: SkillPrintComponent,
+  },
+  {
+    path: 'new-character',
+    redirectTo: 'new-character/1',
+  },
+  {
+    path: 'new-character/:step',
+    component: StepByStepCharacterComponent,
   },
   {
     path: 'show',

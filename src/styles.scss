@@ -188,6 +188,15 @@ button:active {
     transform: translateY(4px);
 }
 
+.big-button {
+    background-color: gold;
+    font-weight: bolder;
+}
+
+.big-button:hover {
+    background-color: white;
+}
+
 .mat-dialog-container {
     background: linear-gradient(0deg, var(--theme-color-1) 0%, var(--theme-color-2) 100%);
 }

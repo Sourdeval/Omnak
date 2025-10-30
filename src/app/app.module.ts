@@ -14,6 +14,7 @@ import { CenterComponent } from './shared/center/center.component';
 import { SkillPrintComponent } from './skill-print/skill-print.component';
 import { GameMasterComponent } from './game-master/game-master.component';
 import { CharacterCreationComponent } from './rules/character-creation/character-creation.component';
+import { StepByStepCharacterComponent } from './step-by-step-character/step-by-step-character.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CharacterCreationComponent } from './rules/character-creation/character
     CenterComponent,
     SkillPrintComponent,
     GameMasterComponent,
-    CharacterCreationComponent
+    CharacterCreationComponent,
+    StepByStepCharacterComponent
   ],
   imports: [
     BrowserModule,

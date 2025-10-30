@@ -1,38 +1,3 @@
-.text-container h6 {
-    font-size: medium;
-    font-weight: normal;
-}
-
-.button-next {
-    margin: 5px;
-    width: 100px;
-}
-
-.invisibleButton {
-    visibility: hidden;
-}
-
-.text-container {
-    border: 1px black solid;
-    flex-grow: 1;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 18px;
-}
-
-span {
-    font-weight: bold;
-    background-color: var(--theme-color-2);
-}
-
-.italic {
-    font-style: italic;
-}
-
-.warning {
-    background-color: orange;
-}
-
 table {
     width: 98%;
     border-collapse: collapse;

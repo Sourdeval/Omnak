@@ -1,0 +1,71 @@
+.back {
+    background-color: deepskyblue;
+    width: 100%;
+    height: 90%;
+    padding: 4px;
+}
+
+.progress {
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.progress-gray {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 28px;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.progress-future {
+    background-color: gray;
+}
+
+.progress-actual {
+    background-color: lightgreen;
+}
+
+.progress-ok {
+    background-color: green;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+.text {
+    margin: 10px;
+    font-size: clamp(1.1rem, 3vw, 2.3rem);
+    line-height: 1.3;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+span {
+    font-weight: bold;
+    background-color: var(--theme-color-2);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.action {
+    background-color: greenyellow;
+}
